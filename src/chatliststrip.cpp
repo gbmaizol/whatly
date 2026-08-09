@@ -247,9 +247,25 @@ static const char kScriptTemplate[] = R"JS(
             // font-size 0, so innerText reads empty and every button would end
             // up wearing the fallback glyph.
             var text = (c.textContent || '').trim();
+            // WhatsApp writes each filter's own count into the pill, right
+            // after its name — "Unread13", "Groups11", and the same for a
+            // custom label. Expanded, that number is on screen; collapsed, the
+            // name is gone and it would go with it, so it moves to a badge on
+            // the letter. Taken from the pill itself rather than counted here:
+            // it is WhatsApp's own number, it needs no id to find and no
+            // language to read, and it is the same number the rail's chat icon
+            // shows — chats with something unread in them, muted ones aside.
+            var m = text.match(/^(.*?)(\d+)$/);
+            var name = m ? m[1] : text;
+            var count = m ? m[2] : '';
             b.setAttribute('data-whatly-letter',
-              c.contains(more) || !text ? '▾'
-                                        : text.charAt(0).toUpperCase());
+              c.contains(more) || !name ? '▾'
+                                        : name.charAt(0).toUpperCase());
+            if (count && !c.contains(more))
+              b.setAttribute('data-whatly-unread',
+                             count.length > 2 ? '99+' : count);
+            else
+              b.removeAttribute('data-whatly-unread');
           });
         }
       }
