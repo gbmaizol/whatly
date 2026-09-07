@@ -94,10 +94,21 @@ gpg --import packaging/appimage/whatly-appimage-pubkey.asc   # once
 appimagetool --validate Whatly-<ver>-x86_64.AppImage
 ```
 
-## Still to do
+## In-app verification
 
-- **In-app verification before self-update.** The updater currently runs
-  `appimageupdatetool` and offers to restart; it does not yet verify the new
-  image's signature against the committed public key before restarting into it.
-  That is the remaining security step and wants a real signed release to develop
-  and test against (which is why it is not guessed at here).
+Done as of the 7.5.0 signed release. After `appimageupdatetool` writes the new
+image, the self-updater (`MainWindow::startAppImageSelfUpdate`, via
+`src/appimagesignature.{h,cpp}`) verifies it before offering to restart:
+
+1. Zero the new image's `.sha256_sig` and `.sig_key` ELF sections, take the
+   SHA-256, render it as a 64-character lower-case hex string. This reproduces
+   the digest `appimagetool` signs.
+2. Verify the detached signature embedded in `.sha256_sig` against the public
+   key compiled into the running build (the committed `whatly-appimage-pubkey.asc`,
+   never the incoming image's own `.sig_key`, so a swapped key cannot pass).
+
+A tampered image is rejected and the previous version is rolled back from the
+`.zs-old` backup, with no restart. An unsigned image (older releases) is applied
+as before; a signed one that cannot be checked (no `gpg` on the system) is
+applied only with the restart prompt saying so. Verification shells out to
+`gpg`.
