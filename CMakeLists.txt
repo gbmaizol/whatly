@@ -166,6 +166,7 @@ set(DATADIR ${CMAKE_INSTALL_PREFIX}/share)
 # Main application source files
 set(SOURCES
     src/about.cpp
+    src/appimagesignature.cpp
     src/appprofile.cpp
     src/automatictheme.cpp
     src/common.cpp
@@ -259,6 +260,7 @@ set(SOURCES
 
 set(HEADERS
     src/about.h
+    src/appimagesignature.h
     src/appprofile.h
     src/autolockeventfilter.h
     src/automatictheme.h
@@ -365,6 +367,7 @@ set(UI_FILES
 set(RESOURCES
     src/icons.qrc
     src/scripts.qrc
+    src/appimage.qrc
 )
 
 # SingleApplication library

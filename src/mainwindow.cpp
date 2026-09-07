@@ -28,6 +28,7 @@
 #endif
 
 #include "about.h"
+#include "appimagesignature.h"
 #include "common.h"
 #include "globalshortcut.h"
 #include "quickcompose.h"
@@ -1547,10 +1548,54 @@ void MainWindow::startAppImageSelfUpdate() {
                      "new version from the release page instead."));
               return;
             }
-            if (QMessageBox::question(
-                    this, tr("Software update"),
-                    tr("Whatly was updated. Restart now to use the new "
-                       "version?")) == QMessageBox::Yes)
+
+            // Verify the freshly-written image before offering to restart into
+            // it (#85). appimageupdatetool --overwrite has already replaced the
+            // on-disk image, keeping the previous one as <image>.zs-old, so a
+            // rejected update can be rolled back; and the running process is
+            // still the old, trusted image in memory, so refusing simply means
+            // not restarting. The trusted key is the one compiled into this
+            // build, never the incoming image's own key.
+            const QString image = qEnvironmentVariable("APPIMAGE");
+            const AppImageSignature::Result sig = AppImageSignature::verify(
+                image, AppImageSignature::trustedPublicKey());
+            if (sig == AppImageSignature::Result::Bad) {
+              qWarning() << "[update] rejected: the downloaded image failed "
+                            "signature verification";
+              const QString backup = image + QStringLiteral(".zs-old");
+              QString restored;
+              if (QFile::exists(backup)) {
+                QFile::remove(image);
+                if (QFile::rename(backup, image))
+                  restored = tr("The previous version has been restored.");
+              }
+              QMessageBox::critical(
+                  this, tr("Software update"),
+                  (tr("The downloaded update failed signature verification and "
+                      "was not applied.") +
+                   (restored.isEmpty() ? QString()
+                                       : QLatin1Char(' ') + restored))
+                      .trimmed());
+              return;
+            }
+            if (sig == AppImageSignature::Result::Unsigned)
+              qInfo() << "[update] image is unsigned; applying without "
+                         "signature verification";
+
+            // A signed image we could not check (no gpg, or an unreadable
+            // image) is not evidence of tampering, so it is applied rather than
+            // blocking users without gpg, but the prompt says so plainly.
+            const QString restartMsg =
+                sig == AppImageSignature::Result::CannotVerify
+                    ? tr("Whatly was updated, but its signature could not be "
+                         "verified. Restart now to use the new version?")
+                    : tr("Whatly was updated. Restart now to use the new "
+                         "version?");
+            if (sig == AppImageSignature::Result::CannotVerify)
+              qWarning() << "[update] could not verify the image signature; "
+                            "applying with the user's confirmation";
+            if (QMessageBox::question(this, tr("Software update"), restartMsg) ==
+                QMessageBox::Yes)
               restartApp();
           });
 

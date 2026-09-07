@@ -1,5 +1,7 @@
 ## Unreleased
 
+- **The AppImage self-update now verifies the new image's signature before restarting into it (#85).** 7.5.0 ships a signed AppImage; the updater now checks it. After `appimageupdatetool` writes the new image, Whatly recomputes the signed digest (the image with its `.sha256_sig` and `.sig_key` sections zeroed, SHA-256, hex) and verifies the embedded signature against the signing key compiled into this build (the committed `whatly-appimage-pubkey.asc`, never the incoming image's own key, so a swapped key cannot pass). A tampered image is rejected and the previous version is rolled back from the `.zs-old` backup, with no restart. An unsigned image (older releases) is still applied as before, and a signed one that cannot be checked (no gpg on the system) is applied only with the restart prompt saying so plainly.
+
 ## 7.5.0 (2026-09-07)
 
 - **The release pipeline can sign the AppImage (#85).** Groundwork for verifying the self-update: when an `APPIMAGE_GPG_PRIVATE_KEY` secret is configured, the release now builds a GPG-signed AppImage (`appimagetool` with `SIGN=1`) and publishes the public key as `whatly-appimage-pubkey.asc` alongside it. It is entirely optional — with no key set the image is built unsigned exactly as before, so nothing breaks in the meantime. The key setup is documented in `packaging/appimage/SIGNING.md`. In-app verification of the signature before restarting into an update is the remaining step, and wants a real signed release to develop against.

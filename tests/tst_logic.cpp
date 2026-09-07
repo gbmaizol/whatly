@@ -30,9 +30,11 @@
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QLineEdit>
+#include <QBuffer>
 #include <QCryptographicHash>
 #include <QDateTime>
 #include <QDragEnterEvent>
+#include <QProcessEnvironment>
 #include <QDragLeaveEvent>
 #include <QDragMoveEvent>
 #include <QDropEvent>
@@ -54,6 +56,7 @@
 #include "debuglog.h"
 #include "appprofile.h"
 #include "settingsmanager.h"
+#include "appimagesignature.h"
 #include "dictionaries.h"
 #include "dictionarybootstrap.h"
 #include "dictionarymanager.h"
@@ -6067,6 +6070,238 @@ private slots:
   }
 };
 
+// AppImage signature verification (issue #85): the ELF section parse and the
+// zeroed-section digest are pure and always tested; the full gpg verification is
+// driven against a synthetic signed ELF and skipped where gpg is absent.
+class TstAppImageSignature : public QObject {
+  Q_OBJECT
+
+  // A minimal ELF64 little-endian file carrying a .shstrtab, a .sha256_sig and a
+  // .sig_key section, laid out exactly as the parser reads them. Returns the
+  // bytes and the offset/size of the two signature sections.
+  struct Elf {
+    QByteArray bytes;
+    qint64 sigOff = 0, sigSize = 0, keyOff = 0, keySize = 0;
+  };
+  static Elf buildElf(const QByteArray &sigContent, const QByteArray &keyContent) {
+    auto put = [](QByteArray &b, qint64 pos, auto value) {
+      const auto le = qToLittleEndian(value);
+      b.replace(static_cast<int>(pos), sizeof(le),
+                reinterpret_cast<const char *>(&le), sizeof(le));
+    };
+
+    // Section-name string table.
+    QByteArray shstr;
+    shstr.append('\0');
+    const quint32 nStr = shstr.size();
+    shstr.append(".shstrtab");
+    shstr.append('\0');
+    const quint32 nSig = shstr.size();
+    shstr.append(".sha256_sig");
+    shstr.append('\0');
+    const quint32 nKey = shstr.size();
+    shstr.append(".sig_key");
+    shstr.append('\0');
+
+    // Layout: [ehdr 64][body 128][shstrtab][sig][key][section header table].
+    QByteArray body(128, 'A');
+    QByteArray b;
+    b.append(QByteArray(64, '\0'));           // ELF header, filled below
+    const qint64 bodyOff = b.size();
+    b.append(body);
+    const qint64 strOff = b.size();
+    b.append(shstr);
+    const qint64 sigOff = b.size();
+    b.append(sigContent);
+    const qint64 keyOff = b.size();
+    b.append(keyContent);
+    const qint64 shoff = b.size();
+    const int nSec = 4;
+    b.append(QByteArray(nSec * 64, '\0'));    // 4 section headers
+
+    // ELF identification + header fields the parser reads.
+    b[0] = 0x7f; b[1] = 'E'; b[2] = 'L'; b[3] = 'F';
+    b[4] = 2;   // ELFCLASS64
+    b[5] = 1;   // ELFDATA2LSB
+    b[6] = 1;   // EI_VERSION
+    put(b, 0x28, quint64(shoff));   // e_shoff
+    put(b, 0x3a, quint16(64));      // e_shentsize
+    put(b, 0x3c, quint16(nSec));    // e_shnum
+    put(b, 0x3e, quint16(1));       // e_shstrndx (.shstrtab is index 1)
+
+    auto shdr = [&](int idx, quint32 name, quint64 off, quint64 size) {
+      const qint64 e = shoff + idx * 64;
+      put(b, e + 0, name);          // sh_name
+      put(b, e + 24, off);          // sh_offset
+      put(b, e + 32, size);         // sh_size
+    };
+    shdr(0, 0, 0, 0);                               // SHT_NULL
+    shdr(1, nStr, quint64(strOff), quint64(shstr.size()));
+    shdr(2, nSig, quint64(sigOff), quint64(sigContent.size()));
+    shdr(3, nKey, quint64(keyOff), quint64(keyContent.size()));
+
+    return {b, sigOff, qint64(sigContent.size()), keyOff,
+            qint64(keyContent.size())};
+  }
+
+private slots:
+  void findsSignatureSections() {
+    const Elf e = buildElf(QByteArray(1024, '\0'), QByteArray(2048, '\0'));
+    const AppImageSignature::Sections s =
+        AppImageSignature::findSections(e.bytes);
+    QVERIFY(s.isElf);
+    QVERIFY(!s.truncated);
+    QVERIFY(s.found);
+    QCOMPARE(s.sigOffset, e.sigOff);
+    QCOMPARE(s.sigSize, e.sigSize);
+    QCOMPARE(s.keyOffset, e.keyOff);
+    QCOMPARE(s.keySize, e.keySize);
+
+    // Not an ELF at all: reported as such, not as "unsigned".
+    const AppImageSignature::Sections bad =
+        AppImageSignature::findSections(QByteArrayLiteral("not an elf file"));
+    QVERIFY(!bad.isElf);
+  }
+
+  void digestZeroesTheGivenRanges() {
+    QByteArray data(4096, '\0');
+    for (int i = 0; i < data.size(); ++i)
+      data[i] = char(i * 7 + 3);
+    // Independently zero a range and hash, then compare to the streamed digest.
+    QByteArray manual = data;
+    for (int i = 100; i < 100 + 200; ++i)
+      manual[i] = '\0';
+    const QByteArray expect =
+        QCryptographicHash::hash(manual, QCryptographicHash::Sha256).toHex();
+
+    QBuffer buf(&data);
+    QVERIFY(buf.open(QIODevice::ReadOnly));
+    const QByteArray got =
+        AppImageSignature::digestHexWithZeroedRanges(buf, {{100, 200}});
+    QCOMPARE(got, expect);
+    QCOMPARE(got.size(), 64);
+  }
+
+  void armoredSignatureIsTrimmed() {
+    QByteArray section = QByteArrayLiteral(
+        "-----BEGIN PGP SIGNATURE-----\n\niHUEA...\n-----END PGP SIGNATURE-----");
+    section.append(QByteArray(200, '\0')); // the NUL padding of the section
+    const QByteArray sig = AppImageSignature::armoredSignature(section);
+    QVERIFY(sig.startsWith("-----BEGIN PGP SIGNATURE-----"));
+    QVERIFY(sig.trimmed().endsWith("-----END PGP SIGNATURE-----"));
+    QVERIFY(!sig.contains('\0'));
+    // A section with no armor (an unsigned image) yields nothing.
+    QVERIFY(AppImageSignature::armoredSignature(QByteArray(512, '\0')).isEmpty());
+  }
+
+  void verifiesAgainstTheTrustedKey() {
+    const QString gpg = QStandardPaths::findExecutable(QStringLiteral("gpg"));
+    if (gpg.isEmpty())
+      QSKIP("gpg not available");
+
+    QTemporaryDir home;
+    QVERIFY(home.isValid());
+    QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+    env.insert(QStringLiteral("GNUPGHOME"), home.path());
+    auto gpgRun = [&](const QStringList &args, const QByteArray &stdinData,
+                      QByteArray *out) -> int {
+      QProcess p;
+      p.setProcessEnvironment(env);
+      p.setProgram(gpg);
+      p.setArguments(QStringList{QStringLiteral("--homedir"), home.path(),
+                                 QStringLiteral("--batch"),
+                                 QStringLiteral("--no-tty")} +
+                     args);
+      p.start();
+      if (!p.waitForStarted(5000))
+        return -1;
+      if (!stdinData.isEmpty()) {
+        p.write(stdinData);
+      }
+      p.closeWriteChannel();
+      if (!p.waitForFinished(20000)) {
+        p.kill();
+        return -1;
+      }
+      if (out)
+        *out = p.readAllStandardOutput();
+      return p.exitCode();
+    };
+
+    // A throwaway, passphrase-less signing key.
+    const QByteArray keyconf =
+        "%no-protection\nKey-Type: EDDSA\nKey-Curve: ed25519\nKey-Usage: sign\n"
+        "Name-Real: Whatly Test\nName-Email: test@example.invalid\n"
+        "Expire-Date: 0\n%commit\n";
+    if (gpgRun({QStringLiteral("--gen-key")}, keyconf, nullptr) != 0)
+      QSKIP("could not generate a test key");
+    QByteArray pub;
+    QVERIFY(gpgRun({QStringLiteral("--armor"), QStringLiteral("--export"),
+                    QStringLiteral("test@example.invalid")},
+                   {}, &pub) == 0);
+    QVERIFY(pub.contains("BEGIN PGP PUBLIC KEY"));
+
+    // A synthetic image: empty signature/key sections to start.
+    const int sigSize = 1024, keySize = 2048;
+    Elf e = buildElf(QByteArray(sigSize, '\0'), QByteArray(keySize, '\0'));
+    const QString imgPath = home.filePath(QStringLiteral("test.AppImage"));
+    {
+      QFile f(imgPath);
+      QVERIFY(f.open(QIODevice::WriteOnly));
+      f.write(e.bytes);
+    }
+
+    // The signed digest is the file with both sections zeroed (they already are).
+    QByteArray digest;
+    {
+      QFile f(imgPath);
+      QVERIFY(f.open(QIODevice::ReadOnly));
+      digest = AppImageSignature::digestHexWithZeroedRanges(
+          f, {{e.sigOff, e.sigSize}, {e.keyOff, e.keySize}});
+    }
+    QByteArray sigAsc;
+    QVERIFY(gpgRun({QStringLiteral("--armor"), QStringLiteral("--detach-sign"),
+                    QStringLiteral("-u"),
+                    QStringLiteral("test@example.invalid")},
+                   digest, &sigAsc) == 0);
+    QVERIFY(sigAsc.contains("BEGIN PGP SIGNATURE"));
+
+    // Embed the signature into the .sha256_sig section (padded to its size).
+    QByteArray bytes = e.bytes;
+    QByteArray padded = sigAsc;
+    padded.resize(sigSize); // resize pads with NULs
+    bytes.replace(static_cast<int>(e.sigOff), sigSize, padded);
+    const auto writeImg = [&](const QByteArray &data) {
+      QFile f(imgPath);
+      QVERIFY(f.open(QIODevice::WriteOnly));
+      f.write(data);
+    };
+    writeImg(bytes);
+
+    // Signed and untampered: Good.
+    QCOMPARE(AppImageSignature::verify(imgPath, pub, gpg),
+             AppImageSignature::Result::Good);
+
+    // Tamper with a body byte (outside the zeroed sections): the digest changes,
+    // so the signature no longer matches. Bad.
+    QByteArray tampered = bytes;
+    tampered[70] = char(tampered.at(70) ^ 0xff); // inside the 128-byte body
+    writeImg(tampered);
+    QCOMPARE(AppImageSignature::verify(imgPath, pub, gpg),
+             AppImageSignature::Result::Bad);
+
+    // An empty signature section is an unsigned image.
+    writeImg(e.bytes);
+    QCOMPARE(AppImageSignature::verify(imgPath, pub, gpg),
+             AppImageSignature::Result::Unsigned);
+
+    // Not an ELF: cannot verify (rather than silently "unsigned").
+    writeImg(QByteArray(4096, 'x'));
+    QCOMPARE(AppImageSignature::verify(imgPath, pub, gpg),
+             AppImageSignature::Result::CannotVerify);
+  }
+};
+
 // ─────────────────────────────────────────────────────────────────────────────
 // The Cloud API send path, pointed at the mock server via WHATLY_CLOUD_API_BASE:
 // text, template and media sends, their API-error, network-error, unconfigured
@@ -6346,6 +6581,7 @@ int main(int argc, char *argv[]) {
   { TstNetworkClients t;      run(&t); }
   { TstDictionaryManagerNet t; run(&t); }
   { TstDictionaryBootstrapNet t; run(&t); }
+  { TstAppImageSignature t;   run(&t); }
   { TstCloudApiNet t;         run(&t); }
   { TstUpdateCheckNet t;      run(&t); }
   { TstWidgets t;             run(&t); }

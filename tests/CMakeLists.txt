@@ -44,7 +44,7 @@ set_tests_properties(ui_assets PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen
 # ── Logic test (headless helpers, script generators, queue, sun, etc.) ───────
 add_executable(tst_logic
     tst_logic.cpp
-    ${S}/utils.cpp ${S}/debuglog.cpp ${S}/appprofile.cpp ${S}/common.cpp
+    ${S}/utils.cpp ${S}/debuglog.cpp ${S}/appprofile.cpp ${S}/common.cpp ${S}/appimagesignature.cpp
     ${S}/sunclock.cpp ${S}/identicons.cpp ${S}/theme.cpp ${S}/settingssearch.cpp ${S}/dictionaries.cpp ${S}/dictionarybootstrap.cpp ${S}/dictionarymanager.cpp ${S}/dictionaryrows.cpp
     ${S}/scheduledmessages.cpp ${S}/messaging.cpp ${S}/messagetemplates.cpp ${S}/autoreply.cpp ${S}/cloudapi.cpp ${S}/localapi.cpp ${S}/cloudwebhook.cpp
     ${S}/webfont.cpp ${S}/chattheme.cpp ${S}/mutedstatus.cpp ${S}/privacyblur.cpp ${S}/chatliststrip.cpp

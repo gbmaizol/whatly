@@ -1,0 +1,9 @@
+<!-- The AppImage signing public key, compiled into the binary so the running
+     (trusted) app verifies a downloaded update against a key it carries itself,
+     not one supplied by the incoming image (issue #85). One source of truth:
+     the same file published beside each release. -->
+<RCC>
+  <qresource prefix="/appimage">
+    <file alias="whatly-appimage-pubkey.asc">../packaging/appimage/whatly-appimage-pubkey.asc</file>
+  </qresource>
+</RCC>
