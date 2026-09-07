@@ -412,6 +412,7 @@ void MainWindow::showCommandPalette() {
   // Every menu/keyboard action, by its (cleaned) text.
   const QList<QAction *> actions = {
       m_reloadAction,      m_minimizeAction,  m_restoreAction,
+      m_findChatAction,
       m_lockAction,        m_muteAction,      m_fullscreenAction,
       m_openUrlAction,     m_scheduledMessagesAction, m_toggleThemeAction,
       m_chatListStripAction, m_settingsAction, m_aboutAction,
