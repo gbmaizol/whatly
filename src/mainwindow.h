@@ -128,6 +128,9 @@ public slots:
   // Put the whole app in the tray: every window, for the same reason hiding one
   // and leaving the rest would say one of them is the real one.
   void hideAllWindows();
+  // "Boss key": hide every window if any is showing, or restore them all if they
+  // are hidden. While hidden, message popups are suppressed (see m_bossHidden).
+  void toggleBossHide();
   void newChat();
   // Whether the account strip stays up with only one account, where it is a row
   // of chrome carrying a single tab. Off by default; the "+" it holds is also
@@ -442,6 +445,9 @@ private:
 
   QList<Account> m_accounts;
   int m_activeAccount = 0;
+  // True while the boss-key hid every window; suppresses message popups so none
+  // surfaces while hidden. Cleared whenever the windows are brought back.
+  bool m_bossHidden = false;
   AccountTabBar *m_accountBar = nullptr;
   QStackedWidget *m_accountStack = nullptr;
   // Grid view: a container the account views are re-parented into when the grid

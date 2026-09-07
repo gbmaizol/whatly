@@ -581,8 +581,10 @@ void MainWindow::refreshWindowsMenu() {
       // Weakly held: a detached window can be closed between the menu being
       // filled in and an entry being picked, and closing one hands its accounts
       // back rather than taking them with it — so a stale entry does nothing.
-      if (QWidget *target = m_windowsMenuTargets.value(slot))
+      if (QWidget *target = m_windowsMenuTargets.value(slot)) {
+        m_bossHidden = false; // showing a window re-enables message popups
         bringForward(target);
+      }
     });
     entries << entry;
   }

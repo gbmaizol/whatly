@@ -76,11 +76,19 @@ GlobalShortcut::GlobalShortcut(QObject *parent) : QObject(parent) {
   compose.id = QStringLiteral("quick-compose");
   compose.trigger = QStringLiteral("CTRL+ALT+n");
   compose.description = QStringLiteral("Open the Whatly quick-compose box");
+  // Ctrl+Alt+H hides every Whatly window at once (a "boss key"), and restores
+  // them on a second press. While hidden, message popups are suppressed too, so
+  // nothing surfaces after the hide.
+  Binding hide;
+  hide.id = QStringLiteral("hide-all");
+  hide.trigger = QStringLiteral("CTRL+ALT+h");
+  hide.description = QStringLiteral("Hide or restore all Whatly windows");
 #if defined(Q_OS_LINUX)
   raise.keysym = XK_w;
   compose.keysym = XK_n;
+  hide.keysym = XK_h;
 #endif
-  m_bindings << raise << compose;
+  m_bindings << raise << compose << hide;
 }
 
 GlobalShortcut::~GlobalShortcut() { ungrabX11(); }

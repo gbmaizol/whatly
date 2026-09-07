@@ -205,9 +205,14 @@ MainWindow::MainWindow(QWidget *parent)
                 showQuickCompose();
                 return;
               }
+              if (id == QLatin1String("hide-all")) {
+                toggleBossHide();
+                return;
+              }
               // The last window used, not this one: the shortcut means "show me
               // Whatly", and which window happens to own the tray icon is not
               // something the user should be made aware of.
+              m_bossHidden = false; // showing a window re-enables message popups
               bringForward(frontWindow());
             });
   } else {
@@ -1455,7 +1460,25 @@ void MainWindow::hideAllWindows() {
     w->hide();
 }
 
+void MainWindow::toggleBossHide() {
+  bool anyVisible = false;
+  for (QWidget *w : allWindows())
+    if (w->isVisible()) {
+      anyVisible = true;
+      break;
+    }
+  if (anyVisible) {
+    // Hide everything and stop message popups until the windows come back, so a
+    // toast cannot surface right after the panic hide.
+    m_bossHidden = true;
+    hideAllWindows();
+  } else {
+    restoreAllWindows(); // clears m_bossHidden, re-enabling popups
+  }
+}
+
 void MainWindow::restoreAllWindows() {
+  m_bossHidden = false; // any way back in re-enables message popups
   // Least-recently-used first, so what comes back is stacked the way it was
   // left, and the window the user was actually in ends up on top.
   const QList<QWidget *> order = windowsByFocus();

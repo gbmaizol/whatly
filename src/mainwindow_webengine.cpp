@@ -873,6 +873,12 @@ void MainWindow::setNotificationPresenter(QWebEngineProfile *profile) {
         if (settings.value("disableNotificationPopups", false).toBool())
           return;
 
+        // Boss key active: every window is hidden, so a message popup would
+        // reveal exactly what the hide was meant to conceal. Unread badges still
+        // update (that is on the page title, elsewhere).
+        if (m_bossHidden)
+          return;
+
         // Do Not Disturb / keyword rules: suppress popups inside the DND window
         // unless a highlight keyword matches. Unread badges still update because
         // that happens elsewhere, on the page title.
