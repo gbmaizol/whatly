@@ -26,10 +26,18 @@ Several are copyleft (GPL, LGPL, AGPL). They are aggregated with an MIT program
 as independent data, not as a derivative of it. Their corresponding source form
 (the `.dic` and `.aff` in this directory) is kept in the repository and
 published, which is what satisfies the source-availability requirement for the
-copyleft ones. The full license texts are not reproduced here; they are the
-standard texts identified by the SPDX identifiers below (see spdx.org/licenses
-and gnu.org/licenses). If a distribution channel requires the license text
-delivered alongside the binary, add the relevant texts here.
+copyleft ones.
+
+The full texts of the GNU copyleft licenses in use are included under
+[`licenses/`](licenses): `GPL-2.0.txt`, `GPL-3.0.txt`, `LGPL-2.1.txt`,
+`LGPL-3.0.txt` and `AGPL-3.0.txt`. `GPL-3.0.txt` is kept because `LGPL-3.0` is
+written as a set of additional permissions on top of it (and `it_IT`/`es_ES` are
+offered under GPL-3.0 directly). The remaining licenses that appear below
+(MPL-1.1 and MPL-2.0, the BSD variants, Apache-2.0, the Creative Commons ones,
+SISSL, and the SCOWL permissive terms for `en_US`) are named by their SPDX
+identifier only; their standard texts are at spdx.org/licenses. Add any of them
+under `licenses/` if a distribution channel requires the text delivered
+alongside the binary.
 
 ## Per-dictionary license
 
