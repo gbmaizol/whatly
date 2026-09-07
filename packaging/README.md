@@ -117,3 +117,7 @@ so the app downloads them on demand, and the packages then bundle only a minimum
 
 Do not build with `NONE` (or a partial set) before the `dictionaries` release is
 published, or a fresh install would have no dictionary and nowhere to get one.
+
+The dictionaries carry their own upstream licenses (mostly from the LibreOffice
+dictionaries project, several copyleft); they are listed per language in
+`src/dictionaries/LICENSES.md`. Update that file when a dictionary is added.
