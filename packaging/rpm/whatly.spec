@@ -1,5 +1,5 @@
 Name:           whatly
-Version:        7.4.0
+Version:        7.5.0
 # Reference system-Qt spec for downstream packagers; the release itself builds
 # the native rpm from packaging/obs/whatly.spec. Release kept at 0 to match it
 # (both are the system-Qt "whatly"), so this never looks newer than, or collides
@@ -65,6 +65,14 @@ not affiliated with WhatsApp or Meta.
 # %%{_datadir}/whatly/ back here if you do.
 
 %changelog
+* Mon Sep 07 2026 Ángel Guzmán Maeso <angel@guzmanmaeso.com> - 7.5.0-1
+- A fresh install fetches the system language's spell-check dictionary on first
+  run and bundles none, so a non-English user gets their own language instead of
+  a bundled en_US (#110). Packages no longer ship share/whatly.
+- The release pipeline can sign the AppImage when a key is configured (#85).
+- WhatsApp's "Refresh to update" notice no longer wrecks the collapsed chat list
+  (#109). Dictionary licenses are documented in src/dictionaries/LICENSES.md.
+
 * Sun Sep 06 2026 Ángel Guzmán Maeso <angel@guzmanmaeso.com> - 7.4.0-1
 - Settings can be opened without a system tray (a gear appears in the page when
   none is available, #103); the app icon is sharp in the task bar again (#105).

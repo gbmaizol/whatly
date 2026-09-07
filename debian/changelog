@@ -1,3 +1,21 @@
+whatly (7.5.0) unstable; urgency=medium
+
+  * A fresh install now fetches the spell-check dictionary for the system
+    language on first run and bundles none, so a non-English user gets their own
+    language instead of a bundled en_US that suited nobody in particular (#110).
+    The fetch acts once and stops on a deliberate removal, a language absent from
+    the manifest, or a connection that never comes up.
+  * The release pipeline can sign the AppImage when a signing key is configured,
+    groundwork for verifying self-updates; unsigned exactly as before with no key
+    (#85).
+  * WhatsApp's own "Refresh to update" notice no longer wrecks the collapsed chat
+    list; it is handled like the topmost chat instead (#109). Thanks to Gert
+    (gbmaizol).
+  * The dictionaries carry their own upstream licenses; these are now documented
+    in src/dictionaries/LICENSES.md. See CHANGELOG.md.
+
+ -- Ángel Guzmán Maeso <angel@guzmanmaeso.com>  Mon, 07 Sep 2026 12:00:00 +0200
+
 whatly (7.4.0) unstable; urgency=medium
 
   * Settings can be opened without a system tray — a small gear appears in the

@@ -108,6 +108,15 @@
   <content_rating type="oars-1.0" />
 
   <releases>
+    <release version="7.5.0" date="2026-09-07">
+      <description>
+        <ul>
+          <li>A fresh install fetches the spell-check dictionary for the system language on first run and bundles none, so a non-English user gets their own language instead of a bundled en_US (#110)</li>
+          <li>The release pipeline can sign the AppImage when a signing key is configured, groundwork for verifying self-updates (#85)</li>
+          <li>WhatsApp's own "Refresh to update" notice no longer wrecks the collapsed chat list; it is shown like the topmost chat instead (#109)</li>
+        </ul>
+      </description>
+    </release>
     <release version="7.4.0" date="2026-09-06">
       <description>
         <ul>
