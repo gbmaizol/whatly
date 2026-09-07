@@ -59,9 +59,12 @@
 #include <QVarLengthArray>
 #include "utils.h"
 #ifdef Q_OS_UNIX
+#include <fcntl.h>
+#include <spawn.h>
 #include <sys/syscall.h>
 #include <sys/wait.h>
 #include <unistd.h>
+extern char **environ;
 #endif
 #include "chatliststrip.h"
 #include "chatnav.h"
@@ -1638,22 +1641,16 @@ void MainWindow::restartApp() {
   };
 
 #ifdef Q_OS_UNIX
-  // Hand the new process the SAME stdout and stderr this one has.
-  // QProcess::startDetached deliberately does not — the child ends up on the
-  // controlling terminal — so a launch whose output was being piped into a log
-  // file stopped being logged the instant anything called this. "Restart now" is
-  // a button we put in Settings, and one press of it silently ended the log
-  // people are asked to attach to bug reports. Losing the log at the exact moment
-  // someone is reproducing a problem is the worst possible time to lose it.
-  //
-  // fork+exec keeps the descriptors, and that is the whole difference: the
-  // --restart-wait handshake, the arguments and the ordering are unchanged.
+  // Restart in place without QProcess::startDetached, which drops stdout/stderr
+  // (the child lands on the controlling terminal): a run whose output was piped
+  // to a log file stopped being logged the instant "Restart now" was pressed,
+  // the worst moment to lose the log a bug report needs (#62). Both paths below
+  // keep 0, 1 and 2 and drop every other descriptor, so the new process does not
+  // inherit this one's sockets or profile locks.
   if (!QFileInfo(exePath).isExecutable()) {
     failed();
     return;
   }
-  // Everything the child needs is built HERE, before the fork: between fork and
-  // exec only async-signal-safe calls are allowed, and allocating is not one.
   QList<QByteArray> argStore;
   argStore << exePath.toLocal8Bit();
   for (const QString &a : args)
@@ -1663,14 +1660,43 @@ void MainWindow::restartApp() {
     argv.append(a.data());
   argv.append(nullptr);
 
-  // fork, setsid, fork again — the dance startDetached does, and the part of it
-  // that a bare fork was missing. A plain child stays in the dying parent's
-  // session and process group, and does not survive it here: the new process got
-  // as far as printing its start-up line and was then taken down with the old
-  // one. It has to leave that session (setsid) and be orphaned onto init (the
-  // second fork) to outlive the instance that started it. stdout and stderr
-  // survive both forks untouched, which is the whole point of doing this at all;
-  // every other descriptor is closed just before exec, below.
+#if defined(POSIX_SPAWN_SETSID) && defined(__GLIBC_PREREQ)
+#if __GLIBC_PREREQ(2, 34)
+#define WHATLY_POSIX_SPAWN_RESTART 1
+#endif
+#endif
+
+#ifdef WHATLY_POSIX_SPAWN_RESTART
+  // posix_spawn, not fork(): forking a live QtWebEngine (Chromium) process is
+  // not fork-safe — Chromium's threads, locks and per-profile singleton are not
+  // built to survive it — and doing so on a restart wedged the new instance at
+  // ~100% CPU (#98). posix_spawn spawns a fresh process that execs at once,
+  // without cloning this address space or running pthread_atfork handlers.
+  // POSIX_SPAWN_SETSID gives it its own session so it outlives this instance;
+  // addclosefrom_np drops descriptors 3+ (only the open ones, so a gap cannot
+  // fail the spawn) while 0, 1 and 2 stay for the log.
+  posix_spawn_file_actions_t actions;
+  posix_spawn_file_actions_init(&actions);
+  posix_spawn_file_actions_addclosefrom_np(&actions, 3);
+  posix_spawnattr_t attr;
+  posix_spawnattr_init(&attr);
+  posix_spawnattr_setflags(&attr, POSIX_SPAWN_SETSID);
+  pid_t spawned = 0;
+  const int rc = ::posix_spawn(&spawned, argStore.first().constData(), &actions,
+                               &attr, argv.data(), environ);
+  posix_spawn_file_actions_destroy(&actions);
+  posix_spawnattr_destroy(&attr);
+  if (rc != 0) {
+    failed();
+    return;
+  }
+#undef WHATLY_POSIX_SPAWN_RESTART
+#else
+  // Fallback for a libc without POSIX_SPAWN_SETSID / addclosefrom_np: the older
+  // fork, setsid, fork, exec dance. A plain child stays in the dying parent's
+  // session and is taken down with it, so it leaves that session (setsid) and is
+  // orphaned onto init (the second fork) to survive. Only async-signal-safe
+  // calls run between fork and exec.
   const pid_t child = ::fork();
   if (child < 0) {
     failed();
@@ -1683,14 +1709,6 @@ void MainWindow::restartApp() {
     if (grandchild < 0)
       ::_exit(127);
     if (grandchild == 0) {
-      // Keep 0, 1 and 2 — they are the log, and the reason for all of this —
-      // and close everything above them. QProcess::startDetached used to do
-      // that for us, and dropping it cost the remote-debugging port: the old
-      // process's listening socket came through exec, so the new process could
-      // not bind it ("bind() failed: Address already in use", in the log of the
-      // session that found this) and the inherited socket sat there listening
-      // with nobody left to accept on it. Any other descriptor the old process
-      // held — profile locks among them — would travel the same way.
       bool closed = false;
 #ifdef SYS_close_range
       closed = ::syscall(SYS_close_range, 3, ~0U, 0) == 0;
@@ -1701,17 +1719,13 @@ void MainWindow::restartApp() {
           ::close(fd);
       }
       ::execv(argStore.first().constData(), argv.data());
-      // Only reachable if exec failed. Nobody is left to tell by now — the
-      // executable was checked before the first fork for exactly that reason.
       ::_exit(127);
     }
     ::_exit(0); // the middle process has done its job; init adopts the grandchild
   }
-  // Reap the middle process, which exits immediately. Without this it lingers as
-  // a zombie for as long as this instance takes to quit, and --restart-wait
-  // watches for a pid to disappear.
   int status = 0;
-  ::waitpid(child, &status, 0);
+  ::waitpid(child, &status, 0); // reap the middle process
+#endif
 #else
   if (!QProcess::startDetached(exePath, args)) {
     failed();
