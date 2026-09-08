@@ -4,22 +4,20 @@
 # QtWebEngine BaseApp, which carries the huge Chromium bits so the app itself
 # stays small. Build with packaging/flatpak/build-flatpak.sh, or by hand:
 #
-#   flatpak install -y flathub org.kde.Platform//6.9 org.kde.Sdk//6.9 \
-#       io.qt.qtwebengine.BaseApp//6.9
+#   flatpak install -y flathub org.kde.Platform//6.10 org.kde.Sdk//6.10 \
+#       io.qt.qtwebengine.BaseApp//6.10
 #   flatpak-builder --user --install --force-clean build-flatpak \
 #       packaging/flatpak/net.shakaran.whatly.yml
 #
-# Whatly's default Qt floor is 6.10, but the code's real requirement is 6.8
-# (QWebEnginePermission) and the KDE 6.9 runtime's Chromium is recent enough for
-# WhatsApp Web — so the build lowers the floor to 6.9 via -DQT_VERSION_MINOR (see
-# config-opts). If a KDE runtime for Qt 6.10 is available, bump the three
-# runtime versions to 6.10 and drop that config-opt.
+# On the KDE 6.10 runtime (Qt 6.10), which matches Whatly's default Qt floor, so
+# no -DQT_VERSION_MINOR override is needed. Moved off 6.9 once that runtime went
+# end-of-life (#111).
 app-id: net.shakaran.whatly
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 base: io.qt.qtwebengine.BaseApp
-base-version: '6.9'
+base-version: '6.10'
 command: whatly
 
 finish-args:
@@ -57,7 +55,6 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_INSTALL_PREFIX=/app
-      - -DQT_VERSION_MINOR=9
     sources:
       - type: git
         url: https://github.com/shakaran/whatly.git
