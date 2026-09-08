@@ -17,8 +17,14 @@ static const char kScriptName[] = "whatly-linked-device-name";
 // arbitrary text but the browser name is validated against known browsers
 // and silently omitted otherwise (both behaviors observed by re-linking a
 // phone). The wrapper exploits that: os carries the full brand text and name
-// is set to the unrecognized "Whatly", so the browser prefix disappears and
+// defaults to the unrecognized "Whatly", so the browser prefix disappears and
 // the label reads just "Whatly for Linux".
+//
+// That unrecognized name has a cost: WhatsApp's "Link with phone number" flow
+// refuses to issue a pairing code for an unknown browser (#43). So the browser
+// name is configurable (setting "linkedDeviceBrowserName"): leave it empty for
+// the clean "Whatly" label, or set a recognized name such as Chrome to make
+// phone-number linking work, accepting the prefix back in the label.
 //
 // The wrapper reads the LIVE name from window.__whatlyLinkedDeviceName, so
 // re-running this script on a loaded page toggles the override without a
@@ -28,7 +34,9 @@ static const char kScriptTemplate[] = R"JS(
 (function () {
   'use strict';
   var NAME = __NAME__;
-  window.__whatlyLinkedDeviceName = NAME;  // live value read by the wrapper
+  var BROWSER = __BROWSER__;
+  window.__whatlyLinkedDeviceName = NAME;      // live value read by the wrapper
+  window.__whatlyLinkedBrowserName = BROWSER;  // live browser name, "" -> Whatly
   if (window.__whatlyLinkedDeviceNameHooked || !NAME) return;
   var wrap = function (orig) {
     return function () {
@@ -36,7 +44,10 @@ static const char kScriptTemplate[] = R"JS(
       try {
         if (window.__whatlyLinkedDeviceName && inf) {
           inf.os = window.__whatlyLinkedDeviceName;
-          inf.name = 'Whatly';  // unknown browser → phone omits the prefix
+          // Empty keeps the stock "Whatly" (unknown to WhatsApp, so the phone
+          // drops the browser prefix for a clean label). A recognised name such
+          // as Chrome is what lets "Link with phone number" work (#43).
+          inf.name = window.__whatlyLinkedBrowserName || 'Whatly';
         }
       } catch (e) { /* keep the stock label */ }
       return inf;
@@ -135,20 +146,34 @@ static bool isEnabled() {
       .toBool();
 }
 
+// The browser name reported to the phone during linking. Empty by default; the
+// script then falls back to the stock "Whatly". A recognised name (e.g. Chrome)
+// is what lets "Link with phone number" work (#43), at the cost of the browser
+// prefix reappearing in the linked-devices label.
+static QString browserName() {
+  return SettingsManager::instance()
+      .settings()
+      .value(QStringLiteral("linkedDeviceBrowserName"))
+      .toString();
+}
+
+// A string bound for a JS double-quoted literal: a quote or backslash in it
+// (an account name or a user-typed browser name) must not break out.
+static QString jsLiteral(const QString &s) {
+  QString escaped = s;
+  escaped.replace(QLatin1Char('\\'), QLatin1String("\\\\"));
+  escaped.replace(QLatin1Char('"'), QLatin1String("\\\""));
+  return QStringLiteral("\"%1\"").arg(escaped);
+}
+
 QString scriptSource(const QString &accountLabel) {
   QString name = isEnabled() ? platformDeviceName() : QString();
   if (!name.isEmpty() && !accountLabel.isEmpty())
     name += QStringLiteral(" (%1)").arg(accountLabel);
 
-  // The label ends up inside a JS double-quoted string literal, so a quote or
-  // backslash in an account name must not break out of it.
-  QString escaped = name;
-  escaped.replace(QLatin1Char('\\'), QLatin1String("\\\\"));
-  escaped.replace(QLatin1Char('"'), QLatin1String("\\\""));
-
   QString source = QString::fromLatin1(kScriptTemplate);
-  source.replace(QLatin1String("__NAME__"),
-                 QStringLiteral("\"%1\"").arg(escaped));
+  source.replace(QLatin1String("__NAME__"), jsLiteral(name));
+  source.replace(QLatin1String("__BROWSER__"), jsLiteral(browserName()));
   return source;
 }
 

@@ -211,17 +211,17 @@ Do you wish to override the security check and continue ?   </source>
 <context>
     <name>ChatListStrip</name>
     <message>
-        <location filename="../chatliststrip.cpp" line="739"/>
+        <location filename="../chatliststrip.cpp" line="866"/>
         <source>Small</source>
         <translation>작게</translation>
     </message>
     <message>
-        <location filename="../chatliststrip.cpp" line="741"/>
+        <location filename="../chatliststrip.cpp" line="868"/>
         <source>Medium</source>
         <translation>보통</translation>
     </message>
     <message>
-        <location filename="../chatliststrip.cpp" line="743"/>
+        <location filename="../chatliststrip.cpp" line="870"/>
         <source>Large</source>
         <translation>크게</translation>
     </message>
@@ -378,17 +378,17 @@ Do you wish to override the security check and continue ?   </source>
 <context>
     <name>DictionaryManager</name>
     <message>
-        <location filename="../dictionarymanager.cpp" line="112"/>
+        <location filename="../dictionarymanager.cpp" line="113"/>
         <source>No writable dictionary directory.</source>
         <translation>쓰기 가능한 사전 디렉터리가 없습니다.</translation>
     </message>
     <message>
-        <location filename="../dictionarymanager.cpp" line="142"/>
+        <location filename="../dictionarymanager.cpp" line="143"/>
         <source>The downloaded dictionary failed verification.</source>
         <translation>다운로드한 사전의 검증에 실패했습니다.</translation>
     </message>
     <message>
-        <location filename="../dictionarymanager.cpp" line="152"/>
+        <location filename="../dictionarymanager.cpp" line="153"/>
         <source>Could not save the dictionary.</source>
         <translation>사전을 저장할 수 없습니다.</translation>
     </message>
@@ -580,22 +580,22 @@ Do you wish to override the security check and continue ?   </source>
         <translation>최근 안 읽음</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="922"/>
+        <location filename="../mainwindow_webengine.cpp" line="928"/>
         <source>Reply</source>
         <translation>답장</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="923"/>
+        <location filename="../mainwindow_webengine.cpp" line="929"/>
         <source>Reply to %1…</source>
         <translation>%1에게 답장…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1071"/>
+        <location filename="../mainwindow_webengine.cpp" line="1077"/>
         <source>Waiting for network…</source>
         <translation>네트워크 대기 중…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1198"/>
+        <location filename="../mainwindow_webengine.cpp" line="1204"/>
         <source>This build cannot send H.264/MP4 videos: its browser engine was built without the proprietary codecs. Photos and WebM/VP9 videos work. For MP4, use the Flatpak, whose engine is built with them. (Click to dismiss.)</source>
         <translation>이 빌드는 H.264/MP4 동영상을 보낼 수 없습니다. 브라우저 엔진이 독점 코덱 없이 빌드되었기 때문입니다. 사진과 WebM/VP9 동영상은 정상 작동합니다. MP4의 경우 해당 코덱이 포함되어 엔진이 빌드된 Flatpak을 사용하세요. (클릭하여 닫기.)</translation>
     </message>
@@ -604,435 +604,451 @@ Do you wish to override the security check and continue ?   </source>
         <translation type="vanished">이 빌드는 H.264/MP4 동영상을 보낼 수 없습니다. 브라우저 엔진이 독점 코덱 없이 빌드되었습니다. 사진과 WebM/VP9 동영상은 작동합니다. MP4는 코덱이 포함된 배포판/네이티브 패키지를 사용하세요. (클릭하여 닫기.)</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1511"/>
+        <location filename="../mainwindow_webengine.cpp" line="1517"/>
         <source>Inline translation is off (enable it in Settings → Translation).</source>
         <translation>인라인 번역이 꺼져 있습니다 (설정 → 번역에서 켜세요).</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1515"/>
+        <location filename="../mainwindow_webengine.cpp" line="1521"/>
         <source>The message box is empty.</source>
         <translation>메시지 입력란이 비어 있습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1516"/>
+        <location filename="../mainwindow_webengine.cpp" line="1522"/>
         <source>Select some text to translate first.</source>
         <translation>먼저 번역할 텍스트를 선택하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1554"/>
+        <location filename="../mainwindow_webengine.cpp" line="1560"/>
         <source>No conversation is open.</source>
         <translation>열린 대화가 없습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1558"/>
+        <location filename="../mainwindow_webengine.cpp" line="1564"/>
         <source>An export is already running.</source>
         <translation>이미 내보내기가 진행 중입니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1563"/>
+        <location filename="../mainwindow_webengine.cpp" line="1569"/>
         <source>Choose a folder for the exported chat</source>
         <translation>내보낼 채팅을 저장할 폴더 선택</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1569"/>
+        <location filename="../mainwindow_webengine.cpp" line="1575"/>
         <source>Collecting messages… scrolling through the conversation.</source>
         <translation>메시지 수집 중… 대화를 스크롤하는 중입니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1502"/>
-        <location filename="../mainwindow_webengine.cpp" line="1570"/>
+        <location filename="../mainwindow.cpp" line="1529"/>
+        <location filename="../mainwindow_webengine.cpp" line="1576"/>
         <source>Cancel</source>
         <translation type="unfinished">취소</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1617"/>
+        <location filename="../mainwindow_webengine.cpp" line="1623"/>
         <source>Collecting messages… (%1 so far)</source>
         <translation>메시지 수집 중… (현재 %1개)</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1623"/>
+        <location filename="../mainwindow_webengine.cpp" line="1629"/>
         <source>Could not read the conversation: %1</source>
         <translation>대화를 읽을 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1969"/>
+        <location filename="../mainwindow_webengine.cpp" line="1975"/>
         <source>Do Not Disturb on.</source>
         <translation>방해 금지 켜짐.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1969"/>
+        <location filename="../mainwindow_webengine.cpp" line="1975"/>
         <source>Do Not Disturb off.</source>
         <translation>방해 금지 꺼짐.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1977"/>
-        <location filename="../mainwindow_webengine.cpp" line="1993"/>
+        <location filename="../mainwindow_webengine.cpp" line="1983"/>
+        <location filename="../mainwindow_webengine.cpp" line="1999"/>
         <source>Do Not Disturb on until %1.</source>
         <translation>방해 금지 켜짐 (%1까지).</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2004"/>
+        <location filename="../mainwindow_webengine.cpp" line="2010"/>
         <source>Open a chat to set a reply reminder.</source>
         <translation>답장 알림을 설정하려면 채팅을 여세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2010"/>
+        <location filename="../mainwindow_webengine.cpp" line="2016"/>
         <source>Time to reply to this chat.</source>
         <translation>이 채팅에 답장할 시간입니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2013"/>
+        <location filename="../mainwindow_webengine.cpp" line="2019"/>
         <source>Reply reminder set for %1.</source>
         <translation>답장 알림을 %1(으)로 설정했습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2044"/>
-        <location filename="../mainwindow_webengine.cpp" line="2068"/>
+        <location filename="../mainwindow_webengine.cpp" line="2050"/>
+        <location filename="../mainwindow_webengine.cpp" line="2074"/>
         <source>Low disk space</source>
         <translation>디스크 공간 부족</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2045"/>
+        <location filename="../mainwindow_webengine.cpp" line="2051"/>
         <source>Whatly&apos;s data folder has only %1 free.</source>
         <translation>Whatly 데이터 폴더에 %1만 남았습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2048"/>
+        <location filename="../mainwindow_webengine.cpp" line="2054"/>
         <source>With so little space, WhatsApp Web&apos;s local database can be corrupted by a truncated write, which forces you to link your phone again. Move Whatly&apos;s data folder to a disk with more room, or free up space.</source>
         <translation>공간이 이렇게 적으면 쓰기가 잘려 WhatsApp Web의 로컬 데이터베이스가 손상되어 휴대폰을 다시 연결해야 할 수 있습니다. Whatly 데이터 폴더를 여유 공간이 많은 디스크로 옮기거나 공간을 확보하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2052"/>
+        <location filename="../mainwindow_webengine.cpp" line="2058"/>
         <source>Change folder…</source>
         <translation>폴더 변경…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2053"/>
+        <location filename="../mainwindow_webengine.cpp" line="2059"/>
         <source>Later</source>
         <translation type="unfinished">나중에</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2061"/>
+        <location filename="../mainwindow_webengine.cpp" line="2067"/>
         <source>Choose a data folder for Whatly</source>
         <translation>Whatly 데이터 폴더 선택</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2069"/>
+        <location filename="../mainwindow_webengine.cpp" line="2075"/>
         <source>That folder is also low on space (%1 free). Please pick another.</source>
         <translation>그 폴더도 공간이 부족합니다(%1 남음). 다른 폴더를 선택하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2076"/>
+        <location filename="../mainwindow_webengine.cpp" line="2082"/>
         <source>Restart Whatly</source>
         <translation>Whatly 다시 시작</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2077"/>
+        <location filename="../mainwindow_webengine.cpp" line="2083"/>
         <source>Whatly will use &quot;%1&quot; as its data folder after a restart. Your current data stays where it is (you can move it there yourself). Restart now?</source>
         <translation>다시 시작하면 Whatly가 &quot;%1&quot;을(를) 데이터 폴더로 사용합니다. 현재 데이터는 그대로 남습니다(직접 옮길 수 있습니다). 지금 다시 시작할까요?</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2097"/>
+        <location filename="../mainwindow_webengine.cpp" line="2103"/>
         <source>No unread chats to summarise.</source>
         <translation>요약할 읽지 않은 채팅이 없습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2102"/>
+        <location filename="../mainwindow_webengine.cpp" line="2108"/>
         <source>Unread digest</source>
         <translation>읽지 않음 요약</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1591"/>
-        <location filename="../mainwindow_webengine.cpp" line="1646"/>
+        <location filename="../mainwindow_accounts.cpp" line="1592"/>
+        <location filename="../mainwindow_webengine.cpp" line="1652"/>
         <source>chat</source>
         <translation>채팅</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1591"/>
+        <location filename="../mainwindow_accounts.cpp" line="1592"/>
         <source>chats</source>
         <translation>채팅</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1658"/>
+        <location filename="../mainwindow_webengine.cpp" line="1664"/>
         <source>Could not create the export folder.</source>
         <translation>내보내기 폴더를 만들 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1688"/>
+        <location filename="../mainwindow_webengine.cpp" line="1694"/>
         <source>The export could not be fully written.</source>
         <translation>내보내기를 완전히 저장하지 못했습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1692"/>
+        <location filename="../mainwindow_webengine.cpp" line="1698"/>
         <source>Saved %1 messages and %2 media files to %3</source>
         <translation>메시지 %1개와 미디어 파일 %2개를 %3에 저장했습니다</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1781"/>
+        <location filename="../mainwindow_webengine.cpp" line="1787"/>
         <source>The AI assistant is off (enable it in Settings → AI assistant).</source>
         <translation>AI 어시스턴트가 꺼져 있습니다 (설정 → AI 어시스턴트에서 켜세요).</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1786"/>
+        <location filename="../mainwindow_webengine.cpp" line="1792"/>
         <source>There is nothing for the assistant to work on.</source>
         <translation>어시스턴트가 처리할 내용이 없습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1798"/>
+        <location filename="../mainwindow_webengine.cpp" line="1804"/>
         <source>Asking the assistant… (low memory: %1 MB free; a local model may fail or slow the app)</source>
         <translation>어시스턴트에 요청 중… (메모리 부족: %1 MB 남음; 로컬 모델이 실패하거나 앱이 느려질 수 있습니다)</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1803"/>
+        <location filename="../mainwindow_webengine.cpp" line="1809"/>
         <source>Asking the assistant…</source>
         <translation>어시스턴트에 요청 중…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1824"/>
+        <location filename="../mainwindow_webengine.cpp" line="1830"/>
         <source>AI assistant</source>
         <translation type="unfinished">AI 어시스턴트</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1883"/>
+        <location filename="../mainwindow_webengine.cpp" line="1889"/>
         <source>Message updated.</source>
         <translation>메시지가 업데이트되었습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1849"/>
-        <location filename="../mainwindow_webengine.cpp" line="1863"/>
-        <location filename="../mainwindow_webengine.cpp" line="1886"/>
+        <location filename="../mainwindow_webengine.cpp" line="1855"/>
+        <location filename="../mainwindow_webengine.cpp" line="1869"/>
+        <location filename="../mainwindow_webengine.cpp" line="1892"/>
         <source>AI result</source>
         <translation>AI 결과</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1210"/>
+        <location filename="../mainwindow_webengine.cpp" line="1216"/>
         <source>This build cannot send H.264/MP4 videos: its browser engine was built without the proprietary codecs, and no build of Whatly with them exists for this platform. Photos and WebM/VP9 videos work; to send an MP4, convert it to WebM first or share it as a document. (Click to dismiss.)</source>
         <translation>이 빌드는 H.264/MP4 동영상을 보낼 수 없습니다. 브라우저 엔진이 독점 코덱 없이 빌드되었으며, 이 플랫폼용으로 코덱이 포함된 Whatly 빌드는 없습니다. 사진과 WebM/VP9 동영상은 작동합니다. MP4를 보내려면 먼저 WebM으로 변환하거나 문서로 공유하세요. (클릭하여 닫기)</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1222"/>
+        <location filename="../mainwindow_webengine.cpp" line="1228"/>
         <source>Voice and video calls need the same codecs, so this build cannot make them either.</source>
         <translation>음성 통화와 영상 통화는 동일한 코덱이 필요하므로 이 빌드에서는 이 기능도 사용할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1899"/>
+        <location filename="../mainwindow_webengine.cpp" line="1905"/>
         <source>Chat summary</source>
         <translation>채팅 요약</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1839"/>
+        <location filename="../mainwindow_webengine.cpp" line="1845"/>
         <source>Close</source>
         <translation type="unfinished">닫기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="122"/>
-        <location filename="../mainwindow.cpp" line="1278"/>
-        <location filename="../mainwindow.cpp" line="1374"/>
+        <location filename="../mainwindow.cpp" line="126"/>
+        <location filename="../mainwindow.cpp" line="1287"/>
+        <location filename="../mainwindow.cpp" line="1383"/>
         <source>No WhatsApp window is open</source>
         <translation>열려 있는 WhatsApp 창이 없습니다</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1270"/>
+        <location filename="../mainwindow.cpp" line="1279"/>
         <source>Could not understand the recipient: %1</source>
         <translation>수신자를 인식할 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1333"/>
+        <location filename="../mainwindow.cpp" line="1342"/>
         <source>Opening the group and sending…</source>
         <translation>그룹을 열고 전송하는 중…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1365"/>
+        <location filename="../mainwindow.cpp" line="1374"/>
         <source>The local API could not start: %1</source>
         <translation>로컬 API를 시작할 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1245"/>
+        <location filename="../mainwindow.cpp" line="1254"/>
         <source>Cloud API send failed: %1</source>
         <translation>Cloud API 전송 실패: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1236"/>
+        <location filename="../mainwindow.cpp" line="1245"/>
         <source>The Cloud API is not configured.</source>
         <translation>Cloud API가 구성되지 않았습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1231"/>
+        <location filename="../mainwindow.cpp" line="1240"/>
         <source>The Cloud API needs a phone number as the recipient.</source>
         <translation>Cloud API에는 수신자로 전화번호가 필요합니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1334"/>
+        <location filename="../mainwindow.cpp" line="1343"/>
         <source>Opening the chat with &quot;%1&quot; and sending…</source>
         <translation>&quot;%1&quot;와의 채팅을 열고 전송하는 중…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="127"/>
+        <location filename="../mainwindow.cpp" line="131"/>
         <source>Reminder</source>
         <translation>알림</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="127"/>
+        <location filename="../mainwindow.cpp" line="131"/>
         <source>Reminder: %1</source>
         <translation>알림: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="265"/>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="274"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>Update available</source>
         <translation>업데이트 사용 가능</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="254"/>
+        <location filename="../mainwindow.cpp" line="263"/>
         <source>Whatly %1 is available. Click to open the download page.</source>
         <translation>Whatly %1을(를) 사용할 수 있습니다. 클릭하여 다운로드 페이지를 여세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="234"/>
+        <location filename="../mainwindow.cpp" line="243"/>
         <source>Whatly %1 is available. Update it through Flathub or your software centre.</source>
         <translation>Whatly %1 을(를) 사용할 수 있습니다. Flathub 또는 소프트웨어 센터를 통해 업데이트하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="239"/>
+        <location filename="../mainwindow.cpp" line="248"/>
         <source>Whatly %1 is available. Update it with your package manager.</source>
         <translation>Whatly %1 을(를) 사용할 수 있습니다. 패키지 관리자로 업데이트하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="244"/>
+        <location filename="../mainwindow.cpp" line="253"/>
         <source>Whatly %1 is available. Choose Update now to fetch just the parts that changed and update in place.</source>
         <translation>Whatly %1을(를) 사용할 수 있습니다. 변경된 부분만 받아 제자리에서 업데이트하려면 지금 업데이트를 선택하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="247"/>
+        <location filename="../mainwindow.cpp" line="256"/>
         <source>Whatly %1 is available. This AppImage can update itself in place with AppImageUpdate, fetching only the parts that changed.</source>
         <translation>Whatly %1 을(를) 사용할 수 있습니다. 이 AppImage는 AppImageUpdate로 제자리에서 업데이트할 수 있으며, 변경된 부분만 내려받습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="271"/>
+        <location filename="../mainwindow.cpp" line="280"/>
         <source>Update now</source>
         <translation>지금 업데이트</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="905"/>
         <location filename="../mainwindow.cpp" line="914"/>
+        <location filename="../mainwindow.cpp" line="923"/>
         <source>Diagnostics</source>
         <translation>진단</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="906"/>
+        <location filename="../mainwindow.cpp" line="915"/>
         <source>No scroll diagnostics recorded yet. Turn on collection, scroll a chat for a few seconds, then copy.</source>
         <translation>아직 기록된 스크롤 진단이 없습니다. 수집을 켜고 채팅을 몇 초 동안 스크롤한 다음 복사하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="915"/>
+        <location filename="../mainwindow.cpp" line="924"/>
         <source>Scroll diagnostics copied to the clipboard (and added to the log). Paste them into your bug report.</source>
         <translation>스크롤 진단을 클립보드에 복사했습니다(로그에도 추가됨). 버그 보고서에 붙여넣으세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1012"/>
-        <location filename="../mainwindow.cpp" line="1018"/>
-        <location filename="../mainwindow_webengine.cpp" line="1030"/>
-        <location filename="../mainwindow_webengine.cpp" line="1033"/>
+        <location filename="../mainwindow.cpp" line="1021"/>
+        <location filename="../mainwindow.cpp" line="1027"/>
+        <location filename="../mainwindow_webengine.cpp" line="1036"/>
+        <location filename="../mainwindow_webengine.cpp" line="1039"/>
         <source>| Error</source>
         <translation>| 오류</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1013"/>
+        <location filename="../mainwindow.cpp" line="1022"/>
         <source>Unlock to access Settings.</source>
         <translation>설정에 접근하려면 잠금을 해제하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1019"/>
+        <location filename="../mainwindow.cpp" line="1028"/>
         <source>Unable to initialize settings module.
 Webengine is not initialized.</source>
         <translation>설정 모듈을 초기화할 수 없습니다.
 WebEngine이 초기화되지 않았습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1040"/>
+        <location filename="../mainwindow.cpp" line="1049"/>
         <source> | Action required</source>
         <translation> | 작업 필요</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1041"/>
+        <location filename="../mainwindow.cpp" line="1050"/>
         <source>Page needs to be reloaded to continue.</source>
         <translation>계속하려면 페이지를 다시 불러와야 합니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1220"/>
-        <location filename="../mainwindow.cpp" line="1862"/>
-        <location filename="../mainwindow_webengine.cpp" line="1725"/>
+        <location filename="../mainwindow.cpp" line="1229"/>
+        <location filename="../mainwindow.cpp" line="1944"/>
+        <location filename="../mainwindow_webengine.cpp" line="1731"/>
         <source>Whatly is locked. Unlock it to send messages.</source>
         <translation>Whatly가 잠겨 있습니다. 메시지를 보내려면 잠금을 해제하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1502"/>
+        <location filename="../mainwindow.cpp" line="1529"/>
         <source>Updating Whatly…</source>
         <translation>Whatly 업데이트 중…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1504"/>
-        <location filename="../mainwindow.cpp" line="1545"/>
-        <location filename="../mainwindow.cpp" line="1551"/>
-        <location filename="../mainwindow.cpp" line="1563"/>
+        <location filename="../mainwindow.cpp" line="1531"/>
+        <location filename="../mainwindow.cpp" line="1572"/>
+        <location filename="../mainwindow.cpp" line="1599"/>
+        <location filename="../mainwindow.cpp" line="1623"/>
+        <location filename="../mainwindow.cpp" line="1634"/>
         <source>Software update</source>
         <translation>소프트웨어 업데이트</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1546"/>
+        <location filename="../mainwindow.cpp" line="1573"/>
         <source>The update could not be completed. You can download the new version from the release page instead.</source>
         <translation>업데이트를 완료할 수 없습니다. 대신 릴리스 페이지에서 새 버전을 내려받을 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1552"/>
+        <location filename="../mainwindow.cpp" line="1596"/>
+        <source>The previous version has been restored.</source>
+        <translation>이전 버전으로 복원되었습니다.</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1600"/>
+        <source>The downloaded update failed signature verification and was not applied.</source>
+        <translation>다운로드한 업데이트가 서명 검증에 실패하여 적용되지 않았습니다.</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1616"/>
+        <source>Whatly was updated, but its signature could not be verified. Restart now to use the new version?</source>
+        <translation>Whatly가 업데이트되었지만 서명을 확인할 수 없습니다. 새 버전을 사용하려면 지금 다시 시작하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1618"/>
         <source>Whatly was updated. Restart now to use the new version?</source>
         <translation>Whatly가 업데이트되었습니다. 새 버전을 사용하려면 지금 다시 시작할까요?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1564"/>
+        <location filename="../mainwindow.cpp" line="1635"/>
         <source>The update tool could not be started.</source>
         <translation>업데이트 도구를 시작할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1590"/>
+        <location filename="../mainwindow.cpp" line="1661"/>
         <source>Restart</source>
         <translation>다시 시작</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1591"/>
+        <location filename="../mainwindow.cpp" line="1662"/>
         <source>Whatly could not start a new instance, so it has not closed this one. Please quit and reopen it.</source>
         <translation>Whatly가 새 인스턴스를 시작하지 못해 현재 인스턴스를 닫지 않았습니다. 앱을 종료한 후 다시 열어 주세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1717"/>
+        <location filename="../mainwindow.cpp" line="1799"/>
         <source>Expand the chat list</source>
         <translation>채팅 목록 펼치기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1718"/>
+        <location filename="../mainwindow.cpp" line="1800"/>
         <location filename="../mainwindow_tray.cpp" line="370"/>
         <source>Collapse the chat list</source>
         <translation>채팅 목록 접기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="268"/>
-        <location filename="../mainwindow.cpp" line="1838"/>
+        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="1920"/>
         <source>Open</source>
         <translation>열기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1884"/>
+        <location filename="../mainwindow.cpp" line="1966"/>
         <location filename="../mainwindow_tray.cpp" line="29"/>
         <source>New Chat</source>
         <translation>새 대화</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1885"/>
+        <location filename="../mainwindow.cpp" line="1967"/>
         <source>Enter a valid WhatsApp number with country code (ex- +91XXXXXXXXXX)</source>
         <translation>국가 번호를 포함한 유효한 WhatsApp 번호를 입력하세요 (예: +82XXXXXXXXXX)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1915"/>
+        <location filename="../mainwindow.cpp" line="1997"/>
         <source>Rate Application</source>
         <translation>앱 평가</translation>
     </message>
@@ -1280,13 +1296,13 @@ Open Settings now?</source>
     </message>
     <message>
         <location filename="../mainwindow_tray.cpp" line="377"/>
-        <location filename="../mainwindow_webengine.cpp" line="1554"/>
-        <location filename="../mainwindow_webengine.cpp" line="1558"/>
-        <location filename="../mainwindow_webengine.cpp" line="1571"/>
-        <location filename="../mainwindow_webengine.cpp" line="1622"/>
-        <location filename="../mainwindow_webengine.cpp" line="1657"/>
-        <location filename="../mainwindow_webengine.cpp" line="1687"/>
-        <location filename="../mainwindow_webengine.cpp" line="1691"/>
+        <location filename="../mainwindow_webengine.cpp" line="1560"/>
+        <location filename="../mainwindow_webengine.cpp" line="1564"/>
+        <location filename="../mainwindow_webengine.cpp" line="1577"/>
+        <location filename="../mainwindow_webengine.cpp" line="1628"/>
+        <location filename="../mainwindow_webengine.cpp" line="1663"/>
+        <location filename="../mainwindow_webengine.cpp" line="1693"/>
+        <location filename="../mainwindow_webengine.cpp" line="1697"/>
         <source>Export chat</source>
         <translation>채팅 내보내기</translation>
     </message>
@@ -1317,93 +1333,93 @@ Open Settings now?</source>
         <translation>맞춤법</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="599"/>
+        <location filename="../mainwindow_tray.cpp" line="601"/>
         <source>hidden</source>
         <translation>숨김</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="601"/>
+        <location filename="../mainwindow_tray.cpp" line="603"/>
         <source>minimised</source>
         <translation>최소화</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="638"/>
+        <location filename="../mainwindow_tray.cpp" line="640"/>
         <source>All of them</source>
         <translation>전체</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="653"/>
+        <location filename="../mainwindow_tray.cpp" line="655"/>
         <source>No spell-check language is installed.</source>
         <translation>설치된 맞춤법 검사 언어가 없습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="654"/>
+        <location filename="../mainwindow_tray.cpp" line="656"/>
         <source>Only one spell-check language is chosen. Pick more in Settings to switch between them.</source>
         <translation>맞춤법 검사 언어가 하나만 선택되어 있습니다. 전환하려면 설정에서 더 선택하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="677"/>
+        <location filename="../mainwindow_tray.cpp" line="679"/>
         <source>Spelling: every chosen language</source>
         <translation>맞춤법: 선택한 모든 언어</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="678"/>
+        <location filename="../mainwindow_tray.cpp" line="680"/>
         <source>Spelling: %1</source>
         <translation>맞춤법: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow_accounts.cpp" line="348"/>
-        <location filename="../mainwindow_accounts.cpp" line="1817"/>
+        <location filename="../mainwindow_accounts.cpp" line="1818"/>
         <source>Rename…</source>
         <translation>이름 바꾸기…</translation>
     </message>
     <message>
         <location filename="../mainwindow_accounts.cpp" line="349"/>
-        <location filename="../mainwindow_accounts.cpp" line="1818"/>
+        <location filename="../mainwindow_accounts.cpp" line="1819"/>
         <source>Open in own window</source>
         <translation>독립 창으로 열기</translation>
     </message>
     <message>
         <location filename="../mainwindow_accounts.cpp" line="353"/>
-        <location filename="../mainwindow_accounts.cpp" line="1821"/>
+        <location filename="../mainwindow_accounts.cpp" line="1822"/>
         <source>Remove account</source>
         <translation>계정 제거</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="438"/>
+        <location filename="../mainwindow_accounts.cpp" line="439"/>
         <source>Switch to account: %1</source>
         <translation>계정으로 전환: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="441"/>
+        <location filename="../mainwindow_accounts.cpp" line="442"/>
         <location filename="../mainwindow_tray.cpp" line="321"/>
         <source>Add account…</source>
         <translation>계정 추가…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="442"/>
+        <location filename="../mainwindow_accounts.cpp" line="443"/>
         <source>Quick message…</source>
         <translation>빠른 메시지…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="447"/>
+        <location filename="../mainwindow_accounts.cpp" line="448"/>
         <source>Insert: %1</source>
         <translation>삽입: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="755"/>
+        <location filename="../mainwindow_accounts.cpp" line="756"/>
         <source>%1 — %2 unread</source>
         <translation>%1 — 읽지 않음 %2개</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1561"/>
-        <location filename="../mainwindow_accounts.cpp" line="2220"/>
+        <location filename="../mainwindow_accounts.cpp" line="1562"/>
+        <location filename="../mainwindow_accounts.cpp" line="2221"/>
         <source>Add another account</source>
         <translation>다른 계정 추가</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1590"/>
-        <location filename="../mainwindow_accounts.cpp" line="1617"/>
+        <location filename="../mainwindow_accounts.cpp" line="1591"/>
+        <location filename="../mainwindow_accounts.cpp" line="1618"/>
         <source>Restore</source>
         <translation>복원</translation>
     </message>
@@ -1416,39 +1432,39 @@ Open Settings now?</source>
         <translation type="vanished">개의 메시지</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1663"/>
+        <location filename="../mainwindow_accounts.cpp" line="1664"/>
         <source>Add account</source>
         <translation>계정 추가</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1664"/>
+        <location filename="../mainwindow_accounts.cpp" line="1665"/>
         <source>Name for the new account:</source>
         <translation>새 계정 이름:</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1665"/>
-        <location filename="../mainwindow_accounts.cpp" line="2558"/>
-        <location filename="../mainwindow_accounts.cpp" line="2563"/>
+        <location filename="../mainwindow_accounts.cpp" line="1666"/>
+        <location filename="../mainwindow_accounts.cpp" line="2559"/>
+        <location filename="../mainwindow_accounts.cpp" line="2564"/>
         <source>Account %1</source>
         <translation>계정 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1694"/>
+        <location filename="../mainwindow_accounts.cpp" line="1695"/>
         <source>Rename account</source>
         <translation>계정 이름 바꾸기</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1694"/>
+        <location filename="../mainwindow_accounts.cpp" line="1695"/>
         <source>Account name:</source>
         <translation>계정 이름:</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="2239"/>
+        <location filename="../mainwindow_accounts.cpp" line="2240"/>
         <source>Tip: give an account its own window</source>
         <translation>팁: 계정에 전용 창 주기</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="2240"/>
+        <location filename="../mainwindow_accounts.cpp" line="2241"/>
         <source>You now have more than one account, shown as tabs along the top.
 
 You can pull any account out into its own window: right-click its tab and choose “Open in own window”. Close that window to dock the account back as a tab.</source>
@@ -1457,25 +1473,25 @@ You can pull any account out into its own window: right-click its tab and choose
 어떤 계정이든 독립 창으로 꺼낼 수 있습니다. 해당 탭을 마우스 오른쪽 버튼으로 클릭하고 “독립 창으로 열기”를 선택하세요. 그 창을 닫으면 계정이 다시 탭으로 도킹됩니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="2552"/>
-        <location filename="../mainwindow_accounts.cpp" line="2556"/>
+        <location filename="../mainwindow_accounts.cpp" line="2553"/>
+        <location filename="../mainwindow_accounts.cpp" line="2557"/>
         <source>Account 1</source>
         <translation>계정 1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1028"/>
+        <location filename="../mainwindow_webengine.cpp" line="1034"/>
         <source>Unlock to Reload the App.</source>
         <translation>앱을 새로 고치려면 잠금을 해제하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1299"/>
-        <location filename="../mainwindow.cpp" line="1380"/>
+        <location filename="../mainwindow.cpp" line="1308"/>
+        <location filename="../mainwindow.cpp" line="1389"/>
         <source>Could not read the file to send: %1</source>
         <translation>보낼 파일을 읽을 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1308"/>
-        <location filename="../mainwindow.cpp" line="1390"/>
+        <location filename="../mainwindow.cpp" line="1317"/>
+        <location filename="../mainwindow.cpp" line="1399"/>
         <source>The file is too large to send over the web backend.</source>
         <translation>파일이 너무 커서 web 백엔드로 보낼 수 없습니다.</translation>
     </message>
@@ -1665,104 +1681,104 @@ You can pull any account out into its own window: right-click its tab and choose
         <translation>디버그 정보 숨기기</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="205"/>
+        <location filename="../main.cpp" line="207"/>
         <source>Nothing to migrate from &quot;%1&quot; — already migrated, or no data found there.</source>
         <translation>&quot;%1&quot;에서 마이그레이션할 항목이 없습니다 — 이미 완료되었거나 데이터가 없습니다.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="210"/>
+        <location filename="../main.cpp" line="212"/>
         <source>Would copy:</source>
         <translation>복사 예정:</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="210"/>
+        <location filename="../main.cpp" line="212"/>
         <source>Copied:</source>
         <translation>복사됨:</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="214"/>
+        <location filename="../main.cpp" line="216"/>
         <source>Run again without --dry-run to perform the copy.</source>
         <translation>복사를 수행하려면 --dry-run 없이 다시 실행하세요.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="656"/>
+        <location filename="../main.cpp" line="671"/>
         <source>Feature rich WhatsApp web client based on Qt WebEngine</source>
         <translation>Qt WebEngine 기반의 다기능 WhatsApp Web 클라이언트</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="663"/>
+        <location filename="../main.cpp" line="678"/>
         <source>Displays help on commandline options</source>
         <translation>명령줄 옵션 도움말을 표시합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="668"/>
+        <location filename="../main.cpp" line="683"/>
         <source>Opens Settings dialog in a running instance of </source>
         <translation>실행 중인 인스턴스에서 설정을 엽니다: </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="673"/>
+        <location filename="../main.cpp" line="688"/>
         <source>Locks a running instance of </source>
         <translation>실행 중인 인스턴스를 잠급니다: </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="679"/>
+        <location filename="../main.cpp" line="694"/>
         <source>Opens About dialog in a running instance of </source>
         <translation>실행 중인 인스턴스에서 «정보» 창을 엽니다: </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="684"/>
+        <location filename="../main.cpp" line="699"/>
         <source>Opens the scheduled messages dialog in a running instance of </source>
         <translation>실행 중인 인스턴스에서 예약 메시지 대화상자를 엽니다 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="691"/>
+        <location filename="../main.cpp" line="706"/>
         <source>Toggle between dark &amp; light theme in a running instance of </source>
         <translation>실행 중인 인스턴스에서 밝은 테마와 어두운 테마를 전환합니다: </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="698"/>
+        <location filename="../main.cpp" line="713"/>
         <source>Reload the app in a running instance of </source>
         <translation>실행 중인 인스턴스에서 앱을 새로 고칩니다: </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="704"/>
+        <location filename="../main.cpp" line="719"/>
         <source>Open new chat prompt in a running instance of </source>
         <translation>실행 중인 인스턴스에서 새 대화 창을 엽니다: </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="717"/>
+        <location filename="../main.cpp" line="732"/>
         <source>Run as a separate account with its own session and settings, in its own window</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;자체 세션과 설정을 가진 별도 계정으로, 별도의 창에서 실행합니다&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="734"/>
+        <location filename="../main.cpp" line="749"/>
         <source>Show main window of running instance of </source>
         <translation>실행 중인 인스턴스의 기본 창을 표시합니다: </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="741"/>
+        <location filename="../main.cpp" line="756"/>
         <source>Copy settings and the logged-in session from a previous install (e.g. the older &quot;whatsie&quot; build) into this one, then exit</source>
         <translation>이전 설치(예: 이전 &quot;whatsie&quot; 빌드)에서 설정과 로그인된 세션을 여기로 복사한 후 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="748"/>
+        <location filename="../main.cpp" line="763"/>
         <source>With --migrate-from, only report what would be copied</source>
         <translation>--migrate-from와 함께 사용하면 복사될 항목만 표시합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="766"/>
+        <location filename="../main.cpp" line="781"/>
         <source>Print the current unread message count and exit</source>
         <translation>현재 읽지 않은 메시지 수를 출력하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="1291"/>
+        <location filename="../main.cpp" line="1315"/>
         <source>App lock is not configured, 
 Please setup the password in the Settings first.</source>
         <translation>앱 잠금이 설정되어 있지 않습니다.
 먼저 설정에서 비밀번호를 지정하세요.</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1025"/>
+        <location filename="../mainwindow_webengine.cpp" line="1031"/>
         <source>Reloading...</source>
         <translation>새로 고치는 중...</translation>
     </message>
@@ -1922,172 +1938,172 @@ Please setup the password in the Settings first.</source>
         <translation>채팅 목록 표시</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="1389"/>
+        <location filename="../main.cpp" line="1413"/>
         <source>Recovered from a start-up crash by switching to safe rendering. You can adjust this in Settings → Performance.</source>
         <translation>시작 시 충돌에서 안전 렌더링으로 전환하여 복구했습니다. 설정 → 성능에서 조정할 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="772"/>
+        <location filename="../main.cpp" line="787"/>
         <source>Send a message via the running instance, then exit (needs --to and --message)</source>
         <translation>실행 중인 인스턴스를 통해 메시지를 보내고 종료합니다 (--to 및 --message 필요)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="776"/>
+        <location filename="../main.cpp" line="791"/>
         <source>Recipient for --send: a phone number (international), a group id, or a contact name</source>
         <translation>--send의 수신자: 전화번호(국제), 그룹 ID 또는 연락처 이름</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="781"/>
+        <location filename="../main.cpp" line="796"/>
         <source>Message text for --send</source>
         <translation>--send의 메시지 텍스트</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="793"/>
+        <location filename="../main.cpp" line="808"/>
         <source>How --send delivers: &apos;web&apos; (the running WhatsApp Web session) or &apos;cloud&apos; (Meta WhatsApp Business Cloud API)</source>
         <translation>--send 전송 방식: &apos;web&apos;(실행 중인 WhatsApp Web 세션) 또는 &apos;cloud&apos;(Meta WhatsApp Business Cloud API)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="784"/>
+        <location filename="../main.cpp" line="799"/>
         <source>Attach a file for --send (its --message, if any, becomes the caption)</source>
         <translation>--send에 파일을 첨부합니다 (--message가 있으면 캡션이 됩니다)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="727"/>
+        <location filename="../main.cpp" line="742"/>
         <source>Internal: wait for the process with this id to exit before starting, used by &quot;Restart now&quot;</source>
         <translation>내부용: 시작하기 전에 이 id를 가진 프로세스가 종료될 때까지 대기하며, &quot;지금 다시 시작&quot;에서 사용됩니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="789"/>
+        <location filename="../main.cpp" line="804"/>
         <source>Caption for the --file attachment (alias of --message)</source>
         <translation>--file 첨부의 캡션 (--message의 별칭)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="799"/>
+        <location filename="../main.cpp" line="814"/>
         <source>Use the saved template of this name as the --send message (fill its {{fields}} with --var)</source>
         <translation>이 이름의 저장된 템플릿을 --send 메시지로 사용합니다 (--var로 {{필드}} 채우기)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="804"/>
+        <location filename="../main.cpp" line="819"/>
         <source>Fill a template field: key=value (repeatable)</source>
         <translation>템플릿 필드 채우기: key=value (반복 가능)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="808"/>
+        <location filename="../main.cpp" line="823"/>
         <source>List the saved message templates and exit</source>
         <translation>저장된 메시지 템플릿을 나열하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="811"/>
+        <location filename="../main.cpp" line="826"/>
         <source>Save (or replace) a message template, then exit: name=body</source>
         <translation>메시지 템플릿을 저장(또는 교체)하고 종료합니다: name=body</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="815"/>
+        <location filename="../main.cpp" line="830"/>
         <source>Delete the saved message template of this name, then exit</source>
         <translation>이 이름의 저장된 메시지 템플릿을 삭제하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="820"/>
+        <location filename="../main.cpp" line="835"/>
         <source>Turn auto-reply to incoming messages on, then exit</source>
         <translation>수신 메시지에 대한 자동 회신을 켜고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="823"/>
+        <location filename="../main.cpp" line="838"/>
         <source>Turn auto-reply off, then exit</source>
         <translation>자동 회신을 끄고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="826"/>
+        <location filename="../main.cpp" line="841"/>
         <source>List the active auto-reply rules (status included) and exit</source>
         <translation>활성화된 자동 회신 규칙(상태 포함)을 나열하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="829"/>
+        <location filename="../main.cpp" line="844"/>
         <source>Use this JSON file as a source of auto-reply rules, then exit (empty to clear)</source>
         <translation>이 JSON 파일을 자동 회신 규칙의 소스로 사용하고 종료합니다 (비우면 해제)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="835"/>
+        <location filename="../main.cpp" line="850"/>
         <source>Set the Cloud API phone-number id, then exit</source>
         <translation>Cloud API 전화번호 ID를 설정하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="839"/>
+        <location filename="../main.cpp" line="854"/>
         <source>Set the Cloud API access token, then exit (stored in the account config)</source>
         <translation>Cloud API 액세스 토큰을 설정하고 종료합니다(계정 설정에 저장됨)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="844"/>
+        <location filename="../main.cpp" line="859"/>
         <source>Set the Cloud API graph version (e.g. v21.0), then exit</source>
         <translation>Cloud API graph 버전을 설정하고 종료합니다(예: v21.0)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="848"/>
+        <location filename="../main.cpp" line="863"/>
         <source>Show whether the Cloud API is configured, then exit</source>
         <translation>Cloud API 구성 여부를 표시하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="851"/>
+        <location filename="../main.cpp" line="866"/>
         <source>For --send --backend cloud: send this Meta-approved template</source>
         <translation>--send --backend cloud용: Meta가 승인한 이 템플릿을 전송합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="855"/>
+        <location filename="../main.cpp" line="870"/>
         <source>Language code for --cloud-template (e.g. es, en_US)</source>
         <translation>--cloud-template의 언어 코드(예: es, en_US)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="859"/>
+        <location filename="../main.cpp" line="874"/>
         <source>A positional body parameter for --cloud-template (repeatable)</source>
         <translation>--cloud-template의 위치 본문 매개변수(반복 가능)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="864"/>
+        <location filename="../main.cpp" line="879"/>
         <source>Enable the local HTTP API, then exit</source>
         <translation>로컬 HTTP API를 활성화하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="867"/>
+        <location filename="../main.cpp" line="882"/>
         <source>Disable the local HTTP API, then exit</source>
         <translation>로컬 HTTP API를 비활성화하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="870"/>
+        <location filename="../main.cpp" line="885"/>
         <source>Set the local HTTP API port (default 8590), then exit</source>
         <translation>로컬 HTTP API 포트를 설정하고 종료합니다(기본값 8590)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="874"/>
+        <location filename="../main.cpp" line="889"/>
         <source>Set the local HTTP API bearer token, then exit</source>
         <translation>로컬 HTTP API Bearer 토큰을 설정하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="878"/>
+        <location filename="../main.cpp" line="893"/>
         <source>Show the local HTTP API configuration, then exit</source>
         <translation>로컬 HTTP API 구성을 표시하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="882"/>
+        <location filename="../main.cpp" line="897"/>
         <source>Enable receiving Cloud API webhooks, then exit</source>
         <translation>Cloud API 웹훅 수신을 활성화하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="885"/>
+        <location filename="../main.cpp" line="900"/>
         <source>Disable receiving Cloud API webhooks, then exit</source>
         <translation>Cloud API 웹훅 수신을 비활성화하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="888"/>
+        <location filename="../main.cpp" line="903"/>
         <source>Set the Cloud API webhook verify token, then exit</source>
         <translation>Cloud API 웹훅 확인 토큰을 설정하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="892"/>
+        <location filename="../main.cpp" line="907"/>
         <source>Set the Meta app secret for webhook signature checks, then exit</source>
         <translation>웹훅 서명 확인을 위한 Meta 앱 시크릿을 설정하고 종료합니다</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="896"/>
+        <location filename="../main.cpp" line="911"/>
         <source>Show the Cloud API webhook configuration, then exit</source>
         <translation>Cloud API 웹훅 구성을 표시하고 종료합니다</translation>
     </message>
@@ -2482,37 +2498,37 @@ Please setup the password in the Settings first.</source>
         <translation type="vanished">보고 있지 않은 계정을 일시 중단하여 메모리를 확보합니다. 일시 중단된 계정은 다시 전환할 때까지 메시지를 받지 않습니다. 단일 계정 설정은 영향을 받지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2102"/>
+        <location filename="../settingswidget.ui" line="2123"/>
         <source>after</source>
         <translation>후</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2109"/>
+        <location filename="../settingswidget.ui" line="2130"/>
         <source> min</source>
         <translation> 분</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2074"/>
+        <location filename="../settingswidget.ui" line="2095"/>
         <source>Font hinting</source>
         <translation>글꼴 힌팅</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2081"/>
+        <location filename="../settingswidget.ui" line="2102"/>
         <source>How glyph edges are snapped to pixels. Automatic follows your system; a lighter level can fix heavy or uneven text.</source>
         <translation>글리프 가장자리를 픽셀에 맞추는 방식입니다. 자동은 시스템을 따릅니다. 더 가벼운 수준은 두껍거나 고르지 않은 텍스트를 개선할 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1723"/>
+        <location filename="../settingswidget.cpp" line="1729"/>
         <source>Slight</source>
         <translation>약간</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1724"/>
+        <location filename="../settingswidget.cpp" line="1730"/>
         <source>Medium</source>
         <translation>보통</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1725"/>
+        <location filename="../settingswidget.cpp" line="1731"/>
         <source>Full</source>
         <translation>전체</translation>
     </message>
@@ -2583,11 +2599,11 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="198"/>
-        <location filename="../settingswidget.ui" line="2010"/>
-        <location filename="../settingswidget.ui" line="2054"/>
-        <location filename="../settingswidget.ui" line="2221"/>
-        <location filename="../settingswidget.cpp" line="1721"/>
-        <location filename="../settingswidget.cpp" line="2022"/>
+        <location filename="../settingswidget.ui" line="2031"/>
+        <location filename="../settingswidget.ui" line="2075"/>
+        <location filename="../settingswidget.ui" line="2242"/>
+        <location filename="../settingswidget.cpp" line="1727"/>
+        <location filename="../settingswidget.cpp" line="2028"/>
         <source>Automatic</source>
         <translation>자동</translation>
     </message>
@@ -2643,7 +2659,7 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="326"/>
-        <location filename="../settingswidget.ui" line="1319"/>
+        <location filename="../settingswidget.ui" line="1340"/>
         <source> Secs</source>
         <translation> 초</translation>
     </message>
@@ -2860,7 +2876,7 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="691"/>
-        <location filename="../settingswidget.cpp" line="1638"/>
+        <location filename="../settingswidget.cpp" line="1644"/>
         <source>Custom CSS</source>
         <translation>사용자 지정 CSS</translation>
     </message>
@@ -2917,7 +2933,7 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="756"/>
-        <location filename="../settingswidget.cpp" line="2628"/>
+        <location filename="../settingswidget.cpp" line="2634"/>
         <source>Check spelling as I type</source>
         <translation>입력하는 동안 맞춤법 검사</translation>
     </message>
@@ -2948,7 +2964,7 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="831"/>
-        <location filename="../settingswidget.cpp" line="1614"/>
+        <location filename="../settingswidget.cpp" line="1620"/>
         <source>Chat wallpaper</source>
         <translation>채팅 배경</translation>
     </message>
@@ -2973,714 +2989,729 @@ Please setup the password in the Settings first.</source>
         <translation>연결된 기기에서 Whatly로 표시</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="876"/>
+        <location filename="../settingswidget.ui" line="871"/>
+        <source>Browser name for linking</source>
+        <translation>연결용 브라우저 이름</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.ui" line="878"/>
+        <source>Whatly</source>
+        <translation>Whatly</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.ui" line="881"/>
+        <source>Leave empty to show just &quot;Whatly&quot;. Set a browser WhatsApp knows, such as Chrome, if linking by phone number does not work.</source>
+        <translation>비워 두면 "Whatly"만 표시됩니다. 전화번호 연결이 작동하지 않으면 Chrome처럼 WhatsApp이 인식하는 브라우저 이름을 입력하세요.</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.ui" line="897"/>
         <source>User Agent</source>
         <translation>사용자 에이전트</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="879"/>
+        <location filename="../settingswidget.ui" line="900"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Advanced — leave this alone unless you know exactly what you are doing. A non-standard user agent can make WhatsApp refuse to load, and unusual values risk your WhatsApp account being flagged or blacklisted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;고급 — 정확히 무엇을 하는지 알지 못한다면 이 설정을 그대로 두세요. 비표준 user agent는 WhatsApp이 로드되지 않게 만들 수 있으며, 비정상적인 값은 WhatsApp 계정이 플래그 처리되거나 블랙리스트에 오를 위험이 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="889"/>
+        <location filename="../settingswidget.ui" line="910"/>
         <source>  Set</source>
         <translation>  적용</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="900"/>
+        <location filename="../settingswidget.ui" line="921"/>
         <source>Reset to default</source>
         <translation>기본값으로 되돌리기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="923"/>
+        <location filename="../settingswidget.ui" line="944"/>
         <source>Zoom factor when normal</source>
         <translation>일반 창일 때의 확대 비율</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="951"/>
-        <location filename="../settingswidget.ui" line="1086"/>
+        <location filename="../settingswidget.ui" line="972"/>
+        <location filename="../settingswidget.ui" line="1107"/>
         <source>Zoom Out</source>
         <translation>축소</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="990"/>
-        <location filename="../settingswidget.ui" line="1125"/>
+        <location filename="../settingswidget.ui" line="1011"/>
+        <location filename="../settingswidget.ui" line="1146"/>
         <source>Zoom In</source>
         <translation>확대</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1035"/>
-        <location filename="../settingswidget.ui" line="1170"/>
+        <location filename="../settingswidget.ui" line="1056"/>
+        <location filename="../settingswidget.ui" line="1191"/>
         <source>reset</source>
         <translation>초기화</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1058"/>
+        <location filename="../settingswidget.ui" line="1079"/>
         <source>Zoom factor when maximized/fullscreen</source>
         <translation>최대화/전체 화면일 때의 확대 비율</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1193"/>
+        <location filename="../settingswidget.ui" line="1214"/>
         <source>Minimize to tray</source>
         <translation>트레이로 최소화</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1202"/>
+        <location filename="../settingswidget.ui" line="1223"/>
         <source>Quit</source>
         <translation>종료</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1214"/>
+        <location filename="../settingswidget.ui" line="1235"/>
         <source>Global shortcuts</source>
         <translation>전역 단축키</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1221"/>
+        <location filename="../settingswidget.ui" line="1242"/>
         <source>Close button action</source>
         <translation>닫기 단추 동작</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1228"/>
+        <location filename="../settingswidget.ui" line="1249"/>
         <source>  Show shortcuts</source>
         <translation>  단축키 보기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1239"/>
+        <location filename="../settingswidget.ui" line="1260"/>
         <source>Permissions</source>
         <translation>권한</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1246"/>
+        <location filename="../settingswidget.ui" line="1267"/>
         <source>  Show permissions</source>
         <translation>  권한 보기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1261"/>
+        <location filename="../settingswidget.ui" line="1282"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable lock screen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;잠금 화면을 사용합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1264"/>
+        <location filename="../settingswidget.ui" line="1285"/>
         <source>Enable App lock on start</source>
         <translation>시작할 때 앱 잠금 사용</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1271"/>
+        <location filename="../settingswidget.ui" line="1292"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When the window hides to the system tray, lock it behind the passcode. Requires a password to be set.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;창이 시스템 트레이로 숨겨질 때 암호로 잠급니다. 비밀번호가 설정되어 있어야 합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1274"/>
+        <location filename="../settingswidget.ui" line="1295"/>
         <source>Lock when hidden to tray</source>
         <translation>트레이로 숨길 때 잠금</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1281"/>
+        <location filename="../settingswidget.ui" line="1302"/>
         <source>Also lock Whatly when the desktop session locks. Requires a password to be set. (Linux)</source>
         <translation>데스크톱 세션이 잠길 때 Whatly도 잠급니다. 비밀번호가 설정되어 있어야 합니다. (Linux)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1284"/>
+        <location filename="../settingswidget.ui" line="1305"/>
         <source>Lock when the screen locks</source>
         <translation>화면이 잠길 때 잠그기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1291"/>
+        <location filename="../settingswidget.ui" line="1312"/>
         <source>Current Password</source>
         <translation>현재 비밀번호</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1298"/>
-        <location filename="../settingswidget.ui" line="1332"/>
+        <location filename="../settingswidget.ui" line="1319"/>
+        <location filename="../settingswidget.ui" line="1353"/>
         <source>Change password</source>
         <translation>비밀번호 변경</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1301"/>
-        <location filename="../settingswidget.ui" line="1410"/>
+        <location filename="../settingswidget.ui" line="1322"/>
+        <location filename="../settingswidget.ui" line="1431"/>
         <source>Change</source>
         <translation>변경</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1312"/>
+        <location filename="../settingswidget.ui" line="1333"/>
         <source>Enable auto locking after</source>
         <translation>다음 시간 후 자동 잠금</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1335"/>
+        <location filename="../settingswidget.ui" line="1356"/>
         <source>Reset</source>
         <translation>초기화</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1367"/>
+        <location filename="../settingswidget.ui" line="1388"/>
         <source>View password</source>
         <translation>비밀번호 보기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1394"/>
+        <location filename="../settingswidget.ui" line="1415"/>
         <source>Default Download location</source>
         <translation>기본 다운로드 위치</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1407"/>
+        <location filename="../settingswidget.ui" line="1428"/>
         <source>Change Download Location</source>
         <translation>다운로드 위치 변경</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1426"/>
+        <location filename="../settingswidget.ui" line="1447"/>
         <source>Storage </source>
         <translation>저장소 </translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1446"/>
+        <location filename="../settingswidget.ui" line="1467"/>
         <source>Property</source>
         <translation>속성</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1453"/>
+        <location filename="../settingswidget.ui" line="1474"/>
         <source>  Clear (requires restart)</source>
         <translation>  비우기 (다시 시작 필요)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1464"/>
+        <location filename="../settingswidget.ui" line="1485"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Persistent data includes persistent cookies, HTML5 local storage, and visited links.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;지속 데이터에는 지속 쿠키, HTML5 로컬 저장소, 방문한 링크가 포함됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1467"/>
+        <location filename="../settingswidget.ui" line="1488"/>
         <source>Persistent data</source>
         <translation>지속 데이터</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1474"/>
-        <location filename="../settingswidget.ui" line="1494"/>
+        <location filename="../settingswidget.ui" line="1495"/>
+        <location filename="../settingswidget.ui" line="1515"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1484"/>
+        <location filename="../settingswidget.ui" line="1505"/>
         <source>The HTTP/media cache. Clearing it is safe — it is re-downloaded as needed.</source>
         <translation>HTTP/미디어 캐시입니다. 지워도 안전합니다 — 필요할 때 다시 다운로드됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1487"/>
+        <location filename="../settingswidget.ui" line="1508"/>
         <source>Cache</source>
         <translation>캐시</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1504"/>
+        <location filename="../settingswidget.ui" line="1525"/>
         <source>  Clear cache</source>
         <translation>  캐시 지우기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1527"/>
+        <location filename="../settingswidget.ui" line="1548"/>
         <source>Size</source>
         <translation>크기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1549"/>
+        <location filename="../settingswidget.ui" line="1570"/>
         <source>Action</source>
         <translation>동작</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1563"/>
+        <location filename="../settingswidget.ui" line="1584"/>
         <source>Backup</source>
         <translation>백업</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1570"/>
+        <location filename="../settingswidget.ui" line="1591"/>
         <source>Save this account (settings, session and addons) to a .tar.gz archive. The archive contains your logged-in session — keep it private.</source>
         <translation>이 계정(설정, 세션, 부가 기능)을 .tar.gz 압축 파일에 저장합니다. 압축 파일에는 로그인된 세션이 포함되어 있으니 — 외부에 공개하지 마세요.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1573"/>
+        <location filename="../settingswidget.ui" line="1594"/>
         <source>Export profile…</source>
         <translation>프로필 내보내기…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1580"/>
+        <location filename="../settingswidget.ui" line="1601"/>
         <source>Restore an account from a .tar.gz archive. This overwrites the current data and needs a restart.</source>
         <translation>.tar.gz 압축 파일에서 계정을 복원합니다. 현재 데이터를 덮어쓰며 다시 시작해야 합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1583"/>
+        <location filename="../settingswidget.ui" line="1604"/>
         <source>Import profile…</source>
         <translation>프로필 가져오기…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1608"/>
+        <location filename="../settingswidget.ui" line="1629"/>
         <source>Performance (requires restart)</source>
         <translation>성능(다시 시작 필요)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1614"/>
+        <location filename="../settingswidget.ui" line="1635"/>
         <source>Fine-tune the rendering engine. The defaults are safe on most systems; if the window is blank or the app crashes on start, or if it stutters, try changing these. Changes apply after a restart.</source>
         <translation>렌더링 엔진을 세밀하게 조정합니다. 기본값은 대부분의 시스템에서 안전합니다. 창이 비어 있거나 시작 시 앱이 충돌하거나 끊김이 발생하면 이 값을 변경해 보세요. 변경 사항은 다시 시작한 후에 적용됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1624"/>
+        <location filename="../settingswidget.ui" line="1645"/>
         <source>Render entirely on the CPU (--disable-gpu). Fixes blank windows and start-up crashes on some GPU/driver setups. Default on Linux.</source>
         <translation>전적으로 CPU에서 렌더링합니다 (--disable-gpu). 일부 GPU/드라이버 환경에서 빈 창과 시작 시 충돌을 해결합니다. Linux에서 기본값입니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1627"/>
+        <location filename="../settingswidget.ui" line="1648"/>
         <source>Disable GPU acceleration</source>
         <translation>GPU 가속 비활성화</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1634"/>
+        <location filename="../settingswidget.ui" line="1655"/>
         <source>Composite the page on the CPU (--disable-gpu-compositing). Avoids stale-frame flicker on some drivers.</source>
         <translation>페이지를 CPU에서 합성합니다 (--disable-gpu-compositing). 일부 드라이버에서 오래된 프레임 깜박임을 방지합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1637"/>
+        <location filename="../settingswidget.ui" line="1658"/>
         <source>Disable GPU compositing</source>
         <translation>GPU 합성 비활성화</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1644"/>
+        <location filename="../settingswidget.ui" line="1665"/>
         <source>Disable GPU VSync (--disable-gpu-vsync). May reduce input lag at the cost of tearing.</source>
         <translation>GPU VSync를 비활성화합니다 (--disable-gpu-vsync). 화면 찢어짐을 감수하는 대신 입력 지연을 줄일 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1647"/>
+        <location filename="../settingswidget.ui" line="1668"/>
         <source>Disable GPU VSync</source>
         <translation>GPU VSync 비활성화</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1654"/>
+        <location filename="../settingswidget.ui" line="1675"/>
         <source>Run the GPU process inside the main process (--in-process-gpu). A workaround for some sandboxed setups.</source>
         <translation>GPU 프로세스를 메인 프로세스 내에서 실행합니다 (--in-process-gpu). 일부 샌드박스 환경을 위한 해결 방법입니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1657"/>
+        <location filename="../settingswidget.ui" line="1678"/>
         <source>Run GPU in-process</source>
         <translation>GPU를 프로세스 내에서 실행</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1664"/>
+        <location filename="../settingswidget.ui" line="1685"/>
         <source>Force acceleration even when the driver is blocklisted (--ignore-gpu-blocklist). Try this to turn the GPU back on.</source>
         <translation>드라이버가 차단 목록에 있어도 가속을 강제합니다 (--ignore-gpu-blocklist). GPU를 다시 켜려면 이 옵션을 사용해 보세요.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1667"/>
+        <location filename="../settingswidget.ui" line="1688"/>
         <source>Ignore GPU blocklist</source>
         <translation>GPU 차단 목록 무시</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1674"/>
+        <location filename="../settingswidget.ui" line="1695"/>
         <source>Run everything in a single process (--single-process). Uses less memory but is less stable.</source>
         <translation>모든 것을 단일 프로세스에서 실행합니다 (--single-process). 메모리를 적게 사용하지만 안정성은 떨어집니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1677"/>
+        <location filename="../settingswidget.ui" line="1698"/>
         <source>Single-process mode (lower memory)</source>
         <translation>단일 프로세스 모드 (메모리 절약)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1684"/>
+        <location filename="../settingswidget.ui" line="1705"/>
         <source>Share one renderer process per site (--process-per-site). Reduces memory use.</source>
         <translation>사이트당 렌더러 프로세스 하나를 공유합니다 (--process-per-site). 메모리 사용량을 줄입니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1687"/>
+        <location filename="../settingswidget.ui" line="1708"/>
         <source>One process per site (lower memory)</source>
         <translation>사이트당 프로세스 하나 (메모리 절약)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1694"/>
+        <location filename="../settingswidget.ui" line="1715"/>
         <source>Ask the JavaScript engine to use less memory at a small cost in speed (V8 --optimize-for-size). Recommended for an app that stays in the tray. Ignored when a JavaScript memory limit is set below.</source>
         <translation>JavaScript 엔진이 약간의 속도를 희생하여 메모리를 더 적게 사용하도록 요청합니다(V8 --optimize-for-size). 트레이에 상주하는 앱에 권장됩니다. 아래에서 JavaScript 메모리 한도를 설정하면 무시됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1697"/>
+        <location filename="../settingswidget.ui" line="1718"/>
         <source>Optimize memory over speed (lower memory)</source>
         <translation>속도보다 메모리 최적화 (메모리 절약)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1704"/>
+        <location filename="../settingswidget.ui" line="1725"/>
         <source>Hide contact names and message previews in the chat list (hover to reveal one). Useful when sharing your screen. The open conversation is untouched.</source>
         <translation>대화 목록의 연락처 이름과 메시지 미리보기를 숨깁니다(마우스를 올리면 하나만 표시). 화면 공유 시 유용합니다. 열려 있는 대화는 그대로 유지됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1707"/>
+        <location filename="../settingswidget.ui" line="1728"/>
         <source>Focus mode (hide chat-list previews)</source>
         <translation>집중 모드 (대화 목록 미리보기 숨기기)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1714"/>
+        <location filename="../settingswidget.ui" line="1735"/>
         <source>Default photos and videos to HD quality in the media editor. Depends on WhatsApp Web&apos;s layout; if a WhatsApp update breaks it, turn it off.</source>
         <translation>미디어 편집기에서 사진과 동영상을 기본적으로 HD 화질로 설정합니다. WhatsApp Web의 레이아웃에 따라 달라지며, WhatsApp 업데이트로 인해 작동하지 않으면 끄세요.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1717"/>
+        <location filename="../settingswidget.ui" line="1738"/>
         <source>Send photos and videos in HD by default</source>
         <translation>기본적으로 사진과 동영상을 HD로 보내기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1726"/>
+        <location filename="../settingswidget.ui" line="1747"/>
         <source>Hold a message for a few seconds after you press Enter, showing an &quot;Undo&quot; button before it is actually sent. Press Enter again to send at once.</source>
         <translation>Enter를 누른 후 메시지를 몇 초 동안 보류하고, 실제로 전송되기 전에 &quot;실행 취소&quot; 버튼을 표시합니다. Enter를 다시 누르면 즉시 전송됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1729"/>
+        <location filename="../settingswidget.ui" line="1750"/>
         <source>Undo send (hold Enter-sent messages briefly)</source>
         <translation>전송 취소 (Enter로 보낸 메시지를 잠시 보류)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1736"/>
+        <location filename="../settingswidget.ui" line="1757"/>
         <source>How long to hold a message before it is sent.</source>
         <translation>전송하기 전에 메시지를 보류할 시간입니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1739"/>
+        <location filename="../settingswidget.ui" line="1760"/>
         <source> s</source>
         <translation>초</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1754"/>
+        <location filename="../settingswidget.ui" line="1775"/>
         <source>Inline translation</source>
         <translation>인라인 번역</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1760"/>
+        <location filename="../settingswidget.ui" line="1781"/>
         <source>Translate selected text or your message box through a LibreTranslate-compatible service. The request is made by the app, so the endpoint and key never reach WhatsApp Web. Bind keys to &quot;Translate selection&quot; / &quot;Translate message box&quot; in Shortcuts, or use the command palette.</source>
         <translation>LibreTranslate 호환 서비스를 통해 선택한 텍스트나 메시지 입력란을 번역합니다. 요청은 앱이 보내므로 엔드포인트와 키가 WhatsApp Web에 전달되지 않습니다. 단축키에서 &quot;선택 영역 번역&quot; / &quot;메시지 입력란 번역&quot;에 키를 지정하거나 명령 팔레트를 사용하세요.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1763"/>
+        <location filename="../settingswidget.ui" line="1784"/>
         <source>Enable inline translation</source>
         <translation>인라인 번역 켜기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1770"/>
-        <location filename="../settingswidget.ui" line="1840"/>
+        <location filename="../settingswidget.ui" line="1791"/>
+        <location filename="../settingswidget.ui" line="1861"/>
         <source>Endpoint</source>
         <translation>엔드포인트</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1777"/>
+        <location filename="../settingswidget.ui" line="1798"/>
         <source>A LibreTranslate-compatible &quot;/translate&quot; URL, e.g. http://localhost:5000/translate for a self-hosted instance.</source>
         <translation>LibreTranslate 호환 &quot;/translate&quot; URL입니다. 예: 자체 호스팅 인스턴스는 http://localhost:5000/translate.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1780"/>
+        <location filename="../settingswidget.ui" line="1801"/>
         <source>https://your-libretranslate/translate</source>
         <translation>https://your-libretranslate/translate</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1787"/>
-        <location filename="../settingswidget.ui" line="1874"/>
+        <location filename="../settingswidget.ui" line="1808"/>
+        <location filename="../settingswidget.ui" line="1895"/>
         <source>API key (optional)</source>
         <translation>API 키 (선택)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1794"/>
+        <location filename="../settingswidget.ui" line="1815"/>
         <source>Only needed by endpoints that require one. Stored locally.</source>
         <translation>키가 필요한 엔드포인트에서만 사용합니다. 로컬에 저장됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1804"/>
+        <location filename="../settingswidget.ui" line="1825"/>
         <source>Target language</source>
         <translation>대상 언어</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1811"/>
+        <location filename="../settingswidget.ui" line="1832"/>
         <source>Two-letter code to translate into (e.g. en, es, fr). Leave empty to use the app&apos;s language. The source language is detected automatically.</source>
         <translation>번역할 두 글자 언어 코드 (예: en, es, fr). 비워 두면 앱 언어를 사용합니다. 원본 언어는 자동으로 감지됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1814"/>
+        <location filename="../settingswidget.ui" line="1835"/>
         <source>app language</source>
         <translation>앱 언어</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1824"/>
+        <location filename="../settingswidget.ui" line="1845"/>
         <source>AI assistant</source>
         <translation>AI 어시스턴트</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1830"/>
+        <location filename="../settingswidget.ui" line="1851"/>
         <source>Summarise a chat, improve your draft or suggest a reply through an OpenAI-compatible service. The chat text is sent to that service, so use one you trust (a local runner keeps it on your machine). The request is made by the app, so the endpoint and key never reach WhatsApp Web. Actions live in the command palette and Shortcuts.</source>
         <translation>OpenAI 호환 서비스를 통해 채팅을 요약하고 초안을 개선하거나 답장을 제안합니다. 채팅 텍스트가 해당 서비스로 전송되므로 신뢰할 수 있는 서비스를 사용하세요(로컬 실행기는 기기 내에 보관합니다). 요청은 앱이 보내므로 엔드포인트와 키가 WhatsApp Web에 전달되지 않습니다. 작업은 명령 팔레트와 단축키에 있습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1833"/>
+        <location filename="../settingswidget.ui" line="1854"/>
         <source>Enable AI assistant</source>
         <translation>AI 어시스턴트 켜기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1847"/>
+        <location filename="../settingswidget.ui" line="1868"/>
         <source>An OpenAI-compatible /chat/completions URL, e.g. https://api.openai.com/v1/chat/completions or http://localhost:11434/v1/chat/completions for a local Ollama.</source>
         <translation>OpenAI 호환 /chat/completions URL입니다. 예: https://api.openai.com/v1/chat/completions 또는 로컬 Ollama의 http://localhost:11434/v1/chat/completions.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1850"/>
+        <location filename="../settingswidget.ui" line="1871"/>
         <source>https://api.openai.com/v1/chat/completions</source>
         <translation>https://api.openai.com/v1/chat/completions</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1857"/>
+        <location filename="../settingswidget.ui" line="1878"/>
         <source>Model</source>
         <translation>모델</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1864"/>
+        <location filename="../settingswidget.ui" line="1885"/>
         <source>The model name the endpoint expects, e.g. gpt-4o-mini or llama3.</source>
         <translation>엔드포인트가 요구하는 모델 이름입니다. 예: gpt-4o-mini 또는 llama3.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1867"/>
+        <location filename="../settingswidget.ui" line="1888"/>
         <source>e.g. gpt-4o-mini</source>
         <translation>예: gpt-4o-mini</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1881"/>
+        <location filename="../settingswidget.ui" line="1902"/>
         <source>Sent as a Bearer token. Not needed by most local runners. Stored locally.</source>
         <translation>Bearer 토큰으로 전송됩니다. 대부분의 로컬 실행기에서는 필요하지 않습니다. 로컬에 저장됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1898"/>
+        <location filename="../settingswidget.ui" line="1919"/>
         <source>Local models (Ollama)</source>
         <translation>로컬 모델 (Ollama)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1907"/>
+        <location filename="../settingswidget.ui" line="1928"/>
         <source>Check for a local Ollama and list its installed models.</source>
         <translation>로컬 Ollama를 확인하고 설치된 모델을 표시합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1910"/>
+        <location filename="../settingswidget.ui" line="1931"/>
         <source>Detect Ollama</source>
         <translation>Ollama 감지</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1926"/>
+        <location filename="../settingswidget.ui" line="1947"/>
         <source>Installed model</source>
         <translation>설치된 모델</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1933"/>
+        <location filename="../settingswidget.ui" line="1954"/>
         <source>Pick one of the models already installed in Ollama; it becomes the model above.</source>
         <translation>Ollama에 이미 설치된 모델 중 하나를 선택하면 위의 모델이 됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1940"/>
+        <location filename="../settingswidget.ui" line="1961"/>
         <source>Download a light model</source>
         <translation>가벼운 모델 다운로드</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1949"/>
+        <location filename="../settingswidget.ui" line="1970"/>
         <source>Light, fast models that run well on modest hardware.</source>
         <translation>평범한 하드웨어에서도 잘 도는 가볍고 빠른 모델.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1956"/>
+        <location filename="../settingswidget.ui" line="1977"/>
         <source>Download</source>
         <translation>다운로드</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1988"/>
+        <location filename="../settingswidget.ui" line="2009"/>
         <source>Stop WebRTC from revealing your local IP address over non-proxied connections.</source>
         <translation>프록시를 거치지 않는 연결에서 WebRTC가 로컬 IP 주소를 노출하지 못하도록 합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1991"/>
+        <location filename="../settingswidget.ui" line="2012"/>
         <source>Prevent WebRTC IP leak</source>
         <translation>WebRTC IP 유출 방지</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2000"/>
+        <location filename="../settingswidget.ui" line="2021"/>
         <source>JavaScript memory limit</source>
         <translation>JavaScript 메모리 제한</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2007"/>
+        <location filename="../settingswidget.ui" line="2028"/>
         <source>Cap the JavaScript heap (V8 --max-old-space-size). 0 = automatic. Lower it if the app uses too much RAM.</source>
         <translation>JavaScript 힙 크기를 제한합니다 (V8 --max-old-space-size). 0 = 자동. 앱이 RAM을 너무 많이 사용하면 값을 낮추세요.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2013"/>
-        <location filename="../settingswidget.ui" line="2057"/>
+        <location filename="../settingswidget.ui" line="2034"/>
+        <location filename="../settingswidget.ui" line="2078"/>
         <source> MB</source>
         <translation> MB</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2030"/>
+        <location filename="../settingswidget.ui" line="2051"/>
         <source>HTTP cache</source>
         <translation>HTTP 캐시</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2037"/>
+        <location filename="../settingswidget.ui" line="2058"/>
         <source>Where to keep the HTTP cache. Memory clears on exit; None disables caching.</source>
         <translation>HTTP 캐시를 저장할 위치입니다. 메모리는 종료 시 지워지며, 없음은 캐싱을 비활성화합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2044"/>
+        <location filename="../settingswidget.ui" line="2065"/>
         <source>Max size</source>
         <translation>최대 크기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2051"/>
+        <location filename="../settingswidget.ui" line="2072"/>
         <source>Maximum on-disk cache size. 0 = automatic.</source>
         <translation>디스크 캐시 최대 크기. 0 = 자동.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2092"/>
+        <location filename="../settingswidget.ui" line="2113"/>
         <source>Free memory by unloading accounts you are not viewing. An unloaded account does not receive messages, and reloads to where it was when you switch back to it. Single-account setups are unaffected.</source>
         <translation>보고 있지 않은 계정을 언로드하여 메모리를 확보합니다. 언로드된 계정은 메시지를 받지 않으며, 다시 전환하면 이전 상태로 다시 로드됩니다. 단일 계정 구성은 영향을 받지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2095"/>
+        <location filename="../settingswidget.ui" line="2116"/>
         <source>Unload inactive accounts from memory</source>
         <translation>비활성 계정을 메모리에서 언로드</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2124"/>
+        <location filename="../settingswidget.ui" line="2145"/>
         <source>Also unload the account a window was showing, once that window has been minimised or put away to the tray for the same length of time as above. Nothing reaches an unloaded account: while Whatly is away there are no notifications from it and its counts stand still, and it takes a few seconds to come back when you return to the window. Needs the setting above.</source>
         <translation>어떤 창이 표시하던 계정도, 그 창이 위와 같은 시간 동안 최소화되거나 트레이에 들어가 있으면 언로드합니다. 언로드된 계정에는 아무것도 도달하지 않습니다. Whatly가 떠나 있는 동안에는 알림이 오지 않고 개수도 멈추며, 창으로 돌아오면 복귀하는 데 몇 초가 걸립니다. 위 설정이 필요합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2127"/>
+        <location filename="../settingswidget.ui" line="2148"/>
         <source>Unload also minimised and hidden accounts</source>
         <translation>최소화되거나 숨겨진 계정도 언로드</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2137"/>
+        <location filename="../settingswidget.ui" line="2158"/>
         <source>Network &amp; Startup</source>
         <translation>네트워크 및 시작</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2143"/>
+        <location filename="../settingswidget.ui" line="2164"/>
         <source>Launch Whatly automatically when you log in to your desktop session.</source>
         <translation>데스크톱 세션에 로그인할 때 Whatly를 자동으로 실행합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2146"/>
+        <location filename="../settingswidget.ui" line="2167"/>
         <source>Start Whatly when I log in</source>
         <translation>로그인할 때 Whatly 시작</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2156"/>
+        <location filename="../settingswidget.ui" line="2177"/>
         <source>Use a custom window frame (requires restart)</source>
         <translation>사용자 지정 창 프레임 사용 (다시 시작 필요)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2169"/>
+        <location filename="../settingswidget.ui" line="2190"/>
         <source>Restart Whatly now so the settings above take effect. The windows, and this page with it, come back exactly as they are.</source>
         <translation>위 설정을 적용하려면 지금 Whatly를 다시 시작하세요. 창과 이 페이지가 지금 그대로 다시 나타납니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2172"/>
+        <location filename="../settingswidget.ui" line="2193"/>
         <source>Restart now</source>
         <translation>지금 다시 시작</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2179"/>
+        <location filename="../settingswidget.ui" line="2200"/>
         <source>Keep the account tab strip up even when there is only one account, so its &quot;+&quot; is always at hand. With it off, the strip appears once a second account exists; you can still add one with Ctrl+K.</source>
         <translation>계정이 하나뿐이어도 계정 탭 막대를 항상 표시하여 &quot;+&quot;를 언제든 쓸 수 있게 합니다. 끄면 두 번째 계정이 생겼을 때 막대가 나타납니다. 그래도 Ctrl+K로 계정을 추가할 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2182"/>
+        <location filename="../settingswidget.ui" line="2203"/>
         <source>Show the account tabs even with a single account</source>
         <translation>계정이 하나뿐이어도 계정 탭 표시</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2189"/>
+        <location filename="../settingswidget.ui" line="2210"/>
         <source>Drop the title bar and put its buttons at the end of the account tab strip, the way a browser does, instead of giving them a row of their own. Switches on the custom window frame, which it needs. Applies after a restart.</source>
         <translation>제목 표시줄을 없애고, 그 버튼들을 별도의 줄에 두는 대신 브라우저처럼 계정 탭 막대 끝에 배치합니다. 이에 필요한 사용자 지정 창 테두리를 켭니다. 다시 시작한 뒤에 적용됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2192"/>
+        <location filename="../settingswidget.ui" line="2213"/>
         <source>Hide the title bar (requires restart)</source>
         <translation>제목 표시줄 숨기기(다시 시작 필요)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2199"/>
+        <location filename="../settingswidget.ui" line="2220"/>
         <source>Check GitHub once a day for a newer release and let you know. Whatly never downloads or installs anything on its own.</source>
         <translation>하루에 한 번 GitHub에서 새 릴리스를 확인하고 알려 드립니다. Whatly는 스스로 아무것도 다운로드하거나 설치하지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2202"/>
+        <location filename="../settingswidget.ui" line="2223"/>
         <source>Check for updates automatically</source>
         <translation>자동으로 업데이트 확인</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2218"/>
+        <location filename="../settingswidget.ui" line="2239"/>
         <source>Scale the whole window and the page (QT_SCALE_FACTOR). Automatic follows the desktop. A QT_SCALE_FACTOR environment variable, if set, overrides this. Applies after a restart.</source>
         <translation>전체 창과 페이지의 배율을 조정합니다(QT_SCALE_FACTOR). 자동은 데스크톱 설정을 따릅니다. QT_SCALE_FACTOR 환경 변수가 설정되어 있으면 이 설정보다 우선합니다. 다시 시작한 후 적용됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2254"/>
+        <location filename="../settingswidget.ui" line="2275"/>
         <source>Proxy</source>
         <translation>프록시</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2261"/>
+        <location filename="../settingswidget.ui" line="2282"/>
         <source>How Whatly connects to the network. System follows the operating system; None connects directly.</source>
         <translation>Whatly가 네트워크에 연결하는 방식입니다. 시스템은 운영 체제 설정을 따르고, 없음은 직접 연결합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2286"/>
+        <location filename="../settingswidget.ui" line="2307"/>
         <source>Host</source>
         <translation>호스트</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2293"/>
+        <location filename="../settingswidget.ui" line="2314"/>
         <source>127.0.0.1</source>
         <translation>127.0.0.1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2300"/>
-        <location filename="../settingswidget.ui" line="2580"/>
+        <location filename="../settingswidget.ui" line="2321"/>
+        <location filename="../settingswidget.ui" line="2601"/>
         <source>Port</source>
         <translation>포트</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2314"/>
+        <location filename="../settingswidget.ui" line="2335"/>
         <source>Username</source>
         <translation>사용자 이름</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2321"/>
-        <location filename="../settingswidget.ui" line="2338"/>
+        <location filename="../settingswidget.ui" line="2342"/>
+        <location filename="../settingswidget.ui" line="2359"/>
         <source>Optional</source>
         <translation>선택 사항</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2328"/>
+        <location filename="../settingswidget.ui" line="2349"/>
         <source>Password</source>
         <translation>비밀번호</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2357"/>
+        <location filename="../settingswidget.ui" line="2378"/>
         <source>Load .js files to run on WhatsApp Web. Each addon runs in its own sandbox, so a broken one cannot take down the others or the page. Untick an addon to disable it without removing it. Changes apply after a restart.</source>
         <translation>WhatsApp Web에서 실행할 .js 파일을 불러옵니다. 각 애드온은 자체 샌드박스에서 실행되므로, 하나가 손상되어도 다른 애드온이나 페이지를 중단시키지 않습니다. 애드온의 체크를 해제하면 제거하지 않고 비활성화됩니다. 변경 사항은 다시 시작한 후에 적용됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2379"/>
+        <location filename="../settingswidget.ui" line="2400"/>
         <source>Add addon…</source>
         <translation>애드온 추가…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2386"/>
-        <location filename="../settingswidget.ui" line="2446"/>
+        <location filename="../settingswidget.ui" line="2407"/>
+        <location filename="../settingswidget.ui" line="2467"/>
         <source>Remove</source>
         <translation>제거</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2411"/>
+        <location filename="../settingswidget.ui" line="2432"/>
         <source>Saved replies</source>
         <translation>저장된 답장</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2417"/>
+        <location filename="../settingswidget.ui" line="2438"/>
         <source>Short texts you send often. Insert one from the command palette (Ctrl+K) — type &quot;Insert&quot; and pick it; the text is typed into the message box.</source>
         <translation>자주 보내는 짧은 문구입니다. 명령 팔레트(Ctrl+K)에서 하나를 삽입하세요 — &quot;삽입&quot;을 입력한 뒤 선택하면 메시지 입력란에 텍스트가 입력됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2439"/>
+        <location filename="../settingswidget.ui" line="2460"/>
         <source>Add reply…</source>
         <translation>답장 추가…</translation>
     </message>
@@ -3704,344 +3735,344 @@ Please setup the password in the Settings first.</source>
         <translation type="vanished">성능 및 개인정보 (재시작 필요)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2153"/>
+        <location filename="../settingswidget.ui" line="2174"/>
         <source>Let Whatly draw the window&apos;s border and title bar instead of the system, so they follow Whatly&apos;s own theme. On its own this only changes their appearance; tick &quot;Hide the title bar&quot; as well to get rid of the title row altogether. Applies after a restart.</source>
         <translation>창의 테두리와 제목 표시줄을 시스템 대신 Whatly가 그리도록 하여 Whatly 자체 테마를 따르게 합니다. 이것만으로는 모양만 바뀝니다. 제목 줄을 완전히 없애려면 &quot;제목 표시줄 숨기기&quot;도 함께 선택하세요. 다시 시작한 뒤에 적용됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2211"/>
+        <location filename="../settingswidget.ui" line="2232"/>
         <source>Interface scale (requires restart)</source>
         <translation>인터페이스 배율 (재시작 필요)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2351"/>
+        <location filename="../settingswidget.ui" line="2372"/>
         <source>Custom JavaScript addons (requires restart)</source>
         <translation>사용자 지정 JavaScript 애드온 (재시작 필요)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2471"/>
+        <location filename="../settingswidget.ui" line="2492"/>
         <source>Keyboard shortcuts (requires restart)</source>
         <translation>키보드 단축키 (재시작 필요)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2557"/>
+        <location filename="../settingswidget.ui" line="2578"/>
         <source>Local API &amp; Cloud webhooks</source>
         <translation>로컬 API 및 Cloud 웹훅</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2563"/>
+        <location filename="../settingswidget.ui" line="2584"/>
         <source>A small HTTP endpoint on the loopback interface (127.0.0.1) lets other programs on this machine send through Whatly, and lets Meta deliver Cloud API webhooks (incoming messages) so auto-reply works without a browser. It is never exposed to the network; to receive webhooks from Meta, forward the port with a tunnel or reverse proxy (e.g. cloudflared or ngrok).</source>
         <translation>루프백 인터페이스(127.0.0.1)의 작은 HTTP 엔드포인트를 통해 이 컴퓨터의 다른 프로그램이 Whatly로 전송하고, Meta가 Cloud API 웹훅(수신 메시지)을 전달할 수 있어 자동 회신이 브라우저 없이 작동합니다. 네트워크에 노출되지 않습니다. Meta로부터 웹훅을 받으려면 터널이나 리버스 프록시(예: cloudflared 또는 ngrok)로 포트를 전달하세요.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2573"/>
+        <location filename="../settingswidget.ui" line="2594"/>
         <source>Enable the local HTTP API (send over HTTP)</source>
         <translation>로컬 HTTP API 활성화(HTTP로 전송)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2597"/>
+        <location filename="../settingswidget.ui" line="2618"/>
         <source>Bearer token</source>
         <translation>Bearer 토큰</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2607"/>
+        <location filename="../settingswidget.ui" line="2628"/>
         <source>required to authorise requests</source>
         <translation>요청을 승인하는 데 필요합니다</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2614"/>
+        <location filename="../settingswidget.ui" line="2635"/>
         <source>Receive Cloud API webhooks (incoming messages)</source>
         <translation>Cloud API 웹훅 수신(수신 메시지)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2621"/>
+        <location filename="../settingswidget.ui" line="2642"/>
         <source>Webhook verify token</source>
         <translation>웹훅 확인 토큰</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2631"/>
+        <location filename="../settingswidget.ui" line="2652"/>
         <source>echoed to Meta during setup</source>
         <translation>설정 중 Meta로 전송됩니다</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2638"/>
+        <location filename="../settingswidget.ui" line="2659"/>
         <source>Meta app secret</source>
         <translation>Meta 앱 시크릿</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2648"/>
+        <location filename="../settingswidget.ui" line="2669"/>
         <source>verifies the webhook signature</source>
         <translation>웹훅 서명을 확인합니다</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2493"/>
+        <location filename="../settingswidget.ui" line="2514"/>
         <source>Cloud API (send without a browser session)</source>
         <translation>Cloud API(브라우저 세션 없이 전송)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2499"/>
+        <location filename="../settingswidget.ui" line="2520"/>
         <source>Send with `--send --backend cloud` through the Meta WhatsApp Business Cloud API — no running WhatsApp Web session needed. The access token is one you supply from Meta; it is stored in this account&apos;s config and Whatly never obtains it itself.</source>
         <translation>Meta WhatsApp Business Cloud API를 통해 `--send --backend cloud`로 전송합니다 — 실행 중인 WhatsApp Web 세션이 필요하지 않습니다. 액세스 토큰은 Meta에서 직접 제공하는 것으로, 이 계정 구성에 저장되며 Whatly가 직접 획득하지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2509"/>
+        <location filename="../settingswidget.ui" line="2530"/>
         <source>Phone-number ID</source>
         <translation>전화번호 ID</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2523"/>
+        <location filename="../settingswidget.ui" line="2544"/>
         <source>Access token</source>
         <translation>액세스 토큰</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2533"/>
+        <location filename="../settingswidget.ui" line="2554"/>
         <source>your Meta access token</source>
         <translation>사용자의 Meta 액세스 토큰</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2540"/>
+        <location filename="../settingswidget.ui" line="2561"/>
         <source>Graph API version</source>
         <translation>Graph API 버전</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2477"/>
+        <location filename="../settingswidget.ui" line="2498"/>
         <source>Click a field and press the key combination. Clear a field to remove the shortcut. Changes apply after a restart.</source>
         <translation>필드를 클릭하고 키 조합을 누르세요. 단축키를 제거하려면 필드를 비우세요. 변경 사항은 다시 시작한 후에 적용됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1271"/>
+        <location filename="../settingswidget.cpp" line="1277"/>
         <source>This will delete Persistent Data ! Persistent data includes persistent cookies and Cache, and Quit the application.</source>
         <translation>영구 데이터(영구 쿠키 및 캐시 포함)를 삭제하고 애플리케이션을 종료합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1276"/>
+        <location filename="../settingswidget.cpp" line="1282"/>
         <source>Delete Cookies and Quit Application?</source>
         <translation>쿠키를 삭제하고 애플리케이션을 종료할까요?</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1382"/>
+        <location filename="../settingswidget.cpp" line="1388"/>
         <source>| Error</source>
         <translation>| 오류</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1383"/>
+        <location filename="../settingswidget.cpp" line="1389"/>
         <source>Cannot set an empty UserAgent String.</source>
         <translation>빈 User-Agent 문자열은 설정할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1434"/>
+        <location filename="../settingswidget.cpp" line="1440"/>
         <source>Automatic theme switching was disabled due to manual theme toggle.</source>
         <translation>테마를 직접 변경했기 때문에 자동 테마 전환이 해제되었습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1451"/>
+        <location filename="../settingswidget.cpp" line="1457"/>
         <source>Require setup</source>
         <translation>설정 필요</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1480"/>
+        <location filename="../settingswidget.cpp" line="1486"/>
         <source>App lock is not configured.</source>
         <translation>앱 잠금이 설정되지 않았습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1484"/>
+        <location filename="../settingswidget.cpp" line="1490"/>
         <source>Do you want to setup App lock now?</source>
         <translation>지금 앱 잠금을 설정할까요?</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1526"/>
+        <location filename="../settingswidget.cpp" line="1532"/>
         <source>Feature permissions</source>
         <translation>기능 권한</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1605"/>
+        <location filename="../settingswidget.cpp" line="1611"/>
         <source>Choose a chat wallpaper</source>
         <translation>채팅 배경 선택</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1607"/>
+        <location filename="../settingswidget.cpp" line="1613"/>
         <source>Images (%1)</source>
         <translation>이미지 (%1)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1615"/>
+        <location filename="../settingswidget.cpp" line="1621"/>
         <source>Could not use that image: %1</source>
         <translation>이미지를 사용할 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1630"/>
+        <location filename="../settingswidget.cpp" line="1636"/>
         <source>Choose a CSS file</source>
         <translation>CSS 파일 선택</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1632"/>
+        <location filename="../settingswidget.cpp" line="1638"/>
         <source>Stylesheets (*.css);;All files (*)</source>
         <translation>스타일시트 (*.css);;모든 파일 (*)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1639"/>
+        <location filename="../settingswidget.cpp" line="1645"/>
         <source>Could not read that file: %1</source>
         <translation>파일을 읽을 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1712"/>
+        <location filename="../settingswidget.cpp" line="1718"/>
         <source>Disk</source>
         <translation>디스크</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1713"/>
+        <location filename="../settingswidget.cpp" line="1719"/>
         <source>Memory</source>
         <translation>메모리</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1871"/>
+        <location filename="../settingswidget.cpp" line="1877"/>
         <source>Ollama not found at this address.</source>
         <translation>이 주소에서 Ollama를 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1901"/>
+        <location filename="../settingswidget.cpp" line="1907"/>
         <source>Download complete.</source>
         <translation>다운로드가 완료되었습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1904"/>
+        <location filename="../settingswidget.cpp" line="1910"/>
         <source>Download failed: %1</source>
         <translation>다운로드 실패: %1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1915"/>
+        <location filename="../settingswidget.cpp" line="1921"/>
         <source>Checking…</source>
         <translation>확인 중…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1940"/>
+        <location filename="../settingswidget.cpp" line="1946"/>
         <source>Starting download of %1…</source>
         <translation>%1 다운로드 시작…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1995"/>
+        <location filename="../settingswidget.cpp" line="2001"/>
         <source>System</source>
         <translation>시스템</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1996"/>
+        <location filename="../settingswidget.cpp" line="2002"/>
         <source>None (direct)</source>
         <translation>없음(직접)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1997"/>
+        <location filename="../settingswidget.cpp" line="2003"/>
         <source>SOCKS5</source>
         <translation>SOCKS5</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1998"/>
+        <location filename="../settingswidget.cpp" line="2004"/>
         <source>HTTP</source>
         <translation>HTTP</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2024"/>
+        <location filename="../settingswidget.cpp" line="2030"/>
         <source>Desktop portal (Flatpak)</source>
         <translation>데스크톱 포털 (Flatpak)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2026"/>
+        <location filename="../settingswidget.cpp" line="2032"/>
         <source>System service (libnotify)</source>
         <translation>시스템 서비스 (libnotify)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2211"/>
-        <location filename="../settingswidget.cpp" line="2215"/>
+        <location filename="../settingswidget.cpp" line="2217"/>
+        <location filename="../settingswidget.cpp" line="2221"/>
         <source>Add reply</source>
         <translation>답장 추가</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2211"/>
+        <location filename="../settingswidget.cpp" line="2217"/>
         <source>Name</source>
         <translation>이름</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2215"/>
+        <location filename="../settingswidget.cpp" line="2221"/>
         <source>Text to insert</source>
         <translation>삽입할 텍스트</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2232"/>
+        <location filename="../settingswidget.cpp" line="2238"/>
         <source>Choose a JavaScript file</source>
         <translation>JavaScript 파일 선택</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2233"/>
+        <location filename="../settingswidget.cpp" line="2239"/>
         <source>JavaScript (*.js);;All files (*)</source>
         <translation>JavaScript (*.js);;모든 파일 (*)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2238"/>
+        <location filename="../settingswidget.cpp" line="2244"/>
         <source>Could not add addon</source>
         <translation>애드온을 추가할 수 없습니다</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2251"/>
+        <location filename="../settingswidget.cpp" line="2257"/>
         <source>Remove addon</source>
         <translation>애드온 제거</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2252"/>
+        <location filename="../settingswidget.cpp" line="2258"/>
         <source>Remove the addon &quot;%1&quot;? This deletes its file.</source>
         <translation>애드온 &quot;%1&quot;을(를) 제거하시겠습니까? 해당 파일이 삭제됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2362"/>
+        <location filename="../settingswidget.cpp" line="2368"/>
         <source>Search settings</source>
         <translation>설정 검색</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2364"/>
+        <location filename="../settingswidget.cpp" line="2370"/>
         <source>Show only the settings that match. What you find is the setting itself, working where it stands — not a list to click through. Tooltips are searched as well as labels, and so are the English names of the settings when Whatly is running in another language.</source>
         <translation>일치하는 설정만 표시합니다. 찾은 것은 설정 그 자체로, 목록을 클릭해 들어가는 것이 아니라 그 자리에서 바로 작동합니다. 레이블뿐 아니라 툴팁도 검색되며, Whatly가 다른 언어로 실행 중일 때는 설정의 영어 이름도 검색됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2486"/>
+        <location filename="../settingswidget.cpp" line="2492"/>
         <source>No setting matches “%1”. Tooltips are searched too, so a plainer word usually finds it.</source>
         <translation>“%1”과(와) 일치하는 설정이 없습니다. 툴팁도 검색되므로 더 간단한 단어로 대개 찾을 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2627"/>
+        <location filename="../settingswidget.cpp" line="2633"/>
         <source>Spell checker (no dictionaries installed)</source>
         <translation>맞춤법 검사기(설치된 사전 없음)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2733"/>
+        <location filename="../settingswidget.cpp" line="2739"/>
         <source>Downloadable languages unavailable — click to try again</source>
         <translation>다운로드 가능한 언어를 불러올 수 없습니다 — 클릭하여 다시 시도</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2747"/>
+        <location filename="../settingswidget.cpp" line="2753"/>
         <source>Tick the languages to check spelling against. Each row downloads or deletes its dictionary.</source>
         <translation>맞춤법 검사에 사용할 언어를 선택하세요. 각 행에서 사전을 다운로드하거나 삭제합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1714"/>
-        <location filename="../settingswidget.cpp" line="1722"/>
+        <location filename="../settingswidget.cpp" line="1720"/>
+        <location filename="../settingswidget.cpp" line="1728"/>
         <source>None</source>
         <translation>없음</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="536"/>
+        <location filename="../settingswidget.cpp" line="541"/>
         <source>Basics</source>
         <translation>기본</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="544"/>
+        <location filename="../settingswidget.cpp" line="550"/>
         <source>Appearance</source>
         <translation>모양</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="563"/>
+        <location filename="../settingswidget.cpp" line="569"/>
         <source>Notifications</source>
         <translation>알림</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="567"/>
+        <location filename="../settingswidget.cpp" line="573"/>
         <source>Chatting</source>
         <translation>채팅</translation>
     </message>
@@ -4050,114 +4081,114 @@ Please setup the password in the Settings first.</source>
         <translation type="vanished">맞춤법 검사 사전</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="674"/>
+        <location filename="../settingswidget.cpp" line="680"/>
         <source>Privacy &amp; Lock</source>
         <translation>개인정보 및 잠금</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="688"/>
+        <location filename="../settingswidget.cpp" line="694"/>
         <source>Window &amp;&amp; zoom</source>
         <translation>창 및 확대/축소</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="717"/>
+        <location filename="../settingswidget.cpp" line="723"/>
         <source>AI &amp;&amp; translation</source>
         <translation>AI &amp;&amp; 번역</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="724"/>
+        <location filename="../settingswidget.cpp" line="730"/>
         <source>Advanced</source>
         <translation>고급</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="850"/>
+        <location filename="../settingswidget.cpp" line="856"/>
         <source>Collect scroll diagnostics</source>
         <translation>스크롤 진단 수집</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="852"/>
+        <location filename="../settingswidget.cpp" line="858"/>
         <source>Records how smoothly the chat scrolls, to attach to a bug report. Off by default; it does nothing until you turn it on, and adds nothing to a normal session.</source>
         <translation>채팅 스크롤이 얼마나 부드러운지 기록하여 버그 보고서에 첨부합니다. 기본값은 꺼짐입니다. 켜기 전까지는 아무 작업도 하지 않으며 일반 사용에 아무런 영향을 주지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="862"/>
+        <location filename="../settingswidget.cpp" line="868"/>
         <source>Copy diagnostics</source>
         <translation>진단 복사</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="864"/>
+        <location filename="../settingswidget.cpp" line="870"/>
         <source>Copy the collected scroll figures to the clipboard (and the log) so they can be pasted into a bug report.</source>
         <translation>수집된 스크롤 수치를 클립보드(및 로그)에 복사하여 버그 보고서에 붙여넣을 수 있도록 합니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="965"/>
+        <location filename="../settingswidget.cpp" line="971"/>
         <source>Fetching the list of languages…</source>
         <translation>언어 목록을 가져오는 중…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1188"/>
+        <location filename="../settingswidget.cpp" line="1194"/>
         <source>Shortcut in use</source>
         <translation>단축키 사용 중</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1189"/>
+        <location filename="../settingswidget.cpp" line="1195"/>
         <source>That shortcut is already used by another action.</source>
         <translation>해당 단축키는 이미 다른 동작에서 사용 중입니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1201"/>
+        <location filename="../settingswidget.cpp" line="1207"/>
         <source>Clear cache</source>
         <translation>캐시 지우기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1202"/>
+        <location filename="../settingswidget.cpp" line="1208"/>
         <source>Clear the cache now? It will be re-downloaded as needed.</source>
         <translation>지금 캐시를 지우시겠습니까? 필요할 때 다시 다운로드됩니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1212"/>
         <location filename="../settingswidget.cpp" line="1218"/>
-        <location filename="../settingswidget.cpp" line="1227"/>
-        <location filename="../settingswidget.cpp" line="1230"/>
+        <location filename="../settingswidget.cpp" line="1224"/>
+        <location filename="../settingswidget.cpp" line="1233"/>
+        <location filename="../settingswidget.cpp" line="1236"/>
         <source>Export profile</source>
         <translation>프로필 내보내기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1213"/>
+        <location filename="../settingswidget.cpp" line="1219"/>
         <source>The archive will contain your logged-in WhatsApp session. Keep it private. Continue?</source>
         <translation>압축 파일에는 로그인된 WhatsApp 세션이 포함됩니다. 외부에 공개하지 마세요. 계속하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1220"/>
-        <location filename="../settingswidget.cpp" line="1235"/>
+        <location filename="../settingswidget.cpp" line="1226"/>
+        <location filename="../settingswidget.cpp" line="1241"/>
         <source>Archives (*.tar.gz)</source>
         <translation>압축 파일 (*.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1228"/>
+        <location filename="../settingswidget.cpp" line="1234"/>
         <source>Profile exported.</source>
         <translation>프로필을 내보냈습니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1235"/>
-        <location filename="../settingswidget.cpp" line="1239"/>
-        <location filename="../settingswidget.cpp" line="1247"/>
-        <location filename="../settingswidget.cpp" line="1250"/>
+        <location filename="../settingswidget.cpp" line="1241"/>
+        <location filename="../settingswidget.cpp" line="1245"/>
+        <location filename="../settingswidget.cpp" line="1253"/>
+        <location filename="../settingswidget.cpp" line="1256"/>
         <source>Import profile</source>
         <translation>프로필 가져오기</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1240"/>
+        <location filename="../settingswidget.cpp" line="1246"/>
         <source>This overwrites the current account&apos;s data with the archive, then Whatly must be restarted. Continue?</source>
         <translation>현재 계정의 데이터를 압축 파일로 덮어쓴 후 Whatly를 다시 시작해야 합니다. 계속하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1248"/>
+        <location filename="../settingswidget.cpp" line="1254"/>
         <source>Profile imported. Please restart Whatly.</source>
         <translation>프로필을 가져왔습니다. Whatly를 다시 시작하세요.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1876"/>
+        <location filename="../settingswidget.cpp" line="1882"/>
         <source>Ollama found (%1 models installed).</source>
         <translation>Ollama 발견 (%1개 모델 설치됨).</translation>
     </message>
@@ -4170,53 +4201,53 @@ Please setup the password in the Settings first.</source>
         <translation type="vanished">맞춤법 검사를 할 언어를 하나 이상 선택하세요.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2849"/>
+        <location filename="../settingswidget.cpp" line="2855"/>
         <source>Choose languages…</source>
         <translation>언어 선택…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2855"/>
+        <location filename="../settingswidget.cpp" line="2861"/>
         <source>%1 of %2 chosen</source>
         <translation>선택한 %2개 중 %1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2857"/>
+        <location filename="../settingswidget.cpp" line="2863"/>
         <source>%1 languages</source>
         <translation>언어 %1개</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2982"/>
+        <location filename="../settingswidget.cpp" line="2988"/>
         <source>WhatsApp default</source>
         <translation>WhatsApp 기본값</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3021"/>
+        <location filename="../settingswidget.cpp" line="3027"/>
         <source>System default</source>
         <translation>시스템 기본값</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3051"/>
+        <location filename="../settingswidget.cpp" line="3057"/>
         <source>The interface language will change when you restart %1.</source>
         <translation>%1 을(를) 다시 시작하면 인터페이스 언어가 바뀝니다.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3065"/>
+        <location filename="../settingswidget.cpp" line="3082"/>
         <source>App Lock Setup</source>
         <translation>앱 잠금 설정</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3066"/>
+        <location filename="../settingswidget.cpp" line="3083"/>
         <source>Please setup the App lock password first.</source>
         <translation>먼저 앱 잠금 비밀번호를 설정하세요.</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3182"/>
-        <location filename="../settingswidget.cpp" line="3193"/>
+        <location filename="../settingswidget.cpp" line="3199"/>
+        <location filename="../settingswidget.cpp" line="3210"/>
         <source>Select download directory</source>
         <translation>다운로드 폴더 선택</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3233"/>
+        <location filename="../settingswidget.cpp" line="3250"/>
         <source>You are about to change your current app lock password!
 
 This will LogOut your current session.
@@ -4227,7 +4258,7 @@ You may also require a complete restart of Application!</source>
 애플리케이션을 완전히 다시 시작해야 할 수도 있습니다!</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3239"/>
+        <location filename="../settingswidget.cpp" line="3256"/>
         <source>Do you want to proceed?</source>
         <translation>계속할까요?</translation>
     </message>
@@ -4317,104 +4348,104 @@ You may also require a complete restart of Application!</source>
 <context>
     <name>WebEnginePage</name>
     <message>
-        <location filename="../webenginepage.cpp" line="57"/>
+        <location filename="../webenginepage.cpp" line="63"/>
         <source>Share your screen</source>
         <translation>화면 공유</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="59"/>
+        <location filename="../webenginepage.cpp" line="65"/>
         <source>Choose what to share:</source>
         <translation>공유할 항목을 선택하세요:</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="71"/>
+        <location filename="../webenginepage.cpp" line="77"/>
         <source>Untitled</source>
         <translation>제목 없음</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="75"/>
+        <location filename="../webenginepage.cpp" line="81"/>
         <source>Screen: </source>
         <translation>화면: </translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="76"/>
+        <location filename="../webenginepage.cpp" line="82"/>
         <source>Window: </source>
         <translation>창: </translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="183"/>
+        <location filename="../webenginepage.cpp" line="189"/>
         <source>Allow %1 to access your location information?</source>
         <translation>%1 이(가) 위치 정보에 접근하도록 허용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="185"/>
+        <location filename="../webenginepage.cpp" line="191"/>
         <source>Allow %1 to access your microphone?</source>
         <translation>%1 이(가) 마이크에 접근하도록 허용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="187"/>
+        <location filename="../webenginepage.cpp" line="193"/>
         <source>Allow %1 to access your webcam?</source>
         <translation>%1 이(가) 카메라에 접근하도록 허용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="189"/>
+        <location filename="../webenginepage.cpp" line="195"/>
         <source>Allow %1 to access your microphone and webcam?</source>
         <translation>%1 이(가) 마이크와 카메라에 접근하도록 허용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="191"/>
+        <location filename="../webenginepage.cpp" line="197"/>
         <source>Allow %1 to lock your mouse cursor?</source>
         <translation>%1 이(가) 마우스 커서를 고정하도록 허용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="193"/>
+        <location filename="../webenginepage.cpp" line="199"/>
         <source>Allow %1 to capture video of your desktop?</source>
         <translation>%1 이(가) 바탕 화면의 영상을 녹화하도록 허용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="195"/>
+        <location filename="../webenginepage.cpp" line="201"/>
         <source>Allow %1 to capture audio and video of your desktop?</source>
         <translation>%1 이(가) 바탕 화면의 소리와 영상을 녹화하도록 허용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="198"/>
+        <location filename="../webenginepage.cpp" line="204"/>
         <source>Allow %1 to show notification on your desktop?</source>
         <translation>%1 이(가) 바탕 화면에 알림을 표시하도록 허용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="200"/>
+        <location filename="../webenginepage.cpp" line="206"/>
         <source>Allow %1 to read your clipboard? This is needed to paste images into a chat.</source>
         <translation>%1 이(가) 클립보드를 읽도록 허용하시겠습니까? 대화에 이미지를 붙여 넣으려면 필요합니다.</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="203"/>
+        <location filename="../webenginepage.cpp" line="209"/>
         <source>Allow %1 to see the fonts installed on your system?</source>
         <translation>%1 이(가) 시스템에 설치된 글꼴을 보도록 허용하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="223"/>
-        <location filename="../webenginepage.cpp" line="437"/>
+        <location filename="../webenginepage.cpp" line="229"/>
+        <location filename="../webenginepage.cpp" line="443"/>
         <source>Permission Request</source>
         <translation>권한 요청</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="360"/>
-        <location filename="../webenginepage.cpp" line="369"/>
+        <location filename="../webenginepage.cpp" line="366"/>
+        <location filename="../webenginepage.cpp" line="375"/>
         <source>Certificate Error</source>
         <translation>인증서 오류</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="389"/>
+        <location filename="../webenginepage.cpp" line="395"/>
         <source>Enter username and password for &quot;%1&quot; at %2</source>
         <translation>%2 의 «%1» 에 대한 사용자 이름과 비밀번호를 입력하세요</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="419"/>
+        <location filename="../webenginepage.cpp" line="425"/>
         <source>Connect to proxy &quot;%1&quot; using:</source>
         <translation>다음을 사용하여 프록시 «%1» 에 연결:</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="438"/>
+        <location filename="../webenginepage.cpp" line="444"/>
         <source>Allow %1 to open all %2 links?</source>
         <translation>%1 이(가) 모든 %2 링크를 열도록 허용하시겠습니까?</translation>
     </message>

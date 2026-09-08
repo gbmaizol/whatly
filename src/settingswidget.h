@@ -121,6 +121,7 @@ private slots:
   void on_closeButtonActionComboBox_currentIndexChanged(int index);
   void on_defaultUserAgentButton_clicked();
   void on_identifyInLinkedDevicesCheckBox_toggled(bool checked);
+  void on_linkedDeviceBrowserLineEdit_editingFinished();
   void on_minimizeOnTrayIconClick_toggled(bool checked);
   void on_minimizeOnlyFocusedWindowCheckBox_toggled(bool checked);
   void on_muteAudioCheckBox_toggled(bool checked);

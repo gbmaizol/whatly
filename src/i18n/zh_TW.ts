@@ -211,17 +211,17 @@ Do you wish to override the security check and continue ?   </source>
 <context>
     <name>ChatListStrip</name>
     <message>
-        <location filename="../chatliststrip.cpp" line="739"/>
+        <location filename="../chatliststrip.cpp" line="866"/>
         <source>Small</source>
         <translation>小</translation>
     </message>
     <message>
-        <location filename="../chatliststrip.cpp" line="741"/>
+        <location filename="../chatliststrip.cpp" line="868"/>
         <source>Medium</source>
         <translation>中</translation>
     </message>
     <message>
-        <location filename="../chatliststrip.cpp" line="743"/>
+        <location filename="../chatliststrip.cpp" line="870"/>
         <source>Large</source>
         <translation>大</translation>
     </message>
@@ -378,17 +378,17 @@ Do you wish to override the security check and continue ?   </source>
 <context>
     <name>DictionaryManager</name>
     <message>
-        <location filename="../dictionarymanager.cpp" line="112"/>
+        <location filename="../dictionarymanager.cpp" line="113"/>
         <source>No writable dictionary directory.</source>
         <translation>沒有可寫入的字典目錄。</translation>
     </message>
     <message>
-        <location filename="../dictionarymanager.cpp" line="142"/>
+        <location filename="../dictionarymanager.cpp" line="143"/>
         <source>The downloaded dictionary failed verification.</source>
         <translation>下載的字典未通過驗證。</translation>
     </message>
     <message>
-        <location filename="../dictionarymanager.cpp" line="152"/>
+        <location filename="../dictionarymanager.cpp" line="153"/>
         <source>Could not save the dictionary.</source>
         <translation>無法儲存字典。</translation>
     </message>
@@ -575,282 +575,298 @@ Do you wish to override the security check and continue ?   </source>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="122"/>
-        <location filename="../mainwindow.cpp" line="1278"/>
-        <location filename="../mainwindow.cpp" line="1374"/>
+        <location filename="../mainwindow.cpp" line="126"/>
+        <location filename="../mainwindow.cpp" line="1287"/>
+        <location filename="../mainwindow.cpp" line="1383"/>
         <source>No WhatsApp window is open</source>
         <translation>沒有開啟的 WhatsApp 視窗</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="127"/>
+        <location filename="../mainwindow.cpp" line="131"/>
         <source>Reminder</source>
         <translation>提醒</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="127"/>
+        <location filename="../mainwindow.cpp" line="131"/>
         <source>Reminder: %1</source>
         <translation>提醒：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="265"/>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="274"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>Update available</source>
         <translation>有可用更新</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="254"/>
+        <location filename="../mainwindow.cpp" line="263"/>
         <source>Whatly %1 is available. Click to open the download page.</source>
         <translation>Whatly %1 已推出。點按以開啟下載頁面。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="234"/>
+        <location filename="../mainwindow.cpp" line="243"/>
         <source>Whatly %1 is available. Update it through Flathub or your software centre.</source>
         <translation>Whatly %1 可用。請透過 Flathub 或你的軟體中心更新。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="239"/>
+        <location filename="../mainwindow.cpp" line="248"/>
         <source>Whatly %1 is available. Update it with your package manager.</source>
         <translation>Whatly %1 可用。請使用你的套件管理器更新。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="244"/>
+        <location filename="../mainwindow.cpp" line="253"/>
         <source>Whatly %1 is available. Choose Update now to fetch just the parts that changed and update in place.</source>
         <translation>Whatly %1 可用。選擇「立即更新」僅下載變更的部分並就地更新。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="247"/>
+        <location filename="../mainwindow.cpp" line="256"/>
         <source>Whatly %1 is available. This AppImage can update itself in place with AppImageUpdate, fetching only the parts that changed.</source>
         <translation>Whatly %1 可用。此 AppImage 可透過 AppImageUpdate 原地更新，只下載變更的部分。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="271"/>
+        <location filename="../mainwindow.cpp" line="280"/>
         <source>Update now</source>
         <translation>立即更新</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="905"/>
         <location filename="../mainwindow.cpp" line="914"/>
+        <location filename="../mainwindow.cpp" line="923"/>
         <source>Diagnostics</source>
         <translation>診斷</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="906"/>
+        <location filename="../mainwindow.cpp" line="915"/>
         <source>No scroll diagnostics recorded yet. Turn on collection, scroll a chat for a few seconds, then copy.</source>
         <translation>尚未記錄捲動診斷。請開啟收集，捲動聊天幾秒鐘，然後複製。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="915"/>
+        <location filename="../mainwindow.cpp" line="924"/>
         <source>Scroll diagnostics copied to the clipboard (and added to the log). Paste them into your bug report.</source>
         <translation>捲動診斷已複製到剪貼簿（並已加入紀錄檔）。請將其貼到你的錯誤報告中。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1012"/>
-        <location filename="../mainwindow.cpp" line="1018"/>
-        <location filename="../mainwindow_webengine.cpp" line="1030"/>
-        <location filename="../mainwindow_webengine.cpp" line="1033"/>
+        <location filename="../mainwindow.cpp" line="1021"/>
+        <location filename="../mainwindow.cpp" line="1027"/>
+        <location filename="../mainwindow_webengine.cpp" line="1036"/>
+        <location filename="../mainwindow_webengine.cpp" line="1039"/>
         <source>| Error</source>
         <translation>| 錯誤</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1013"/>
+        <location filename="../mainwindow.cpp" line="1022"/>
         <source>Unlock to access Settings.</source>
         <translation>解鎖以存取設定。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1019"/>
+        <location filename="../mainwindow.cpp" line="1028"/>
         <source>Unable to initialize settings module.
 Webengine is not initialized.</source>
         <translation>無法初始化設定模組。
 WebEngine 尚未初始化。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1040"/>
+        <location filename="../mainwindow.cpp" line="1049"/>
         <source> | Action required</source>
         <translation> | 需要採取行動</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1041"/>
+        <location filename="../mainwindow.cpp" line="1050"/>
         <source>Page needs to be reloaded to continue.</source>
         <translation>需要重新載入頁面才能繼續。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1220"/>
-        <location filename="../mainwindow.cpp" line="1862"/>
-        <location filename="../mainwindow_webengine.cpp" line="1725"/>
+        <location filename="../mainwindow.cpp" line="1229"/>
+        <location filename="../mainwindow.cpp" line="1944"/>
+        <location filename="../mainwindow_webengine.cpp" line="1731"/>
         <source>Whatly is locked. Unlock it to send messages.</source>
         <translation>Whatly 已鎖定。請解鎖後再傳送訊息。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1231"/>
+        <location filename="../mainwindow.cpp" line="1240"/>
         <source>The Cloud API needs a phone number as the recipient.</source>
         <translation>Cloud API 需要以電話號碼作為收件者。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1236"/>
+        <location filename="../mainwindow.cpp" line="1245"/>
         <source>The Cloud API is not configured.</source>
         <translation>尚未設定 Cloud API。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1245"/>
+        <location filename="../mainwindow.cpp" line="1254"/>
         <source>Cloud API send failed: %1</source>
         <translation>Cloud API 傳送失敗：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1270"/>
+        <location filename="../mainwindow.cpp" line="1279"/>
         <source>Could not understand the recipient: %1</source>
         <translation>無法辨識收件者：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1299"/>
-        <location filename="../mainwindow.cpp" line="1380"/>
+        <location filename="../mainwindow.cpp" line="1308"/>
+        <location filename="../mainwindow.cpp" line="1389"/>
         <source>Could not read the file to send: %1</source>
         <translation>無法讀取要傳送的檔案：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1308"/>
-        <location filename="../mainwindow.cpp" line="1390"/>
+        <location filename="../mainwindow.cpp" line="1317"/>
+        <location filename="../mainwindow.cpp" line="1399"/>
         <source>The file is too large to send over the web backend.</source>
         <translation>檔案太大，無法透過網頁後端傳送。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1333"/>
+        <location filename="../mainwindow.cpp" line="1342"/>
         <source>Opening the group and sending…</source>
         <translation>正在開啟群組並傳送…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1334"/>
+        <location filename="../mainwindow.cpp" line="1343"/>
         <source>Opening the chat with &quot;%1&quot; and sending…</source>
         <translation>正在開啟與「%1」的聊天並傳送…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1365"/>
+        <location filename="../mainwindow.cpp" line="1374"/>
         <source>The local API could not start: %1</source>
         <translation>本機 API 無法啟動：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1502"/>
+        <location filename="../mainwindow.cpp" line="1529"/>
         <source>Updating Whatly…</source>
         <translation>正在更新 Whatly…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1504"/>
-        <location filename="../mainwindow.cpp" line="1545"/>
-        <location filename="../mainwindow.cpp" line="1551"/>
-        <location filename="../mainwindow.cpp" line="1563"/>
+        <location filename="../mainwindow.cpp" line="1531"/>
+        <location filename="../mainwindow.cpp" line="1572"/>
+        <location filename="../mainwindow.cpp" line="1599"/>
+        <location filename="../mainwindow.cpp" line="1623"/>
+        <location filename="../mainwindow.cpp" line="1634"/>
         <source>Software update</source>
         <translation>軟體更新</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1546"/>
+        <location filename="../mainwindow.cpp" line="1573"/>
         <source>The update could not be completed. You can download the new version from the release page instead.</source>
         <translation>無法完成更新。您可以改為從發布頁面下載新版本。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1552"/>
+        <location filename="../mainwindow.cpp" line="1596"/>
+        <source>The previous version has been restored.</source>
+        <translation>已還原先前的版本。</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1600"/>
+        <source>The downloaded update failed signature verification and was not applied.</source>
+        <translation>下載的更新未通過簽章驗證，未套用。</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1616"/>
+        <source>Whatly was updated, but its signature could not be verified. Restart now to use the new version?</source>
+        <translation>Whatly 已更新，但無法驗證其簽章。立即重新啟動以使用新版本？</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1618"/>
         <source>Whatly was updated. Restart now to use the new version?</source>
         <translation>Whatly 已更新。是否立即重新啟動以使用新版本？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1564"/>
+        <location filename="../mainwindow.cpp" line="1635"/>
         <source>The update tool could not be started.</source>
         <translation>無法啟動更新工具。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1590"/>
+        <location filename="../mainwindow.cpp" line="1661"/>
         <source>Restart</source>
         <translation>重新啟動</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1591"/>
+        <location filename="../mainwindow.cpp" line="1662"/>
         <source>Whatly could not start a new instance, so it has not closed this one. Please quit and reopen it.</source>
         <translation>Whatly 無法啟動新執行個體，因此未關閉目前這個。請結束後重新開啟。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1717"/>
+        <location filename="../mainwindow.cpp" line="1799"/>
         <source>Expand the chat list</source>
         <translation>展開聊天清單</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1718"/>
+        <location filename="../mainwindow.cpp" line="1800"/>
         <location filename="../mainwindow_tray.cpp" line="370"/>
         <source>Collapse the chat list</source>
         <translation>收合聊天清單</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="268"/>
-        <location filename="../mainwindow.cpp" line="1838"/>
+        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="1920"/>
         <source>Open</source>
         <translation>開啟</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1884"/>
+        <location filename="../mainwindow.cpp" line="1966"/>
         <location filename="../mainwindow_tray.cpp" line="29"/>
         <source>New Chat</source>
         <translation>新聊天</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1885"/>
+        <location filename="../mainwindow.cpp" line="1967"/>
         <source>Enter a valid WhatsApp number with country code (ex- +91XXXXXXXXXX)</source>
         <translation>請輸入含國碼的有效 WhatsApp 號碼（例如 +91XXXXXXXXXX）</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1915"/>
+        <location filename="../mainwindow.cpp" line="1997"/>
         <source>Rate Application</source>
         <translation>為應用程式評分</translation>
     </message>
     <message>
         <location filename="../mainwindow_accounts.cpp" line="348"/>
-        <location filename="../mainwindow_accounts.cpp" line="1817"/>
+        <location filename="../mainwindow_accounts.cpp" line="1818"/>
         <source>Rename…</source>
         <translation>重新命名…</translation>
     </message>
     <message>
         <location filename="../mainwindow_accounts.cpp" line="349"/>
-        <location filename="../mainwindow_accounts.cpp" line="1818"/>
+        <location filename="../mainwindow_accounts.cpp" line="1819"/>
         <source>Open in own window</source>
         <translation>在獨立視窗中開啟</translation>
     </message>
     <message>
         <location filename="../mainwindow_accounts.cpp" line="353"/>
-        <location filename="../mainwindow_accounts.cpp" line="1821"/>
+        <location filename="../mainwindow_accounts.cpp" line="1822"/>
         <source>Remove account</source>
         <translation>移除帳號</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="438"/>
+        <location filename="../mainwindow_accounts.cpp" line="439"/>
         <source>Switch to account: %1</source>
         <translation>切換至帳號：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="441"/>
+        <location filename="../mainwindow_accounts.cpp" line="442"/>
         <location filename="../mainwindow_tray.cpp" line="321"/>
         <source>Add account…</source>
         <translation>新增帳號…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="442"/>
+        <location filename="../mainwindow_accounts.cpp" line="443"/>
         <source>Quick message…</source>
         <translation>快速訊息…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="447"/>
+        <location filename="../mainwindow_accounts.cpp" line="448"/>
         <source>Insert: %1</source>
         <translation>插入：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="755"/>
+        <location filename="../mainwindow_accounts.cpp" line="756"/>
         <source>%1 — %2 unread</source>
         <translation>%1 — %2 則未讀</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1561"/>
-        <location filename="../mainwindow_accounts.cpp" line="2220"/>
+        <location filename="../mainwindow_accounts.cpp" line="1562"/>
+        <location filename="../mainwindow_accounts.cpp" line="2221"/>
         <source>Add another account</source>
         <translation>新增其他帳號</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1590"/>
-        <location filename="../mainwindow_accounts.cpp" line="1617"/>
+        <location filename="../mainwindow_accounts.cpp" line="1591"/>
+        <location filename="../mainwindow_accounts.cpp" line="1618"/>
         <source>Restore</source>
         <translation>還原</translation>
     </message>
@@ -863,39 +879,39 @@ WebEngine 尚未初始化。</translation>
         <translation type="vanished">則訊息</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1663"/>
+        <location filename="../mainwindow_accounts.cpp" line="1664"/>
         <source>Add account</source>
         <translation>新增帳號</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1664"/>
+        <location filename="../mainwindow_accounts.cpp" line="1665"/>
         <source>Name for the new account:</source>
         <translation>新帳號的名稱：</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1665"/>
-        <location filename="../mainwindow_accounts.cpp" line="2558"/>
-        <location filename="../mainwindow_accounts.cpp" line="2563"/>
+        <location filename="../mainwindow_accounts.cpp" line="1666"/>
+        <location filename="../mainwindow_accounts.cpp" line="2559"/>
+        <location filename="../mainwindow_accounts.cpp" line="2564"/>
         <source>Account %1</source>
         <translation>帳號 %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1694"/>
+        <location filename="../mainwindow_accounts.cpp" line="1695"/>
         <source>Rename account</source>
         <translation>重新命名帳號</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1694"/>
+        <location filename="../mainwindow_accounts.cpp" line="1695"/>
         <source>Account name:</source>
         <translation>帳號名稱：</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="2239"/>
+        <location filename="../mainwindow_accounts.cpp" line="2240"/>
         <source>Tip: give an account its own window</source>
         <translation>提示：為帳號開啟獨立視窗</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="2240"/>
+        <location filename="../mainwindow_accounts.cpp" line="2241"/>
         <source>You now have more than one account, shown as tabs along the top.
 
 You can pull any account out into its own window: right-click its tab and choose “Open in own window”. Close that window to dock the account back as a tab.</source>
@@ -904,8 +920,8 @@ You can pull any account out into its own window: right-click its tab and choose
 您可以將任一帳號拉出成獨立視窗：在其分頁上按右鍵並選擇「在獨立視窗中開啟」。關閉該視窗即可將帳號重新併回分頁。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="2552"/>
-        <location filename="../mainwindow_accounts.cpp" line="2556"/>
+        <location filename="../mainwindow_accounts.cpp" line="2553"/>
+        <location filename="../mainwindow_accounts.cpp" line="2557"/>
         <source>Account 1</source>
         <translation>帳號 1</translation>
     </message>
@@ -1153,13 +1169,13 @@ Open Settings now?</source>
     </message>
     <message>
         <location filename="../mainwindow_tray.cpp" line="377"/>
-        <location filename="../mainwindow_webengine.cpp" line="1554"/>
-        <location filename="../mainwindow_webengine.cpp" line="1558"/>
-        <location filename="../mainwindow_webengine.cpp" line="1571"/>
-        <location filename="../mainwindow_webengine.cpp" line="1622"/>
-        <location filename="../mainwindow_webengine.cpp" line="1657"/>
-        <location filename="../mainwindow_webengine.cpp" line="1687"/>
-        <location filename="../mainwindow_webengine.cpp" line="1691"/>
+        <location filename="../mainwindow_webengine.cpp" line="1560"/>
+        <location filename="../mainwindow_webengine.cpp" line="1564"/>
+        <location filename="../mainwindow_webengine.cpp" line="1577"/>
+        <location filename="../mainwindow_webengine.cpp" line="1628"/>
+        <location filename="../mainwindow_webengine.cpp" line="1663"/>
+        <location filename="../mainwindow_webengine.cpp" line="1693"/>
+        <location filename="../mainwindow_webengine.cpp" line="1697"/>
         <source>Export chat</source>
         <translation>匯出聊天記錄</translation>
     </message>
@@ -1195,62 +1211,62 @@ Open Settings now?</source>
         <translation>拼字檢查</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="599"/>
+        <location filename="../mainwindow_tray.cpp" line="601"/>
         <source>hidden</source>
         <translation>已隱藏</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="601"/>
+        <location filename="../mainwindow_tray.cpp" line="603"/>
         <source>minimised</source>
         <translation>已最小化</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="638"/>
+        <location filename="../mainwindow_tray.cpp" line="640"/>
         <source>All of them</source>
         <translation>全部</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="653"/>
+        <location filename="../mainwindow_tray.cpp" line="655"/>
         <source>No spell-check language is installed.</source>
         <translation>未安裝任何拼字檢查語言。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="654"/>
+        <location filename="../mainwindow_tray.cpp" line="656"/>
         <source>Only one spell-check language is chosen. Pick more in Settings to switch between them.</source>
         <translation>只選擇了一種拼字檢查語言。請在設定中選擇更多以便在它們之間切換。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="677"/>
+        <location filename="../mainwindow_tray.cpp" line="679"/>
         <source>Spelling: every chosen language</source>
         <translation>拼字檢查：所有已選語言</translation>
     </message>
     <message>
-        <location filename="../mainwindow_tray.cpp" line="678"/>
+        <location filename="../mainwindow_tray.cpp" line="680"/>
         <source>Spelling: %1</source>
         <translation>拼字檢查：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="922"/>
+        <location filename="../mainwindow_webengine.cpp" line="928"/>
         <source>Reply</source>
         <translation>回覆</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="923"/>
+        <location filename="../mainwindow_webengine.cpp" line="929"/>
         <source>Reply to %1…</source>
         <translation>回覆 %1…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1028"/>
+        <location filename="../mainwindow_webengine.cpp" line="1034"/>
         <source>Unlock to Reload the App.</source>
         <translation>解鎖以重新載入應用程式。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1071"/>
+        <location filename="../mainwindow_webengine.cpp" line="1077"/>
         <source>Waiting for network…</source>
         <translation>正在等待網路…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1198"/>
+        <location filename="../mainwindow_webengine.cpp" line="1204"/>
         <source>This build cannot send H.264/MP4 videos: its browser engine was built without the proprietary codecs. Photos and WebM/VP9 videos work. For MP4, use the Flatpak, whose engine is built with them. (Click to dismiss.)</source>
         <translation>此版本無法傳送 H.264/MP4 影片：其瀏覽器引擎在建置時未包含專有編解碼器。相片與 WebM/VP9 影片可正常使用。若要傳送 MP4，請使用 Flatpak 版本，其引擎已包含這些編解碼器。（按一下即可關閉。）</translation>
     </message>
@@ -1259,223 +1275,223 @@ Open Settings now?</source>
         <translation type="vanished">此版本無法傳送 H.264/MP4 影片：其瀏覽器引擎建置時未包含專有編解碼器。相片與 WebM/VP9 影片可用；如需 MP4，請使用含編解碼器建置的發行版/原生套件。（點擊關閉。）</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1511"/>
+        <location filename="../mainwindow_webengine.cpp" line="1517"/>
         <source>Inline translation is off (enable it in Settings → Translation).</source>
         <translation>行內翻譯已關閉（請在設定 → 翻譯中啟用）。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1515"/>
+        <location filename="../mainwindow_webengine.cpp" line="1521"/>
         <source>The message box is empty.</source>
         <translation>訊息輸入框是空的。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1516"/>
+        <location filename="../mainwindow_webengine.cpp" line="1522"/>
         <source>Select some text to translate first.</source>
         <translation>請先選取要翻譯的文字。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1554"/>
+        <location filename="../mainwindow_webengine.cpp" line="1560"/>
         <source>No conversation is open.</source>
         <translation>沒有開啟中的對話。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1558"/>
+        <location filename="../mainwindow_webengine.cpp" line="1564"/>
         <source>An export is already running.</source>
         <translation>已有匯出作業正在進行。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1563"/>
+        <location filename="../mainwindow_webengine.cpp" line="1569"/>
         <source>Choose a folder for the exported chat</source>
         <translation>選擇要匯出聊天記錄的資料夾</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1569"/>
+        <location filename="../mainwindow_webengine.cpp" line="1575"/>
         <source>Collecting messages… scrolling through the conversation.</source>
         <translation>正在收集訊息…捲動瀏覽對話中。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1502"/>
-        <location filename="../mainwindow_webengine.cpp" line="1570"/>
+        <location filename="../mainwindow.cpp" line="1529"/>
+        <location filename="../mainwindow_webengine.cpp" line="1576"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1210"/>
+        <location filename="../mainwindow_webengine.cpp" line="1216"/>
         <source>This build cannot send H.264/MP4 videos: its browser engine was built without the proprietary codecs, and no build of Whatly with them exists for this platform. Photos and WebM/VP9 videos work; to send an MP4, convert it to WebM first or share it as a document. (Click to dismiss.)</source>
         <translation>此版本無法傳送 H.264/MP4 影片：其瀏覽器引擎在建置時未包含專有編解碼器，而且此平台沒有包含它們的 Whatly 版本。照片和 WebM/VP9 影片可以正常使用；若要傳送 MP4，請先將其轉換為 WebM，或作為文件傳送。（點擊關閉。）</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1222"/>
+        <location filename="../mainwindow_webengine.cpp" line="1228"/>
         <source>Voice and video calls need the same codecs, so this build cannot make them either.</source>
         <translation>語音通話和視訊通話需要相同的編解碼器，因此此版本同樣無法進行這些通話。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1617"/>
+        <location filename="../mainwindow_webengine.cpp" line="1623"/>
         <source>Collecting messages… (%1 so far)</source>
         <translation>正在收集訊息…（目前已 %1 則）</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1623"/>
+        <location filename="../mainwindow_webengine.cpp" line="1629"/>
         <source>Could not read the conversation: %1</source>
         <translation>無法讀取對話：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1969"/>
+        <location filename="../mainwindow_webengine.cpp" line="1975"/>
         <source>Do Not Disturb on.</source>
         <translation>請勿打擾已開啟。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1969"/>
+        <location filename="../mainwindow_webengine.cpp" line="1975"/>
         <source>Do Not Disturb off.</source>
         <translation>請勿打擾已關閉。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1977"/>
-        <location filename="../mainwindow_webengine.cpp" line="1993"/>
+        <location filename="../mainwindow_webengine.cpp" line="1983"/>
+        <location filename="../mainwindow_webengine.cpp" line="1999"/>
         <source>Do Not Disturb on until %1.</source>
         <translation>請勿打擾已開啟，直到 %1。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2004"/>
+        <location filename="../mainwindow_webengine.cpp" line="2010"/>
         <source>Open a chat to set a reply reminder.</source>
         <translation>請先開啟一個聊天以設定回覆提醒。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2010"/>
+        <location filename="../mainwindow_webengine.cpp" line="2016"/>
         <source>Time to reply to this chat.</source>
         <translation>該回覆這個聊天了。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2013"/>
+        <location filename="../mainwindow_webengine.cpp" line="2019"/>
         <source>Reply reminder set for %1.</source>
         <translation>已設定回覆提醒：%1。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2044"/>
-        <location filename="../mainwindow_webengine.cpp" line="2068"/>
+        <location filename="../mainwindow_webengine.cpp" line="2050"/>
+        <location filename="../mainwindow_webengine.cpp" line="2074"/>
         <source>Low disk space</source>
         <translation>磁碟空間不足</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2045"/>
+        <location filename="../mainwindow_webengine.cpp" line="2051"/>
         <source>Whatly&apos;s data folder has only %1 free.</source>
         <translation>Whatly 的資料夾僅剩 %1 可用。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2048"/>
+        <location filename="../mainwindow_webengine.cpp" line="2054"/>
         <source>With so little space, WhatsApp Web&apos;s local database can be corrupted by a truncated write, which forces you to link your phone again. Move Whatly&apos;s data folder to a disk with more room, or free up space.</source>
         <translation>空間如此之少時，WhatsApp Web 的本機資料庫可能因寫入被截斷而損毀，迫使你重新連結手機。請將 Whatly 的資料夾移到空間更大的磁碟，或釋放空間。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2052"/>
+        <location filename="../mainwindow_webengine.cpp" line="2058"/>
         <source>Change folder…</source>
         <translation>變更資料夾…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2053"/>
+        <location filename="../mainwindow_webengine.cpp" line="2059"/>
         <source>Later</source>
         <translation type="unfinished">稍後</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2061"/>
+        <location filename="../mainwindow_webengine.cpp" line="2067"/>
         <source>Choose a data folder for Whatly</source>
         <translation>為 Whatly 選擇資料夾</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2069"/>
+        <location filename="../mainwindow_webengine.cpp" line="2075"/>
         <source>That folder is also low on space (%1 free). Please pick another.</source>
         <translation>該資料夾空間也不足（剩餘 %1）。請另選一個。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2076"/>
+        <location filename="../mainwindow_webengine.cpp" line="2082"/>
         <source>Restart Whatly</source>
         <translation>重新啟動 Whatly</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2077"/>
+        <location filename="../mainwindow_webengine.cpp" line="2083"/>
         <source>Whatly will use &quot;%1&quot; as its data folder after a restart. Your current data stays where it is (you can move it there yourself). Restart now?</source>
         <translation>重新啟動後 Whatly 將使用「%1」作為資料夾。你目前的資料仍留在原處（你可以自行移動）。現在重新啟動嗎？</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2097"/>
+        <location filename="../mainwindow_webengine.cpp" line="2103"/>
         <source>No unread chats to summarise.</source>
         <translation>沒有未讀聊天可總結。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="2102"/>
+        <location filename="../mainwindow_webengine.cpp" line="2108"/>
         <source>Unread digest</source>
         <translation>未讀摘要</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1591"/>
-        <location filename="../mainwindow_webengine.cpp" line="1646"/>
+        <location filename="../mainwindow_accounts.cpp" line="1592"/>
+        <location filename="../mainwindow_webengine.cpp" line="1652"/>
         <source>chat</source>
         <translation>聊天</translation>
     </message>
     <message>
-        <location filename="../mainwindow_accounts.cpp" line="1591"/>
+        <location filename="../mainwindow_accounts.cpp" line="1592"/>
         <source>chats</source>
         <translation>聊天</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1658"/>
+        <location filename="../mainwindow_webengine.cpp" line="1664"/>
         <source>Could not create the export folder.</source>
         <translation>無法建立匯出資料夾。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1688"/>
+        <location filename="../mainwindow_webengine.cpp" line="1694"/>
         <source>The export could not be fully written.</source>
         <translation>匯出內容無法完整寫入。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1692"/>
+        <location filename="../mainwindow_webengine.cpp" line="1698"/>
         <source>Saved %1 messages and %2 media files to %3</source>
         <translation>已將 %1 則訊息與 %2 個媒體檔案儲存至 %3</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1781"/>
+        <location filename="../mainwindow_webengine.cpp" line="1787"/>
         <source>The AI assistant is off (enable it in Settings → AI assistant).</source>
         <translation>AI 助理已關閉（請在設定 → AI 助理中啟用）。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1786"/>
+        <location filename="../mainwindow_webengine.cpp" line="1792"/>
         <source>There is nothing for the assistant to work on.</source>
         <translation>沒有可供助理處理的內容。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1798"/>
+        <location filename="../mainwindow_webengine.cpp" line="1804"/>
         <source>Asking the assistant… (low memory: %1 MB free; a local model may fail or slow the app)</source>
         <translation>正在詢問助理…（記憶體不足：剩餘 %1 MB；本機模型可能失敗或拖慢應用程式）</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1803"/>
+        <location filename="../mainwindow_webengine.cpp" line="1809"/>
         <source>Asking the assistant…</source>
         <translation>正在詢問助理…</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1824"/>
+        <location filename="../mainwindow_webengine.cpp" line="1830"/>
         <source>AI assistant</source>
         <translation>AI 助理</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1839"/>
+        <location filename="../mainwindow_webengine.cpp" line="1845"/>
         <source>Close</source>
         <translation>關閉</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1849"/>
-        <location filename="../mainwindow_webengine.cpp" line="1863"/>
-        <location filename="../mainwindow_webengine.cpp" line="1886"/>
+        <location filename="../mainwindow_webengine.cpp" line="1855"/>
+        <location filename="../mainwindow_webengine.cpp" line="1869"/>
+        <location filename="../mainwindow_webengine.cpp" line="1892"/>
         <source>AI result</source>
         <translation>AI 結果</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1883"/>
+        <location filename="../mainwindow_webengine.cpp" line="1889"/>
         <source>Message updated.</source>
         <translation>訊息已更新。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1899"/>
+        <location filename="../mainwindow_webengine.cpp" line="1905"/>
         <source>Chat summary</source>
         <translation>聊天摘要</translation>
     </message>
@@ -1715,274 +1731,274 @@ Open Settings now?</source>
         <translation>建置權杖：%1</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="205"/>
+        <location filename="../main.cpp" line="207"/>
         <source>Nothing to migrate from &quot;%1&quot; — already migrated, or no data found there.</source>
         <translation>沒有可從「%1」搬移的內容 — 已完成搬移，或未找到任何資料。</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="210"/>
+        <location filename="../main.cpp" line="212"/>
         <source>Would copy:</source>
         <translation>將複製：</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="210"/>
+        <location filename="../main.cpp" line="212"/>
         <source>Copied:</source>
         <translation>已複製：</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="214"/>
+        <location filename="../main.cpp" line="216"/>
         <source>Run again without --dry-run to perform the copy.</source>
         <translation>再次執行時不加 --dry-run 即可實際複製。</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="656"/>
+        <location filename="../main.cpp" line="671"/>
         <source>Feature rich WhatsApp web client based on Qt WebEngine</source>
         <translation>以 Qt WebEngine 為基礎、功能豐富的 WhatsApp Web 客戶端</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="663"/>
+        <location filename="../main.cpp" line="678"/>
         <source>Displays help on commandline options</source>
         <translation>顯示命令列選項的說明</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="668"/>
+        <location filename="../main.cpp" line="683"/>
         <source>Opens Settings dialog in a running instance of </source>
         <translation>在執行中的執行個體開啟設定對話框 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="673"/>
+        <location filename="../main.cpp" line="688"/>
         <source>Locks a running instance of </source>
         <translation>鎖定執行中的執行個體 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="679"/>
+        <location filename="../main.cpp" line="694"/>
         <source>Opens About dialog in a running instance of </source>
         <translation>在執行中的執行個體開啟關於對話框 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="684"/>
+        <location filename="../main.cpp" line="699"/>
         <source>Opens the scheduled messages dialog in a running instance of </source>
         <translation>在執行中的執行個體開啟排程訊息對話框 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="691"/>
+        <location filename="../main.cpp" line="706"/>
         <source>Toggle between dark &amp; light theme in a running instance of </source>
         <translation>在執行中的執行個體切換深色與淺色主題 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="698"/>
+        <location filename="../main.cpp" line="713"/>
         <source>Reload the app in a running instance of </source>
         <translation>重新載入執行中的執行個體 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="704"/>
+        <location filename="../main.cpp" line="719"/>
         <source>Open new chat prompt in a running instance of </source>
         <translation>在執行中的執行個體開啟新聊天提示 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="717"/>
+        <location filename="../main.cpp" line="732"/>
         <source>Run as a separate account with its own session and settings, in its own window</source>
         <translation>以獨立視窗執行，並使用專屬的工作階段與設定作為獨立帳號</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="727"/>
+        <location filename="../main.cpp" line="742"/>
         <source>Internal: wait for the process with this id to exit before starting, used by &quot;Restart now&quot;</source>
         <translation>內部使用：啟動前先等待指定 ID 的處理程序結束，供「立即重新啟動」使用</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="734"/>
+        <location filename="../main.cpp" line="749"/>
         <source>Show main window of running instance of </source>
         <translation>顯示執行中的執行個體的主視窗 </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="741"/>
+        <location filename="../main.cpp" line="756"/>
         <source>Copy settings and the logged-in session from a previous install (e.g. the older &quot;whatsie&quot; build) into this one, then exit</source>
         <translation>將先前安裝版本（例如舊版「whatsie」build）的設定與已登入工作階段複製到目前版本，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="748"/>
+        <location filename="../main.cpp" line="763"/>
         <source>With --migrate-from, only report what would be copied</source>
         <translation>搭配 --migrate-from 使用，僅回報將複製的內容</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="766"/>
+        <location filename="../main.cpp" line="781"/>
         <source>Print the current unread message count and exit</source>
         <translation>印出目前未讀訊息數量並結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="772"/>
+        <location filename="../main.cpp" line="787"/>
         <source>Send a message via the running instance, then exit (needs --to and --message)</source>
         <translation>透過執行中的執行個體傳送訊息，然後結束（需要 --to 與 --message）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="776"/>
+        <location filename="../main.cpp" line="791"/>
         <source>Recipient for --send: a phone number (international), a group id, or a contact name</source>
         <translation>--send 的收件者：國際格式電話號碼、群組 ID 或聯絡人名稱</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="781"/>
+        <location filename="../main.cpp" line="796"/>
         <source>Message text for --send</source>
         <translation>--send 使用的訊息文字</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="784"/>
+        <location filename="../main.cpp" line="799"/>
         <source>Attach a file for --send (its --message, if any, becomes the caption)</source>
         <translation>為 --send 附加檔案（若有 --message，將作為說明文字）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="789"/>
+        <location filename="../main.cpp" line="804"/>
         <source>Caption for the --file attachment (alias of --message)</source>
         <translation>--file 附件的說明文字（即 --message 的別名）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="793"/>
+        <location filename="../main.cpp" line="808"/>
         <source>How --send delivers: &apos;web&apos; (the running WhatsApp Web session) or &apos;cloud&apos; (Meta WhatsApp Business Cloud API)</source>
         <translation>--send 的傳送方式：「web」（使用執行中的 WhatsApp Web 工作階段）或「cloud」（使用 Meta WhatsApp Business Cloud API）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="799"/>
+        <location filename="../main.cpp" line="814"/>
         <source>Use the saved template of this name as the --send message (fill its {{fields}} with --var)</source>
         <translation>使用此名稱已儲存的範本作為 --send 訊息（以 --var 填入其 {{fields}}）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="804"/>
+        <location filename="../main.cpp" line="819"/>
         <source>Fill a template field: key=value (repeatable)</source>
         <translation>填入範本欄位：key=value（可重複使用）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="808"/>
+        <location filename="../main.cpp" line="823"/>
         <source>List the saved message templates and exit</source>
         <translation>列出已儲存的訊息範本並結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="811"/>
+        <location filename="../main.cpp" line="826"/>
         <source>Save (or replace) a message template, then exit: name=body</source>
         <translation>儲存（或取代）訊息範本，然後結束：name=body</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="815"/>
+        <location filename="../main.cpp" line="830"/>
         <source>Delete the saved message template of this name, then exit</source>
         <translation>刪除此名稱的已儲存訊息範本，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="820"/>
+        <location filename="../main.cpp" line="835"/>
         <source>Turn auto-reply to incoming messages on, then exit</source>
         <translation>開啟自動回覆傳入訊息，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="823"/>
+        <location filename="../main.cpp" line="838"/>
         <source>Turn auto-reply off, then exit</source>
         <translation>關閉自動回覆，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="826"/>
+        <location filename="../main.cpp" line="841"/>
         <source>List the active auto-reply rules (status included) and exit</source>
         <translation>列出啟用中的自動回覆規則（含狀態）並結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="829"/>
+        <location filename="../main.cpp" line="844"/>
         <source>Use this JSON file as a source of auto-reply rules, then exit (empty to clear)</source>
         <translation>使用此 JSON 檔案作為自動回覆規則來源，然後結束（留空以清除）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="835"/>
+        <location filename="../main.cpp" line="850"/>
         <source>Set the Cloud API phone-number id, then exit</source>
         <translation>設定 Cloud API 電話號碼 ID，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="839"/>
+        <location filename="../main.cpp" line="854"/>
         <source>Set the Cloud API access token, then exit (stored in the account config)</source>
         <translation>設定 Cloud API 存取權杖，然後結束（儲存於帳號設定中）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="844"/>
+        <location filename="../main.cpp" line="859"/>
         <source>Set the Cloud API graph version (e.g. v21.0), then exit</source>
         <translation>設定 Cloud API 圖形 API 版本（例如 v21.0），然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="848"/>
+        <location filename="../main.cpp" line="863"/>
         <source>Show whether the Cloud API is configured, then exit</source>
         <translation>顯示 Cloud API 是否已設定，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="851"/>
+        <location filename="../main.cpp" line="866"/>
         <source>For --send --backend cloud: send this Meta-approved template</source>
         <translation>適用於 --send --backend cloud：傳送此 Meta 核准的範本</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="855"/>
+        <location filename="../main.cpp" line="870"/>
         <source>Language code for --cloud-template (e.g. es, en_US)</source>
         <translation>--cloud-template 使用的語言代碼（例如 es、en_US）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="859"/>
+        <location filename="../main.cpp" line="874"/>
         <source>A positional body parameter for --cloud-template (repeatable)</source>
         <translation>--cloud-template 的位置內文參數（可重複使用）</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="864"/>
+        <location filename="../main.cpp" line="879"/>
         <source>Enable the local HTTP API, then exit</source>
         <translation>啟用本機 HTTP API，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="867"/>
+        <location filename="../main.cpp" line="882"/>
         <source>Disable the local HTTP API, then exit</source>
         <translation>停用本機 HTTP API，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="870"/>
+        <location filename="../main.cpp" line="885"/>
         <source>Set the local HTTP API port (default 8590), then exit</source>
         <translation>設定本機 HTTP API 連接埠（預設 8590），然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="874"/>
+        <location filename="../main.cpp" line="889"/>
         <source>Set the local HTTP API bearer token, then exit</source>
         <translation>設定本機 HTTP API 的 Bearer 權杖，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="878"/>
+        <location filename="../main.cpp" line="893"/>
         <source>Show the local HTTP API configuration, then exit</source>
         <translation>顯示本機 HTTP API 設定，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="882"/>
+        <location filename="../main.cpp" line="897"/>
         <source>Enable receiving Cloud API webhooks, then exit</source>
         <translation>啟用接收 Cloud API webhook，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="885"/>
+        <location filename="../main.cpp" line="900"/>
         <source>Disable receiving Cloud API webhooks, then exit</source>
         <translation>停用接收 Cloud API webhook，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="888"/>
+        <location filename="../main.cpp" line="903"/>
         <source>Set the Cloud API webhook verify token, then exit</source>
         <translation>設定 Cloud API webhook 驗證權杖，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="892"/>
+        <location filename="../main.cpp" line="907"/>
         <source>Set the Meta app secret for webhook signature checks, then exit</source>
         <translation>設定用於 webhook 簽章檢查的 Meta 應用程式密鑰，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="896"/>
+        <location filename="../main.cpp" line="911"/>
         <source>Show the Cloud API webhook configuration, then exit</source>
         <translation>顯示 Cloud API webhook 設定，然後結束</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="1291"/>
+        <location filename="../main.cpp" line="1315"/>
         <source>App lock is not configured, 
 Please setup the password in the Settings first.</source>
         <translation>尚未設定應用程式鎖定，
 請先在設定中設定密碼。</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="1389"/>
+        <location filename="../main.cpp" line="1413"/>
         <source>Recovered from a start-up crash by switching to safe rendering. You can adjust this in Settings → Performance.</source>
         <translation>已從啟動當機中復原，並切換為安全繪圖模式。您可以在設定 → 效能中調整此設定。</translation>
     </message>
     <message>
-        <location filename="../mainwindow_webengine.cpp" line="1025"/>
+        <location filename="../mainwindow_webengine.cpp" line="1031"/>
         <source>Reloading...</source>
         <translation>重新載入中…</translation>
     </message>
@@ -2475,11 +2491,11 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="198"/>
-        <location filename="../settingswidget.ui" line="2010"/>
-        <location filename="../settingswidget.ui" line="2054"/>
-        <location filename="../settingswidget.ui" line="2221"/>
-        <location filename="../settingswidget.cpp" line="1721"/>
-        <location filename="../settingswidget.cpp" line="2022"/>
+        <location filename="../settingswidget.ui" line="2031"/>
+        <location filename="../settingswidget.ui" line="2075"/>
+        <location filename="../settingswidget.ui" line="2242"/>
+        <location filename="../settingswidget.cpp" line="1727"/>
+        <location filename="../settingswidget.cpp" line="2028"/>
         <source>Automatic</source>
         <translation>自動</translation>
     </message>
@@ -2535,7 +2551,7 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="326"/>
-        <location filename="../settingswidget.ui" line="1319"/>
+        <location filename="../settingswidget.ui" line="1340"/>
         <source> Secs</source>
         <translation> 秒</translation>
     </message>
@@ -2807,7 +2823,7 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="691"/>
-        <location filename="../settingswidget.cpp" line="1638"/>
+        <location filename="../settingswidget.cpp" line="1644"/>
         <source>Custom CSS</source>
         <translation>自訂 CSS</translation>
     </message>
@@ -2864,7 +2880,7 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="756"/>
-        <location filename="../settingswidget.cpp" line="2628"/>
+        <location filename="../settingswidget.cpp" line="2634"/>
         <source>Check spelling as I type</source>
         <translation>輸入時檢查拼字</translation>
     </message>
@@ -2920,7 +2936,7 @@ Please setup the password in the Settings first.</source>
     </message>
     <message>
         <location filename="../settingswidget.ui" line="831"/>
-        <location filename="../settingswidget.cpp" line="1614"/>
+        <location filename="../settingswidget.cpp" line="1620"/>
         <source>Chat wallpaper</source>
         <translation>聊天背景</translation>
     </message>
@@ -2945,253 +2961,268 @@ Please setup the password in the Settings first.</source>
         <translation>在已連結的裝置中識別為 Whatly</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="876"/>
+        <location filename="../settingswidget.ui" line="871"/>
+        <source>Browser name for linking</source>
+        <translation>用於連結的瀏覽器名稱</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.ui" line="878"/>
+        <source>Whatly</source>
+        <translation>Whatly</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.ui" line="881"/>
+        <source>Leave empty to show just &quot;Whatly&quot;. Set a browser WhatsApp knows, such as Chrome, if linking by phone number does not work.</source>
+        <translation>留空則僅顯示「Whatly」。如果透過電話號碼連結無法運作，請填寫 WhatsApp 能辨識的瀏覽器，例如 Chrome。</translation>
+    </message>
+    <message>
+        <location filename="../settingswidget.ui" line="897"/>
         <source>User Agent</source>
         <translation>User Agent</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="879"/>
+        <location filename="../settingswidget.ui" line="900"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Advanced — leave this alone unless you know exactly what you are doing. A non-standard user agent can make WhatsApp refuse to load, and unusual values risk your WhatsApp account being flagged or blacklisted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;進階選項 — 除非您完全清楚自己在做什麼,否則請勿更動。非標準的使用者代理字串可能導致 WhatsApp 拒絕載入,異常的數值也可能使您的 WhatsApp 帳號被標記或列入黑名單。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="889"/>
+        <location filename="../settingswidget.ui" line="910"/>
         <source>  Set</source>
         <translation>  設定</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="900"/>
+        <location filename="../settingswidget.ui" line="921"/>
         <source>Reset to default</source>
         <translation>重設為預設值</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="923"/>
+        <location filename="../settingswidget.ui" line="944"/>
         <source>Zoom factor when normal</source>
         <translation>一般狀態下的縮放比例</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="951"/>
-        <location filename="../settingswidget.ui" line="1086"/>
+        <location filename="../settingswidget.ui" line="972"/>
+        <location filename="../settingswidget.ui" line="1107"/>
         <source>Zoom Out</source>
         <translation>縮小</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="990"/>
-        <location filename="../settingswidget.ui" line="1125"/>
+        <location filename="../settingswidget.ui" line="1011"/>
+        <location filename="../settingswidget.ui" line="1146"/>
         <source>Zoom In</source>
         <translation>放大</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1035"/>
-        <location filename="../settingswidget.ui" line="1170"/>
+        <location filename="../settingswidget.ui" line="1056"/>
+        <location filename="../settingswidget.ui" line="1191"/>
         <source>reset</source>
         <translation>重設</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1058"/>
+        <location filename="../settingswidget.ui" line="1079"/>
         <source>Zoom factor when maximized/fullscreen</source>
         <translation>最大化／全螢幕時的縮放比例</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1193"/>
+        <location filename="../settingswidget.ui" line="1214"/>
         <source>Minimize to tray</source>
         <translation>最小化到系統匣</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1202"/>
+        <location filename="../settingswidget.ui" line="1223"/>
         <source>Quit</source>
         <translation>結束</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1214"/>
+        <location filename="../settingswidget.ui" line="1235"/>
         <source>Global shortcuts</source>
         <translation>全域快速鍵</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1221"/>
+        <location filename="../settingswidget.ui" line="1242"/>
         <source>Close button action</source>
         <translation>關閉按鈕動作</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1228"/>
+        <location filename="../settingswidget.ui" line="1249"/>
         <source>  Show shortcuts</source>
         <translation>  顯示快速鍵</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1239"/>
+        <location filename="../settingswidget.ui" line="1260"/>
         <source>Permissions</source>
         <translation>權限</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1246"/>
+        <location filename="../settingswidget.ui" line="1267"/>
         <source>  Show permissions</source>
         <translation>  顯示權限</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1261"/>
+        <location filename="../settingswidget.ui" line="1282"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable lock screen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;啟用鎖定畫面。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1264"/>
+        <location filename="../settingswidget.ui" line="1285"/>
         <source>Enable App lock on start</source>
         <translation>啟動時啟用應用程式鎖定</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1271"/>
+        <location filename="../settingswidget.ui" line="1292"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When the window hides to the system tray, lock it behind the passcode. Requires a password to be set.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;當視窗隱藏至系統匣時,以密碼將其鎖定。需要先設定密碼。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1274"/>
+        <location filename="../settingswidget.ui" line="1295"/>
         <source>Lock when hidden to tray</source>
         <translation>隱藏到系統匣時鎖定</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1281"/>
+        <location filename="../settingswidget.ui" line="1302"/>
         <source>Also lock Whatly when the desktop session locks. Requires a password to be set. (Linux)</source>
         <translation>桌面工作階段鎖定時也鎖定 Whatly。需要先設定密碼。（Linux）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1284"/>
+        <location filename="../settingswidget.ui" line="1305"/>
         <source>Lock when the screen locks</source>
         <translation>螢幕鎖定時鎖定</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1291"/>
+        <location filename="../settingswidget.ui" line="1312"/>
         <source>Current Password</source>
         <translation>目前密碼</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1298"/>
-        <location filename="../settingswidget.ui" line="1332"/>
+        <location filename="../settingswidget.ui" line="1319"/>
+        <location filename="../settingswidget.ui" line="1353"/>
         <source>Change password</source>
         <translation>變更密碼</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1301"/>
-        <location filename="../settingswidget.ui" line="1410"/>
+        <location filename="../settingswidget.ui" line="1322"/>
+        <location filename="../settingswidget.ui" line="1431"/>
         <source>Change</source>
         <translation>變更</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1312"/>
+        <location filename="../settingswidget.ui" line="1333"/>
         <source>Enable auto locking after</source>
         <translation>啟用自動鎖定，時間為</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1335"/>
+        <location filename="../settingswidget.ui" line="1356"/>
         <source>Reset</source>
         <translation>重設</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1367"/>
+        <location filename="../settingswidget.ui" line="1388"/>
         <source>View password</source>
         <translation>檢視密碼</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1394"/>
+        <location filename="../settingswidget.ui" line="1415"/>
         <source>Default Download location</source>
         <translation>預設下載位置</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1407"/>
+        <location filename="../settingswidget.ui" line="1428"/>
         <source>Change Download Location</source>
         <translation>變更下載位置</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1426"/>
+        <location filename="../settingswidget.ui" line="1447"/>
         <source>Storage </source>
         <translation>儲存空間 </translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1446"/>
+        <location filename="../settingswidget.ui" line="1467"/>
         <source>Property</source>
         <translation>屬性</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1453"/>
+        <location filename="../settingswidget.ui" line="1474"/>
         <source>  Clear (requires restart)</source>
         <translation>  清除（需要重新啟動）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1464"/>
+        <location filename="../settingswidget.ui" line="1485"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Persistent data includes persistent cookies, HTML5 local storage, and visited links.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;持續性資料包括永久性 Cookie、HTML5 本機儲存空間,以及已造訪的連結記錄。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1467"/>
+        <location filename="../settingswidget.ui" line="1488"/>
         <source>Persistent data</source>
         <translation>永久性資料</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1474"/>
-        <location filename="../settingswidget.ui" line="1494"/>
+        <location filename="../settingswidget.ui" line="1495"/>
+        <location filename="../settingswidget.ui" line="1515"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1484"/>
+        <location filename="../settingswidget.ui" line="1505"/>
         <source>The HTTP/media cache. Clearing it is safe — it is re-downloaded as needed.</source>
         <translation>HTTP／媒體快取。清除是安全的 — 系統會依需要重新下載。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1487"/>
+        <location filename="../settingswidget.ui" line="1508"/>
         <source>Cache</source>
         <translation>快取</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1504"/>
+        <location filename="../settingswidget.ui" line="1525"/>
         <source>  Clear cache</source>
         <translation>  清除快取</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1527"/>
+        <location filename="../settingswidget.ui" line="1548"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1549"/>
+        <location filename="../settingswidget.ui" line="1570"/>
         <source>Action</source>
         <translation>動作</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1563"/>
+        <location filename="../settingswidget.ui" line="1584"/>
         <source>Backup</source>
         <translation>備份</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1570"/>
+        <location filename="../settingswidget.ui" line="1591"/>
         <source>Save this account (settings, session and addons) to a .tar.gz archive. The archive contains your logged-in session — keep it private.</source>
         <translation>將此帳號（設定、工作階段與附加元件）儲存為 .tar.gz 封存檔。此封存檔包含您已登入的工作階段 — 請妥善保管。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1573"/>
+        <location filename="../settingswidget.ui" line="1594"/>
         <source>Export profile…</source>
         <translation>匯出設定檔…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1580"/>
+        <location filename="../settingswidget.ui" line="1601"/>
         <source>Restore an account from a .tar.gz archive. This overwrites the current data and needs a restart.</source>
         <translation>從 .tar.gz 封存檔還原帳號。這會覆寫目前的資料，並需要重新啟動。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1583"/>
+        <location filename="../settingswidget.ui" line="1604"/>
         <source>Import profile…</source>
         <translation>匯入設定檔…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1608"/>
+        <location filename="../settingswidget.ui" line="1629"/>
         <source>Performance (requires restart)</source>
         <translation>效能（需要重新啟動）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2092"/>
+        <location filename="../settingswidget.ui" line="2113"/>
         <source>Free memory by unloading accounts you are not viewing. An unloaded account does not receive messages, and reloads to where it was when you switch back to it. Single-account setups are unaffected.</source>
         <translation>透過卸載你未在檢視的帳號來釋放記憶體。已卸載的帳號不會接收訊息，切換回來時會重新載入到之前的位置。單帳號設定不受影響。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2095"/>
+        <location filename="../settingswidget.ui" line="2116"/>
         <source>Unload inactive accounts from memory</source>
         <translation>從記憶體卸載不活躍的帳號</translation>
     </message>
@@ -3200,325 +3231,325 @@ Please setup the password in the Settings first.</source>
         <translation type="vanished">效能與隱私（需要重新啟動）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1614"/>
+        <location filename="../settingswidget.ui" line="1635"/>
         <source>Fine-tune the rendering engine. The defaults are safe on most systems; if the window is blank or the app crashes on start, or if it stutters, try changing these. Changes apply after a restart.</source>
         <translation>微調繪圖引擎。預設值在大多數系統上都是安全的；若視窗空白、應用程式啟動時當機，或出現卡頓，可嘗試調整這些設定。變更需要重新啟動才會套用。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1624"/>
+        <location filename="../settingswidget.ui" line="1645"/>
         <source>Render entirely on the CPU (--disable-gpu). Fixes blank windows and start-up crashes on some GPU/driver setups. Default on Linux.</source>
         <translation>完全以 CPU 繪圖（--disable-gpu）。可修正部分 GPU／驅動程式組態造成的空白視窗與啟動當機問題。Linux 上為預設值。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1627"/>
+        <location filename="../settingswidget.ui" line="1648"/>
         <source>Disable GPU acceleration</source>
         <translation>停用 GPU 加速</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1634"/>
+        <location filename="../settingswidget.ui" line="1655"/>
         <source>Composite the page on the CPU (--disable-gpu-compositing). Avoids stale-frame flicker on some drivers.</source>
         <translation>以 CPU 合成頁面（--disable-gpu-compositing）。可避免部分驅動程式出現殘影閃爍。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1637"/>
+        <location filename="../settingswidget.ui" line="1658"/>
         <source>Disable GPU compositing</source>
         <translation>停用 GPU 合成</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1644"/>
+        <location filename="../settingswidget.ui" line="1665"/>
         <source>Disable GPU VSync (--disable-gpu-vsync). May reduce input lag at the cost of tearing.</source>
         <translation>停用 GPU 垂直同步（--disable-gpu-vsync）。可能減少輸入延遲，但會產生畫面撕裂。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1647"/>
+        <location filename="../settingswidget.ui" line="1668"/>
         <source>Disable GPU VSync</source>
         <translation>停用 GPU 垂直同步</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1654"/>
+        <location filename="../settingswidget.ui" line="1675"/>
         <source>Run the GPU process inside the main process (--in-process-gpu). A workaround for some sandboxed setups.</source>
         <translation>在主處理程序內執行 GPU 處理程序（--in-process-gpu）。適用於部分沙盒環境的因應方式。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1657"/>
+        <location filename="../settingswidget.ui" line="1678"/>
         <source>Run GPU in-process</source>
         <translation>以行內處理程序執行 GPU</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1664"/>
+        <location filename="../settingswidget.ui" line="1685"/>
         <source>Force acceleration even when the driver is blocklisted (--ignore-gpu-blocklist). Try this to turn the GPU back on.</source>
         <translation>即使驅動程式在封鎖清單中也強制加速（--ignore-gpu-blocklist）。可嘗試以此重新啟用 GPU。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1667"/>
+        <location filename="../settingswidget.ui" line="1688"/>
         <source>Ignore GPU blocklist</source>
         <translation>忽略 GPU 封鎖清單</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1674"/>
+        <location filename="../settingswidget.ui" line="1695"/>
         <source>Run everything in a single process (--single-process). Uses less memory but is less stable.</source>
         <translation>以單一處理程序執行所有項目（--single-process）。使用較少記憶體，但穩定性較低。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1677"/>
+        <location filename="../settingswidget.ui" line="1698"/>
         <source>Single-process mode (lower memory)</source>
         <translation>單一處理程序模式（降低記憶體用量）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1684"/>
+        <location filename="../settingswidget.ui" line="1705"/>
         <source>Share one renderer process per site (--process-per-site). Reduces memory use.</source>
         <translation>每個網站共用一個繪圖處理程序（--process-per-site）。可減少記憶體用量。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1687"/>
+        <location filename="../settingswidget.ui" line="1708"/>
         <source>One process per site (lower memory)</source>
         <translation>每個網站一個處理程序（降低記憶體用量）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1694"/>
+        <location filename="../settingswidget.ui" line="1715"/>
         <source>Ask the JavaScript engine to use less memory at a small cost in speed (V8 --optimize-for-size). Recommended for an app that stays in the tray. Ignored when a JavaScript memory limit is set below.</source>
         <translation>要求 JavaScript 引擎以些微速度為代價來降低記憶體用量（V8 --optimize-for-size）。建議用於常駐系統匣的應用程式。若下方設定了 JavaScript 記憶體限制，此選項會被忽略。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1697"/>
+        <location filename="../settingswidget.ui" line="1718"/>
         <source>Optimize memory over speed (lower memory)</source>
         <translation>優化記憶體而非速度（降低記憶體用量）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1704"/>
+        <location filename="../settingswidget.ui" line="1725"/>
         <source>Hide contact names and message previews in the chat list (hover to reveal one). Useful when sharing your screen. The open conversation is untouched.</source>
         <translation>在聊天清單中隱藏聯絡人名稱與訊息預覽（滑鼠移入即可顯示）。在分享螢幕時很實用。開啟中的對話不受影響。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1707"/>
+        <location filename="../settingswidget.ui" line="1728"/>
         <source>Focus mode (hide chat-list previews)</source>
         <translation>專注模式（隱藏聊天清單預覽）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1714"/>
+        <location filename="../settingswidget.ui" line="1735"/>
         <source>Default photos and videos to HD quality in the media editor. Depends on WhatsApp Web&apos;s layout; if a WhatsApp update breaks it, turn it off.</source>
         <translation>在媒體編輯器中將相片與影片預設為高畫質。此功能取決於 WhatsApp Web 的版面配置；若 WhatsApp 更新導致失效，請將其關閉。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1717"/>
+        <location filename="../settingswidget.ui" line="1738"/>
         <source>Send photos and videos in HD by default</source>
         <translation>預設以高畫質傳送相片與影片</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1726"/>
+        <location filename="../settingswidget.ui" line="1747"/>
         <source>Hold a message for a few seconds after you press Enter, showing an &quot;Undo&quot; button before it is actually sent. Press Enter again to send at once.</source>
         <translation>按下 Enter 後暫留訊息幾秒鐘，並顯示「復原」按鈕，訊息才會實際傳送。再次按下 Enter 可立即傳送。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1729"/>
+        <location filename="../settingswidget.ui" line="1750"/>
         <source>Undo send (hold Enter-sent messages briefly)</source>
         <translation>復原傳送（短暫暫留以 Enter 傳送的訊息）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1736"/>
+        <location filename="../settingswidget.ui" line="1757"/>
         <source>How long to hold a message before it is sent.</source>
         <translation>訊息在傳送前暫留的時間。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1739"/>
+        <location filename="../settingswidget.ui" line="1760"/>
         <source> s</source>
         <translation> 秒</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1754"/>
+        <location filename="../settingswidget.ui" line="1775"/>
         <source>Inline translation</source>
         <translation>行內翻譯</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1760"/>
+        <location filename="../settingswidget.ui" line="1781"/>
         <source>Translate selected text or your message box through a LibreTranslate-compatible service. The request is made by the app, so the endpoint and key never reach WhatsApp Web. Bind keys to &quot;Translate selection&quot; / &quot;Translate message box&quot; in Shortcuts, or use the command palette.</source>
         <translation>透過相容於 LibreTranslate 的服務翻譯選取的文字或訊息輸入框內容。請求由應用程式發出，因此端點與金鑰不會傳送到 WhatsApp Web。可在快速鍵中將按鍵綁定至「翻譯選取內容」／「翻譯訊息輸入框」，或使用命令面板。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1763"/>
+        <location filename="../settingswidget.ui" line="1784"/>
         <source>Enable inline translation</source>
         <translation>啟用行內翻譯</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1770"/>
-        <location filename="../settingswidget.ui" line="1840"/>
+        <location filename="../settingswidget.ui" line="1791"/>
+        <location filename="../settingswidget.ui" line="1861"/>
         <source>Endpoint</source>
         <translation>端點</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1777"/>
+        <location filename="../settingswidget.ui" line="1798"/>
         <source>A LibreTranslate-compatible &quot;/translate&quot; URL, e.g. http://localhost:5000/translate for a self-hosted instance.</source>
         <translation>相容於 LibreTranslate 的「/translate」網址，例如自架執行個體的 http://localhost:5000/translate。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1780"/>
+        <location filename="../settingswidget.ui" line="1801"/>
         <source>https://your-libretranslate/translate</source>
         <translation>https://your-libretranslate/translate</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1787"/>
-        <location filename="../settingswidget.ui" line="1874"/>
+        <location filename="../settingswidget.ui" line="1808"/>
+        <location filename="../settingswidget.ui" line="1895"/>
         <source>API key (optional)</source>
         <translation>API 金鑰（選填）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1794"/>
+        <location filename="../settingswidget.ui" line="1815"/>
         <source>Only needed by endpoints that require one. Stored locally.</source>
         <translation>僅需要金鑰的端點才需要填寫。儲存於本機。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1804"/>
+        <location filename="../settingswidget.ui" line="1825"/>
         <source>Target language</source>
         <translation>目標語言</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1811"/>
+        <location filename="../settingswidget.ui" line="1832"/>
         <source>Two-letter code to translate into (e.g. en, es, fr). Leave empty to use the app&apos;s language. The source language is detected automatically.</source>
         <translation>要翻譯成的雙字母代碼（例如 en、es、fr）。留空則使用應用程式的語言。來源語言會自動偵測。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1814"/>
+        <location filename="../settingswidget.ui" line="1835"/>
         <source>app language</source>
         <translation>應用程式語言</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1824"/>
+        <location filename="../settingswidget.ui" line="1845"/>
         <source>AI assistant</source>
         <translation>AI 助理</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1830"/>
+        <location filename="../settingswidget.ui" line="1851"/>
         <source>Summarise a chat, improve your draft or suggest a reply through an OpenAI-compatible service. The chat text is sent to that service, so use one you trust (a local runner keeps it on your machine). The request is made by the app, so the endpoint and key never reach WhatsApp Web. Actions live in the command palette and Shortcuts.</source>
         <translation>透過相容於 OpenAI 的服務摘要聊天內容、改善您的草稿或建議回覆。聊天文字會傳送給該服務，因此請使用您信任的服務（本機執行的模型可將資料留在您的裝置上）。請求由應用程式發出，因此端點與金鑰不會傳送到 WhatsApp Web。相關動作可在命令面板與快速鍵中找到。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1833"/>
+        <location filename="../settingswidget.ui" line="1854"/>
         <source>Enable AI assistant</source>
         <translation>啟用 AI 助理</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1847"/>
+        <location filename="../settingswidget.ui" line="1868"/>
         <source>An OpenAI-compatible /chat/completions URL, e.g. https://api.openai.com/v1/chat/completions or http://localhost:11434/v1/chat/completions for a local Ollama.</source>
         <translation>相容於 OpenAI 的 /chat/completions 網址，例如 https://api.openai.com/v1/chat/completions，或本機 Ollama 的 http://localhost:11434/v1/chat/completions。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1850"/>
+        <location filename="../settingswidget.ui" line="1871"/>
         <source>https://api.openai.com/v1/chat/completions</source>
         <translation>https://api.openai.com/v1/chat/completions</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1857"/>
+        <location filename="../settingswidget.ui" line="1878"/>
         <source>Model</source>
         <translation>模型</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1864"/>
+        <location filename="../settingswidget.ui" line="1885"/>
         <source>The model name the endpoint expects, e.g. gpt-4o-mini or llama3.</source>
         <translation>端點所需的模型名稱，例如 gpt-4o-mini 或 llama3。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1867"/>
+        <location filename="../settingswidget.ui" line="1888"/>
         <source>e.g. gpt-4o-mini</source>
         <translation>例如 gpt-4o-mini</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1881"/>
+        <location filename="../settingswidget.ui" line="1902"/>
         <source>Sent as a Bearer token. Not needed by most local runners. Stored locally.</source>
         <translation>以 Bearer 權杖形式傳送。大多數本機執行環境不需要此項。儲存於本機。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1898"/>
+        <location filename="../settingswidget.ui" line="1919"/>
         <source>Local models (Ollama)</source>
         <translation>本機模型（Ollama）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1907"/>
+        <location filename="../settingswidget.ui" line="1928"/>
         <source>Check for a local Ollama and list its installed models.</source>
         <translation>檢查本機 Ollama 並列出其已安裝的模型。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1910"/>
+        <location filename="../settingswidget.ui" line="1931"/>
         <source>Detect Ollama</source>
         <translation>偵測 Ollama</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1926"/>
+        <location filename="../settingswidget.ui" line="1947"/>
         <source>Installed model</source>
         <translation>已安裝的模型</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1933"/>
+        <location filename="../settingswidget.ui" line="1954"/>
         <source>Pick one of the models already installed in Ollama; it becomes the model above.</source>
         <translation>選擇 Ollama 中已安裝的其中一個模型，它會成為上方的模型設定。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1940"/>
+        <location filename="../settingswidget.ui" line="1961"/>
         <source>Download a light model</source>
         <translation>下載輕量模型</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1949"/>
+        <location filename="../settingswidget.ui" line="1970"/>
         <source>Light, fast models that run well on modest hardware.</source>
         <translation>輕量、快速的模型，可在一般硬體上順暢執行。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1956"/>
+        <location filename="../settingswidget.ui" line="1977"/>
         <source>Download</source>
         <translation>下載</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1988"/>
+        <location filename="../settingswidget.ui" line="2009"/>
         <source>Stop WebRTC from revealing your local IP address over non-proxied connections.</source>
         <translation>防止 WebRTC 在未透過代理伺服器的連線中洩漏您的本機 IP 位址。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="1991"/>
+        <location filename="../settingswidget.ui" line="2012"/>
         <source>Prevent WebRTC IP leak</source>
         <translation>防止 WebRTC IP 洩漏</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2000"/>
+        <location filename="../settingswidget.ui" line="2021"/>
         <source>JavaScript memory limit</source>
         <translation>JavaScript 記憶體限制</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2007"/>
+        <location filename="../settingswidget.ui" line="2028"/>
         <source>Cap the JavaScript heap (V8 --max-old-space-size). 0 = automatic. Lower it if the app uses too much RAM.</source>
         <translation>限制 JavaScript 堆積大小（V8 --max-old-space-size）。0 = 自動。若應用程式使用過多記憶體，可調低此值。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2013"/>
-        <location filename="../settingswidget.ui" line="2057"/>
+        <location filename="../settingswidget.ui" line="2034"/>
+        <location filename="../settingswidget.ui" line="2078"/>
         <source> MB</source>
         <translation> MB</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2030"/>
+        <location filename="../settingswidget.ui" line="2051"/>
         <source>HTTP cache</source>
         <translation>HTTP 快取</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2037"/>
+        <location filename="../settingswidget.ui" line="2058"/>
         <source>Where to keep the HTTP cache. Memory clears on exit; None disables caching.</source>
         <translation>HTTP 快取的儲存位置。記憶體模式會在結束時清除；「無」則停用快取。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2044"/>
+        <location filename="../settingswidget.ui" line="2065"/>
         <source>Max size</source>
         <translation>最大大小</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2051"/>
+        <location filename="../settingswidget.ui" line="2072"/>
         <source>Maximum on-disk cache size. 0 = automatic.</source>
         <translation>磁碟快取的最大容量。0 = 自動。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2074"/>
+        <location filename="../settingswidget.ui" line="2095"/>
         <source>Font hinting</source>
         <translation>字型微調</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2081"/>
+        <location filename="../settingswidget.ui" line="2102"/>
         <source>How glyph edges are snapped to pixels. Automatic follows your system; a lighter level can fix heavy or uneven text.</source>
         <translation>字形邊緣對齊像素的方式。自動模式會跟隨您的系統設定；較輕的層級可修正過粗或不均勻的文字。</translation>
     </message>
@@ -3531,285 +3562,285 @@ Please setup the password in the Settings first.</source>
         <translation type="vanished">暫停未使用中的帳號</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2102"/>
+        <location filename="../settingswidget.ui" line="2123"/>
         <source>after</source>
         <translation>之後</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2109"/>
+        <location filename="../settingswidget.ui" line="2130"/>
         <source> min</source>
         <translation> 分鐘</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2124"/>
+        <location filename="../settingswidget.ui" line="2145"/>
         <source>Also unload the account a window was showing, once that window has been minimised or put away to the tray for the same length of time as above. Nothing reaches an unloaded account: while Whatly is away there are no notifications from it and its counts stand still, and it takes a few seconds to come back when you return to the window. Needs the setting above.</source>
         <translation>當某個視窗最小化或收入系統匣達到與上面相同的時間後，也卸載該視窗正在顯示的帳戶。已卸載的帳戶不會收到任何內容：Whatly 離開期間它不會發出通知，其計數保持不變，返回視窗時需要幾秒鐘才能恢復。需要上面的設定。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2127"/>
+        <location filename="../settingswidget.ui" line="2148"/>
         <source>Unload also minimised and hidden accounts</source>
         <translation>同時卸載最小化和隱藏的帳戶</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2137"/>
+        <location filename="../settingswidget.ui" line="2158"/>
         <source>Network &amp; Startup</source>
         <translation>網路與啟動</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2143"/>
+        <location filename="../settingswidget.ui" line="2164"/>
         <source>Launch Whatly automatically when you log in to your desktop session.</source>
         <translation>在登入桌面工作階段時自動啟動 Whatly。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2146"/>
+        <location filename="../settingswidget.ui" line="2167"/>
         <source>Start Whatly when I log in</source>
         <translation>登入時啟動 Whatly</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2153"/>
+        <location filename="../settingswidget.ui" line="2174"/>
         <source>Let Whatly draw the window&apos;s border and title bar instead of the system, so they follow Whatly&apos;s own theme. On its own this only changes their appearance; tick &quot;Hide the title bar&quot; as well to get rid of the title row altogether. Applies after a restart.</source>
         <translation>讓 Whatly 自行繪製視窗邊框與標題列，而非交由系統處理，以套用 Whatly 自身的主題。單獨啟用僅會改變外觀；請一併勾選「隱藏標題列」以完全移除標題列。需要重新啟動才會套用。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2156"/>
+        <location filename="../settingswidget.ui" line="2177"/>
         <source>Use a custom window frame (requires restart)</source>
         <translation>使用自訂視窗框架（需要重新啟動）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2169"/>
+        <location filename="../settingswidget.ui" line="2190"/>
         <source>Restart Whatly now so the settings above take effect. The windows, and this page with it, come back exactly as they are.</source>
         <translation>立即重新啟動 Whatly 以套用上述設定。視窗與此頁面將會保持原樣重新開啟。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2172"/>
+        <location filename="../settingswidget.ui" line="2193"/>
         <source>Restart now</source>
         <translation>立即重新啟動</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2179"/>
+        <location filename="../settingswidget.ui" line="2200"/>
         <source>Keep the account tab strip up even when there is only one account, so its &quot;+&quot; is always at hand. With it off, the strip appears once a second account exists; you can still add one with Ctrl+K.</source>
         <translation>即使只有一個帳號，也保持顯示帳號分頁列，讓「+」按鈕隨時可用。關閉此選項時，分頁列會在新增第二個帳號後才出現；您仍可使用 Ctrl+K 新增帳號。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2182"/>
+        <location filename="../settingswidget.ui" line="2203"/>
         <source>Show the account tabs even with a single account</source>
         <translation>即使只有一個帳號也顯示帳號分頁</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2189"/>
+        <location filename="../settingswidget.ui" line="2210"/>
         <source>Drop the title bar and put its buttons at the end of the account tab strip, the way a browser does, instead of giving them a row of their own. Switches on the custom window frame, which it needs. Applies after a restart.</source>
         <translation>移除標題列，並將其按鈕放到帳號分頁列末端，如同瀏覽器的做法，而非獨立佔用一列。這會一併啟用自訂視窗框架（此為必要條件）。需要重新啟動才會套用。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2192"/>
+        <location filename="../settingswidget.ui" line="2213"/>
         <source>Hide the title bar (requires restart)</source>
         <translation>隱藏標題列（需要重新啟動）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2199"/>
+        <location filename="../settingswidget.ui" line="2220"/>
         <source>Check GitHub once a day for a newer release and let you know. Whatly never downloads or installs anything on its own.</source>
         <translation>每天檢查一次 GitHub 是否有較新版本並通知您。Whatly 絕不會自行下載或安裝任何內容。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2202"/>
+        <location filename="../settingswidget.ui" line="2223"/>
         <source>Check for updates automatically</source>
         <translation>自動檢查更新</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2211"/>
+        <location filename="../settingswidget.ui" line="2232"/>
         <source>Interface scale (requires restart)</source>
         <translation>介面縮放比例（需要重新啟動）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2218"/>
+        <location filename="../settingswidget.ui" line="2239"/>
         <source>Scale the whole window and the page (QT_SCALE_FACTOR). Automatic follows the desktop. A QT_SCALE_FACTOR environment variable, if set, overrides this. Applies after a restart.</source>
         <translation>縮放整個視窗與頁面（QT_SCALE_FACTOR）。自動模式會跟隨桌面設定。若已設定 QT_SCALE_FACTOR 環境變數，將會覆寫此設定。需要重新啟動才會套用。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2254"/>
+        <location filename="../settingswidget.ui" line="2275"/>
         <source>Proxy</source>
         <translation>代理伺服器</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2261"/>
+        <location filename="../settingswidget.ui" line="2282"/>
         <source>How Whatly connects to the network. System follows the operating system; None connects directly.</source>
         <translation>Whatly 連線至網路的方式。「系統」會跟隨作業系統設定；「無」則直接連線。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2286"/>
+        <location filename="../settingswidget.ui" line="2307"/>
         <source>Host</source>
         <translation>主機</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2293"/>
+        <location filename="../settingswidget.ui" line="2314"/>
         <source>127.0.0.1</source>
         <translation>127.0.0.1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2300"/>
-        <location filename="../settingswidget.ui" line="2580"/>
+        <location filename="../settingswidget.ui" line="2321"/>
+        <location filename="../settingswidget.ui" line="2601"/>
         <source>Port</source>
         <translation>連接埠</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2314"/>
+        <location filename="../settingswidget.ui" line="2335"/>
         <source>Username</source>
         <translation>使用者名稱</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2321"/>
-        <location filename="../settingswidget.ui" line="2338"/>
+        <location filename="../settingswidget.ui" line="2342"/>
+        <location filename="../settingswidget.ui" line="2359"/>
         <source>Optional</source>
         <translation>選填</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2328"/>
+        <location filename="../settingswidget.ui" line="2349"/>
         <source>Password</source>
         <translation>密碼</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2351"/>
+        <location filename="../settingswidget.ui" line="2372"/>
         <source>Custom JavaScript addons (requires restart)</source>
         <translation>自訂 JavaScript 附加元件（需要重新啟動）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2357"/>
+        <location filename="../settingswidget.ui" line="2378"/>
         <source>Load .js files to run on WhatsApp Web. Each addon runs in its own sandbox, so a broken one cannot take down the others or the page. Untick an addon to disable it without removing it. Changes apply after a restart.</source>
         <translation>載入 .js 檔案以在 WhatsApp Web 上執行。每個附加元件都在各自的沙盒中執行，因此故障的附加元件不會影響其他元件或頁面。取消勾選附加元件即可在不移除的情況下停用它。變更需要重新啟動才會套用。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2379"/>
+        <location filename="../settingswidget.ui" line="2400"/>
         <source>Add addon…</source>
         <translation>新增附加元件…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2386"/>
-        <location filename="../settingswidget.ui" line="2446"/>
+        <location filename="../settingswidget.ui" line="2407"/>
+        <location filename="../settingswidget.ui" line="2467"/>
         <source>Remove</source>
         <translation>移除</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2411"/>
+        <location filename="../settingswidget.ui" line="2432"/>
         <source>Saved replies</source>
         <translation>已儲存的回覆</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2417"/>
+        <location filename="../settingswidget.ui" line="2438"/>
         <source>Short texts you send often. Insert one from the command palette (Ctrl+K) — type &quot;Insert&quot; and pick it; the text is typed into the message box.</source>
         <translation>您經常傳送的短文字。可從命令面板（Ctrl+K）插入 — 輸入「Insert」並選取，文字即會輸入到訊息輸入框中。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2439"/>
+        <location filename="../settingswidget.ui" line="2460"/>
         <source>Add reply…</source>
         <translation>新增回覆…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2471"/>
+        <location filename="../settingswidget.ui" line="2492"/>
         <source>Keyboard shortcuts (requires restart)</source>
         <translation>鍵盤快速鍵（需要重新啟動）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2477"/>
+        <location filename="../settingswidget.ui" line="2498"/>
         <source>Click a field and press the key combination. Clear a field to remove the shortcut. Changes apply after a restart.</source>
         <translation>點按欄位後按下按鍵組合。清空欄位即可移除快速鍵。變更需要重新啟動才會套用。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2493"/>
+        <location filename="../settingswidget.ui" line="2514"/>
         <source>Cloud API (send without a browser session)</source>
         <translation>Cloud API（無需瀏覽器工作階段即可傳送）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2499"/>
+        <location filename="../settingswidget.ui" line="2520"/>
         <source>Send with `--send --backend cloud` through the Meta WhatsApp Business Cloud API — no running WhatsApp Web session needed. The access token is one you supply from Meta; it is stored in this account&apos;s config and Whatly never obtains it itself.</source>
         <translation>透過 Meta WhatsApp Business Cloud API 以 `--send --backend cloud` 傳送 — 不需要執行中的 WhatsApp Web 工作階段。存取權杖由您自行從 Meta 取得並提供；此權杖會儲存於此帳號的設定中，Whatly 本身絕不會取得它。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2509"/>
+        <location filename="../settingswidget.ui" line="2530"/>
         <source>Phone-number ID</source>
         <translation>電話號碼 ID</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2523"/>
+        <location filename="../settingswidget.ui" line="2544"/>
         <source>Access token</source>
         <translation>存取權杖</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2533"/>
+        <location filename="../settingswidget.ui" line="2554"/>
         <source>your Meta access token</source>
         <translation>您的 Meta 存取權杖</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2540"/>
+        <location filename="../settingswidget.ui" line="2561"/>
         <source>Graph API version</source>
         <translation>Graph API 版本</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2557"/>
+        <location filename="../settingswidget.ui" line="2578"/>
         <source>Local API &amp; Cloud webhooks</source>
         <translation>本機 API 與 Cloud webhook</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2563"/>
+        <location filename="../settingswidget.ui" line="2584"/>
         <source>A small HTTP endpoint on the loopback interface (127.0.0.1) lets other programs on this machine send through Whatly, and lets Meta deliver Cloud API webhooks (incoming messages) so auto-reply works without a browser. It is never exposed to the network; to receive webhooks from Meta, forward the port with a tunnel or reverse proxy (e.g. cloudflared or ngrok).</source>
         <translation>本機回送介面（127.0.0.1）上的小型 HTTP 端點，可讓此電腦上的其他程式透過 Whatly 傳送訊息，並讓 Meta 傳送 Cloud API webhook（傳入訊息），使自動回覆無需瀏覽器即可運作。此端點絕不會對外部網路開放；若要接收 Meta 的 webhook，請使用通道或反向代理（例如 cloudflared 或 ngrok）轉發連接埠。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2573"/>
+        <location filename="../settingswidget.ui" line="2594"/>
         <source>Enable the local HTTP API (send over HTTP)</source>
         <translation>啟用本機 HTTP API（透過 HTTP 傳送）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2597"/>
+        <location filename="../settingswidget.ui" line="2618"/>
         <source>Bearer token</source>
         <translation>Bearer 權杖</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2607"/>
+        <location filename="../settingswidget.ui" line="2628"/>
         <source>required to authorise requests</source>
         <translation>用於授權請求</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2614"/>
+        <location filename="../settingswidget.ui" line="2635"/>
         <source>Receive Cloud API webhooks (incoming messages)</source>
         <translation>接收 Cloud API webhook（傳入訊息）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2621"/>
+        <location filename="../settingswidget.ui" line="2642"/>
         <source>Webhook verify token</source>
         <translation>Webhook 驗證權杖</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2631"/>
+        <location filename="../settingswidget.ui" line="2652"/>
         <source>echoed to Meta during setup</source>
         <translation>設定期間會回傳給 Meta</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2638"/>
+        <location filename="../settingswidget.ui" line="2659"/>
         <source>Meta app secret</source>
         <translation>Meta 應用程式密鑰</translation>
     </message>
     <message>
-        <location filename="../settingswidget.ui" line="2648"/>
+        <location filename="../settingswidget.ui" line="2669"/>
         <source>verifies the webhook signature</source>
         <translation>用於驗證 webhook 簽章</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="536"/>
+        <location filename="../settingswidget.cpp" line="541"/>
         <source>Basics</source>
         <translation>基本設定</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="544"/>
+        <location filename="../settingswidget.cpp" line="550"/>
         <source>Appearance</source>
         <translation>外觀</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="563"/>
+        <location filename="../settingswidget.cpp" line="569"/>
         <source>Notifications</source>
         <translation>通知</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="567"/>
+        <location filename="../settingswidget.cpp" line="573"/>
         <source>Chatting</source>
         <translation>聊天</translation>
     </message>
@@ -3818,346 +3849,346 @@ Please setup the password in the Settings first.</source>
         <translation type="vanished">拼字檢查字典</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="674"/>
+        <location filename="../settingswidget.cpp" line="680"/>
         <source>Privacy &amp; Lock</source>
         <translation>隱私與鎖定</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="688"/>
+        <location filename="../settingswidget.cpp" line="694"/>
         <source>Window &amp;&amp; zoom</source>
         <translation>視窗 &amp;&amp; 縮放</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="717"/>
+        <location filename="../settingswidget.cpp" line="723"/>
         <source>AI &amp;&amp; translation</source>
         <translation>AI &amp;&amp; 翻譯</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="724"/>
+        <location filename="../settingswidget.cpp" line="730"/>
         <source>Advanced</source>
         <translation>進階</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="850"/>
+        <location filename="../settingswidget.cpp" line="856"/>
         <source>Collect scroll diagnostics</source>
         <translation>收集捲動診斷</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="852"/>
+        <location filename="../settingswidget.cpp" line="858"/>
         <source>Records how smoothly the chat scrolls, to attach to a bug report. Off by default; it does nothing until you turn it on, and adds nothing to a normal session.</source>
         <translation>記錄聊天捲動的流暢程度，以便附加到錯誤報告中。預設關閉；開啟前不會執行任何動作，也不會給正常使用增加任何負擔。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="862"/>
+        <location filename="../settingswidget.cpp" line="868"/>
         <source>Copy diagnostics</source>
         <translation>複製診斷</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="864"/>
+        <location filename="../settingswidget.cpp" line="870"/>
         <source>Copy the collected scroll figures to the clipboard (and the log) so they can be pasted into a bug report.</source>
         <translation>將收集到的捲動數據複製到剪貼簿（以及紀錄檔），以便貼到錯誤報告中。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="965"/>
+        <location filename="../settingswidget.cpp" line="971"/>
         <source>Fetching the list of languages…</source>
         <translation>正在取得語言清單…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1188"/>
+        <location filename="../settingswidget.cpp" line="1194"/>
         <source>Shortcut in use</source>
         <translation>快速鍵已被使用</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1189"/>
+        <location filename="../settingswidget.cpp" line="1195"/>
         <source>That shortcut is already used by another action.</source>
         <translation>此快速鍵已被其他動作使用。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1201"/>
+        <location filename="../settingswidget.cpp" line="1207"/>
         <source>Clear cache</source>
         <translation>清除快取</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1202"/>
+        <location filename="../settingswidget.cpp" line="1208"/>
         <source>Clear the cache now? It will be re-downloaded as needed.</source>
         <translation>要立即清除快取嗎？系統會依需要重新下載。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1212"/>
         <location filename="../settingswidget.cpp" line="1218"/>
-        <location filename="../settingswidget.cpp" line="1227"/>
-        <location filename="../settingswidget.cpp" line="1230"/>
+        <location filename="../settingswidget.cpp" line="1224"/>
+        <location filename="../settingswidget.cpp" line="1233"/>
+        <location filename="../settingswidget.cpp" line="1236"/>
         <source>Export profile</source>
         <translation>匯出設定檔</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1213"/>
+        <location filename="../settingswidget.cpp" line="1219"/>
         <source>The archive will contain your logged-in WhatsApp session. Keep it private. Continue?</source>
         <translation>此封存檔將包含您已登入的 WhatsApp 工作階段，請妥善保管。要繼續嗎？</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1220"/>
-        <location filename="../settingswidget.cpp" line="1235"/>
+        <location filename="../settingswidget.cpp" line="1226"/>
+        <location filename="../settingswidget.cpp" line="1241"/>
         <source>Archives (*.tar.gz)</source>
         <translation>封存檔 (*.tar.gz)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1228"/>
+        <location filename="../settingswidget.cpp" line="1234"/>
         <source>Profile exported.</source>
         <translation>設定檔已匯出。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1235"/>
-        <location filename="../settingswidget.cpp" line="1239"/>
-        <location filename="../settingswidget.cpp" line="1247"/>
-        <location filename="../settingswidget.cpp" line="1250"/>
+        <location filename="../settingswidget.cpp" line="1241"/>
+        <location filename="../settingswidget.cpp" line="1245"/>
+        <location filename="../settingswidget.cpp" line="1253"/>
+        <location filename="../settingswidget.cpp" line="1256"/>
         <source>Import profile</source>
         <translation>匯入設定檔</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1240"/>
+        <location filename="../settingswidget.cpp" line="1246"/>
         <source>This overwrites the current account&apos;s data with the archive, then Whatly must be restarted. Continue?</source>
         <translation>這會以封存檔內容覆寫目前帳號的資料，之後必須重新啟動 Whatly。要繼續嗎？</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1248"/>
+        <location filename="../settingswidget.cpp" line="1254"/>
         <source>Profile imported. Please restart Whatly.</source>
         <translation>設定檔已匯入，請重新啟動 Whatly。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1271"/>
+        <location filename="../settingswidget.cpp" line="1277"/>
         <source>This will delete Persistent Data ! Persistent data includes persistent cookies and Cache, and Quit the application.</source>
         <translation>這將刪除永久性資料！永久性資料包含持久性 Cookie 與快取，並會結束應用程式。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1276"/>
+        <location filename="../settingswidget.cpp" line="1282"/>
         <source>Delete Cookies and Quit Application?</source>
         <translation>要刪除 Cookie 並結束應用程式嗎？</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1382"/>
+        <location filename="../settingswidget.cpp" line="1388"/>
         <source>| Error</source>
         <translation>| 錯誤</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1383"/>
+        <location filename="../settingswidget.cpp" line="1389"/>
         <source>Cannot set an empty UserAgent String.</source>
         <translation>無法設定空白的 UserAgent 字串。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1434"/>
+        <location filename="../settingswidget.cpp" line="1440"/>
         <source>Automatic theme switching was disabled due to manual theme toggle.</source>
         <translation>由於手動切換過主題，自動主題切換已停用。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1451"/>
+        <location filename="../settingswidget.cpp" line="1457"/>
         <source>Require setup</source>
         <translation>需要設定</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1480"/>
+        <location filename="../settingswidget.cpp" line="1486"/>
         <source>App lock is not configured.</source>
         <translation>尚未設定應用程式鎖定。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1484"/>
+        <location filename="../settingswidget.cpp" line="1490"/>
         <source>Do you want to setup App lock now?</source>
         <translation>要立即設定應用程式鎖定嗎？</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1526"/>
+        <location filename="../settingswidget.cpp" line="1532"/>
         <source>Feature permissions</source>
         <translation>功能權限</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1605"/>
+        <location filename="../settingswidget.cpp" line="1611"/>
         <source>Choose a chat wallpaper</source>
         <translation>選擇聊天背景</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1607"/>
+        <location filename="../settingswidget.cpp" line="1613"/>
         <source>Images (%1)</source>
         <translation>圖片 (%1)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1615"/>
+        <location filename="../settingswidget.cpp" line="1621"/>
         <source>Could not use that image: %1</source>
         <translation>無法使用該圖片：%1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1630"/>
+        <location filename="../settingswidget.cpp" line="1636"/>
         <source>Choose a CSS file</source>
         <translation>選擇 CSS 檔案</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1632"/>
+        <location filename="../settingswidget.cpp" line="1638"/>
         <source>Stylesheets (*.css);;All files (*)</source>
         <translation>樣式表 (*.css);;所有檔案 (*)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1639"/>
+        <location filename="../settingswidget.cpp" line="1645"/>
         <source>Could not read that file: %1</source>
         <translation>無法讀取該檔案：%1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1712"/>
+        <location filename="../settingswidget.cpp" line="1718"/>
         <source>Disk</source>
         <translation>磁碟</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1713"/>
+        <location filename="../settingswidget.cpp" line="1719"/>
         <source>Memory</source>
         <translation>記憶體</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1714"/>
-        <location filename="../settingswidget.cpp" line="1722"/>
+        <location filename="../settingswidget.cpp" line="1720"/>
+        <location filename="../settingswidget.cpp" line="1728"/>
         <source>None</source>
         <translation>無</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1723"/>
+        <location filename="../settingswidget.cpp" line="1729"/>
         <source>Slight</source>
         <translation>輕微</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1724"/>
+        <location filename="../settingswidget.cpp" line="1730"/>
         <source>Medium</source>
         <translation>中</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1725"/>
+        <location filename="../settingswidget.cpp" line="1731"/>
         <source>Full</source>
         <translation>完全</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1871"/>
+        <location filename="../settingswidget.cpp" line="1877"/>
         <source>Ollama not found at this address.</source>
         <translation>在此位址找不到 Ollama。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1876"/>
+        <location filename="../settingswidget.cpp" line="1882"/>
         <source>Ollama found (%1 models installed).</source>
         <translation>已找到 Ollama（已安裝 %1 個模型）。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1901"/>
+        <location filename="../settingswidget.cpp" line="1907"/>
         <source>Download complete.</source>
         <translation>下載完成。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1904"/>
+        <location filename="../settingswidget.cpp" line="1910"/>
         <source>Download failed: %1</source>
         <translation>下載失敗：%1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1915"/>
+        <location filename="../settingswidget.cpp" line="1921"/>
         <source>Checking…</source>
         <translation>正在檢查…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1940"/>
+        <location filename="../settingswidget.cpp" line="1946"/>
         <source>Starting download of %1…</source>
         <translation>正在開始下載 %1…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1995"/>
+        <location filename="../settingswidget.cpp" line="2001"/>
         <source>System</source>
         <translation>系統</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1996"/>
+        <location filename="../settingswidget.cpp" line="2002"/>
         <source>None (direct)</source>
         <translation>無（直接連線）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1997"/>
+        <location filename="../settingswidget.cpp" line="2003"/>
         <source>SOCKS5</source>
         <translation>SOCKS5</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="1998"/>
+        <location filename="../settingswidget.cpp" line="2004"/>
         <source>HTTP</source>
         <translation>HTTP</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2024"/>
+        <location filename="../settingswidget.cpp" line="2030"/>
         <source>Desktop portal (Flatpak)</source>
         <translation>桌面入口（Flatpak）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2026"/>
+        <location filename="../settingswidget.cpp" line="2032"/>
         <source>System service (libnotify)</source>
         <translation>系統服務（libnotify）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2211"/>
-        <location filename="../settingswidget.cpp" line="2215"/>
+        <location filename="../settingswidget.cpp" line="2217"/>
+        <location filename="../settingswidget.cpp" line="2221"/>
         <source>Add reply</source>
         <translation>新增回覆</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2211"/>
+        <location filename="../settingswidget.cpp" line="2217"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2215"/>
+        <location filename="../settingswidget.cpp" line="2221"/>
         <source>Text to insert</source>
         <translation>要插入的文字</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2232"/>
+        <location filename="../settingswidget.cpp" line="2238"/>
         <source>Choose a JavaScript file</source>
         <translation>選擇 JavaScript 檔案</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2233"/>
+        <location filename="../settingswidget.cpp" line="2239"/>
         <source>JavaScript (*.js);;All files (*)</source>
         <translation>JavaScript (*.js);;所有檔案 (*)</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2238"/>
+        <location filename="../settingswidget.cpp" line="2244"/>
         <source>Could not add addon</source>
         <translation>無法新增附加元件</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2251"/>
+        <location filename="../settingswidget.cpp" line="2257"/>
         <source>Remove addon</source>
         <translation>移除附加元件</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2252"/>
+        <location filename="../settingswidget.cpp" line="2258"/>
         <source>Remove the addon &quot;%1&quot;? This deletes its file.</source>
         <translation>要移除附加元件「%1」嗎？這將刪除其檔案。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2362"/>
+        <location filename="../settingswidget.cpp" line="2368"/>
         <source>Search settings</source>
         <translation>搜尋設定</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2364"/>
+        <location filename="../settingswidget.cpp" line="2370"/>
         <source>Show only the settings that match. What you find is the setting itself, working where it stands — not a list to click through. Tooltips are searched as well as labels, and so are the English names of the settings when Whatly is running in another language.</source>
         <translation>僅顯示相符的設定。你找到的就是設定本身，在原處即可使用，而不是需要點開的清單。除標籤外也會搜尋工具提示；當 Whatly 以其他語言執行時，還會搜尋設定的英文名稱。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2486"/>
+        <location filename="../settingswidget.cpp" line="2492"/>
         <source>No setting matches “%1”. Tooltips are searched too, so a plainer word usually finds it.</source>
         <translation>沒有設定符合「%1」。工具提示也會被搜尋，換個更簡單的詞通常就能找到。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2627"/>
+        <location filename="../settingswidget.cpp" line="2633"/>
         <source>Spell checker (no dictionaries installed)</source>
         <translation>拼字檢查（未安裝字典）</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2733"/>
+        <location filename="../settingswidget.cpp" line="2739"/>
         <source>Downloadable languages unavailable — click to try again</source>
         <translation>無法取得可下載的語言 — 點擊重試</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2747"/>
+        <location filename="../settingswidget.cpp" line="2753"/>
         <source>Tick the languages to check spelling against. Each row downloads or deletes its dictionary.</source>
         <translation>勾選用於拼字檢查的語言。每列可下載或刪除其字典。</translation>
     </message>
@@ -4170,53 +4201,53 @@ Please setup the password in the Settings first.</source>
         <translation type="vanished">勾選一種或多種語言以進行拼字檢查。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2849"/>
+        <location filename="../settingswidget.cpp" line="2855"/>
         <source>Choose languages…</source>
         <translation>選擇語言…</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2855"/>
+        <location filename="../settingswidget.cpp" line="2861"/>
         <source>%1 of %2 chosen</source>
         <translation>已選 %2 種中的 %1</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2857"/>
+        <location filename="../settingswidget.cpp" line="2863"/>
         <source>%1 languages</source>
         <translation>%1 種語言</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="2982"/>
+        <location filename="../settingswidget.cpp" line="2988"/>
         <source>WhatsApp default</source>
         <translation>WhatsApp 預設</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3021"/>
+        <location filename="../settingswidget.cpp" line="3027"/>
         <source>System default</source>
         <translation>系統預設</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3051"/>
+        <location filename="../settingswidget.cpp" line="3057"/>
         <source>The interface language will change when you restart %1.</source>
         <translation>重新啟動 %1 後介面語言將會變更。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3065"/>
+        <location filename="../settingswidget.cpp" line="3082"/>
         <source>App Lock Setup</source>
         <translation>應用程式鎖定設定</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3066"/>
+        <location filename="../settingswidget.cpp" line="3083"/>
         <source>Please setup the App lock password first.</source>
         <translation>請先設定應用程式鎖定密碼。</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3182"/>
-        <location filename="../settingswidget.cpp" line="3193"/>
+        <location filename="../settingswidget.cpp" line="3199"/>
+        <location filename="../settingswidget.cpp" line="3210"/>
         <source>Select download directory</source>
         <translation>選擇下載目錄</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3233"/>
+        <location filename="../settingswidget.cpp" line="3250"/>
         <source>You are about to change your current app lock password!
 
 This will LogOut your current session.
@@ -4227,7 +4258,7 @@ You may also require a complete restart of Application!</source>
 您可能還需要完全重新啟動應用程式！</translation>
     </message>
     <message>
-        <location filename="../settingswidget.cpp" line="3239"/>
+        <location filename="../settingswidget.cpp" line="3256"/>
         <source>Do you want to proceed?</source>
         <translation>要繼續嗎？</translation>
     </message>
@@ -4317,104 +4348,104 @@ You may also require a complete restart of Application!</source>
 <context>
     <name>WebEnginePage</name>
     <message>
-        <location filename="../webenginepage.cpp" line="57"/>
+        <location filename="../webenginepage.cpp" line="63"/>
         <source>Share your screen</source>
         <translation>分享您的螢幕</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="59"/>
+        <location filename="../webenginepage.cpp" line="65"/>
         <source>Choose what to share:</source>
         <translation>選擇要分享的內容：</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="71"/>
+        <location filename="../webenginepage.cpp" line="77"/>
         <source>Untitled</source>
         <translation>未命名</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="75"/>
+        <location filename="../webenginepage.cpp" line="81"/>
         <source>Screen: </source>
         <translation>螢幕： </translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="76"/>
+        <location filename="../webenginepage.cpp" line="82"/>
         <source>Window: </source>
         <translation>視窗： </translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="183"/>
+        <location filename="../webenginepage.cpp" line="189"/>
         <source>Allow %1 to access your location information?</source>
         <translation>要允許 %1 存取您的位置資訊嗎？</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="185"/>
+        <location filename="../webenginepage.cpp" line="191"/>
         <source>Allow %1 to access your microphone?</source>
         <translation>要允許 %1 存取您的麥克風嗎？</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="187"/>
+        <location filename="../webenginepage.cpp" line="193"/>
         <source>Allow %1 to access your webcam?</source>
         <translation>要允許 %1 存取您的網路攝影機嗎？</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="189"/>
+        <location filename="../webenginepage.cpp" line="195"/>
         <source>Allow %1 to access your microphone and webcam?</source>
         <translation>要允許 %1 存取您的麥克風與網路攝影機嗎？</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="191"/>
+        <location filename="../webenginepage.cpp" line="197"/>
         <source>Allow %1 to lock your mouse cursor?</source>
         <translation>要允許 %1 鎖定您的滑鼠游標嗎？</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="193"/>
+        <location filename="../webenginepage.cpp" line="199"/>
         <source>Allow %1 to capture video of your desktop?</source>
         <translation>要允許 %1 擷取您桌面的視訊嗎？</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="195"/>
+        <location filename="../webenginepage.cpp" line="201"/>
         <source>Allow %1 to capture audio and video of your desktop?</source>
         <translation>要允許 %1 擷取您桌面的音訊與視訊嗎？</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="198"/>
+        <location filename="../webenginepage.cpp" line="204"/>
         <source>Allow %1 to show notification on your desktop?</source>
         <translation>要允許 %1 在您的桌面顯示通知嗎？</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="200"/>
+        <location filename="../webenginepage.cpp" line="206"/>
         <source>Allow %1 to read your clipboard? This is needed to paste images into a chat.</source>
         <translation>要允許 %1 讀取您的剪貼簿嗎？這是在聊天中貼上圖片所必需的。</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="203"/>
+        <location filename="../webenginepage.cpp" line="209"/>
         <source>Allow %1 to see the fonts installed on your system?</source>
         <translation>要允許 %1 檢視您系統上已安裝的字型嗎？</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="223"/>
-        <location filename="../webenginepage.cpp" line="437"/>
+        <location filename="../webenginepage.cpp" line="229"/>
+        <location filename="../webenginepage.cpp" line="443"/>
         <source>Permission Request</source>
         <translation>權限要求</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="360"/>
-        <location filename="../webenginepage.cpp" line="369"/>
+        <location filename="../webenginepage.cpp" line="366"/>
+        <location filename="../webenginepage.cpp" line="375"/>
         <source>Certificate Error</source>
         <translation>憑證錯誤</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="389"/>
+        <location filename="../webenginepage.cpp" line="395"/>
         <source>Enter username and password for &quot;%1&quot; at %2</source>
         <translation>請輸入「%1」於 %2 的使用者名稱與密碼</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="419"/>
+        <location filename="../webenginepage.cpp" line="425"/>
         <source>Connect to proxy &quot;%1&quot; using:</source>
         <translation>使用以下方式連線至代理伺服器「%1」：</translation>
     </message>
     <message>
-        <location filename="../webenginepage.cpp" line="438"/>
+        <location filename="../webenginepage.cpp" line="444"/>
         <source>Allow %1 to open all %2 links?</source>
         <translation>要允許 %1 開啟所有 %2 連結嗎？</translation>
     </message>

@@ -863,6 +863,27 @@ background:transparent;
               </property>
              </widget>
             </item>
+            <item row="6" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="linkedDeviceBrowserLayout">
+              <item>
+               <widget class="QLabel" name="linkedDeviceBrowserLabel">
+                <property name="text">
+                 <string>Browser name for linking</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="linkedDeviceBrowserLineEdit">
+                <property name="placeholderText">
+                 <string>Whatly</string>
+                </property>
+                <property name="toolTip">
+                 <string>Leave empty to show just &quot;Whatly&quot;. Set a browser WhatsApp knows, such as Chrome, if linking by phone number does not work.</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
            </layout>
           </item>
           <item row="15" column="0">

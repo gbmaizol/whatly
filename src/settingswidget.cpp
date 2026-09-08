@@ -251,6 +251,11 @@ SettingsWidget::SettingsWidget(QWidget *parent, int screenNumber,
           .settings()
           .value("identifyInLinkedDevices", true)
           .toBool());
+  ui->linkedDeviceBrowserLineEdit->setText(
+      SettingsManager::instance()
+          .settings()
+          .value("linkedDeviceBrowserName")
+          .toString());
   populateLanguages();
   populateChatThemes();
   populatePrivacyBlur();
@@ -539,6 +544,7 @@ SettingsWidget::SettingsWidget(QWidget *parent, int screenNumber,
     moveLayout(body(basics), ui->gridLayout_7); // default download location
     moveWidget(body(basics), ui->useNativeFileDialog, G);
     moveWidget(body(basics), ui->identifyInLinkedDevicesCheckBox, G);
+    moveLayout(body(basics), ui->linkedDeviceBrowserLayout);
 
     // ── Appearance ──────────────────────────────────────────
     auto *appearance = newSection(tr("Appearance"));
@@ -3055,6 +3061,17 @@ void SettingsWidget::on_languageComboBox_currentIndexChanged(int index) {
 void SettingsWidget::on_identifyInLinkedDevicesCheckBox_toggled(bool checked) {
   SettingsManager::instance().settings().setValue("identifyInLinkedDevices",
                                                   checked);
+  emit linkedDeviceNameChanged();
+}
+
+void SettingsWidget::on_linkedDeviceBrowserLineEdit_editingFinished() {
+  // The browser name reported to the phone while linking. Empty means the stock
+  // "Whatly" (unknown to WhatsApp, so the browser prefix is dropped for a clean
+  // label); a recognised name such as Chrome is what makes phone-number linking
+  // work (#43). Trim so a stray space does not read as a name.
+  SettingsManager::instance().settings().setValue(
+      "linkedDeviceBrowserName",
+      ui->linkedDeviceBrowserLineEdit->text().trimmed());
   emit linkedDeviceNameChanged();
 }
 

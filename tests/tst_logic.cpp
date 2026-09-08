@@ -1066,6 +1066,25 @@ private slots:
     QVERIFY(!ChatWallpaper::scriptSource().isEmpty());
     QVERIFY(!WebTweaks::scriptSource().isEmpty());
     QVERIFY(!LinkedDeviceName::scriptSource(QStringLiteral("Work")).isEmpty());
+    // #43: the linked-device browser name is configurable. The __BROWSER__
+    // placeholder must always be replaced (else the script is invalid), a set
+    // name reaches the script, and an empty one falls back to "Whatly" at run
+    // time so phone-number linking can be fixed by setting a recognised browser.
+    {
+      auto &s = SettingsManager::instance().settings();
+      const QVariant saved = s.value(QStringLiteral("linkedDeviceBrowserName"));
+      s.setValue(QStringLiteral("linkedDeviceBrowserName"),
+                 QStringLiteral("Chrome"));
+      const QString js = LinkedDeviceName::scriptSource(QString());
+      QVERIFY(!js.contains(QStringLiteral("__BROWSER__")));
+      QVERIFY(js.contains(QStringLiteral("\"Chrome\"")));
+      s.remove(QStringLiteral("linkedDeviceBrowserName"));
+      const QString js2 = LinkedDeviceName::scriptSource(QString());
+      QVERIFY(!js2.contains(QStringLiteral("__BROWSER__")));
+      QVERIFY(js2.contains(QStringLiteral("|| 'Whatly'")));
+      if (saved.isValid())
+        s.setValue(QStringLiteral("linkedDeviceBrowserName"), saved);
+    }
     // CustomCss without a file is inactive but the script must still be valid.
     CustomCss::scriptSource();
     QVERIFY(!CustomCss::isActive());
