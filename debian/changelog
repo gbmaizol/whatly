@@ -1,3 +1,23 @@
+whatly (7.6.0) unstable; urgency=medium
+
+  * The AppImage self-update now verifies the new image's GPG signature against
+    the key built into the app before restarting into it, and rolls a tampered
+    image back from the backup (#85).
+  * The restart no longer risks wedging the new instance at 100% CPU: it spawns
+    with posix_spawn instead of forking a QtWebEngine process, an AppImage on
+    Wayland hang in particular (#98).
+  * "Link with phone number" can be made to work again. The browser name
+    reported to the phone while linking is now a setting: empty keeps the clean
+    "Whatly" label, a recognised name such as Chrome makes phone-number linking
+    work (#43).
+  * A global "boss key" (Ctrl+Alt+H) hides every window at once and suppresses
+    message popups while hidden.
+  * The Flatpak build moves off the end-of-life KDE 6.9 runtime to KDE 6.10
+    (#111). "Find in chats" is now reachable from the command palette. See
+    CHANGELOG.md.
+
+ -- Ángel Guzmán Maeso <angel@guzmanmaeso.com>  Tue, 08 Sep 2026 12:00:00 +0200
+
 whatly (7.5.0) unstable; urgency=medium
 
   * A fresh install now fetches the spell-check dictionary for the system

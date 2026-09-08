@@ -108,6 +108,18 @@
   <content_rating type="oars-1.0" />
 
   <releases>
+    <release version="7.6.0" date="2026-09-08">
+      <description>
+        <ul>
+          <li>The AppImage self-update now verifies the new image's signature before restarting into it, and rolls back a tampered one (#85)</li>
+          <li>The restart no longer risks wedging the new instance at 100% CPU, an AppImage-on-Wayland hang in particular (#98)</li>
+          <li>"Link with phone number" can be made to work again: the browser name reported while linking is now configurable (#43)</li>
+          <li>A global "boss key" (Ctrl+Alt+H) hides every window at once and suppresses message popups while hidden</li>
+          <li>The Flatpak build moves off the end-of-life KDE 6.9 runtime to KDE 6.10 (#111)</li>
+          <li>"Find in chats" is now reachable from the command palette</li>
+        </ul>
+      </description>
+    </release>
     <release version="7.5.0" date="2026-09-07">
       <description>
         <ul>

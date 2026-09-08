@@ -1,5 +1,5 @@
 Name:           whatly
-Version:        7.5.0
+Version:        7.6.0
 # Reference system-Qt spec for downstream packagers; the release itself builds
 # the native rpm from packaging/obs/whatly.spec. Release kept at 0 to match it
 # (both are the system-Qt "whatly"), so this never looks newer than, or collides
@@ -65,6 +65,16 @@ not affiliated with WhatsApp or Meta.
 # %%{_datadir}/whatly/ back here if you do.
 
 %changelog
+* Tue Sep 08 2026 Ángel Guzmán Maeso <angel@guzmanmaeso.com> - 7.6.0-1
+- The AppImage self-update verifies the new image's signature before restarting
+  and rolls back a tampered one (#85); the restart no longer risks a 100% CPU
+  hang, using posix_spawn instead of forking (#98).
+- "Link with phone number" can be made to work: the browser name reported while
+  linking is now configurable (#43). A global boss key (Ctrl+Alt+H) hides every
+  window at once.
+- Flatpak moves off the end-of-life KDE 6.9 runtime to 6.10 (#111); "Find in
+  chats" is reachable from the command palette.
+
 * Mon Sep 07 2026 Ángel Guzmán Maeso <angel@guzmanmaeso.com> - 7.5.0-1
 - A fresh install fetches the system language's spell-check dictionary on first
   run and bundles none, so a non-English user gets their own language instead of
