@@ -200,12 +200,15 @@ static const char kCollapseCss[] =
     // avatar size and the measurement the strip width is built from.
     //
     // Its wrapper has to grow with it or the layout still reserves the small
-    // box, and the wrapper is matched through :has() rather than by name because
-    // every class here is generated afresh with each deploy: the one element
-    // that directly holds an svg is the icon's own box, whatever it is called
-    // this week.
-    "[data-whatly-banner] svg{width:48px!important;height:48px!important}"
-    "[data-whatly-banner] *:has(>svg){width:48px!important;height:48px!important}"
+    // box. The wrapper is named by tagBanner() rather than matched through
+    // :has(>svg), because every element that directly holds an svg answers to
+    // that — a dismiss cross as readily as the picture — and sizing them all
+    // drew the cross at 48px beside, or instead of, the notice itself.
+    "[data-whatly-banner] [data-whatly-icon]{width:48px!important;"
+    "height:48px!important}"
+    "[data-whatly-banner] [data-whatly-icon]>svg,"
+    "[data-whatly-banner] [data-whatly-icon]>img{width:100%!important;"
+    "height:100%!important}"
     // Collapsed to nothing is not collapsed to no width. Measured on the real
     // notice, the block holding the sentences and the button still occupied
     // 6.4px of the flex line with its text at font-size 0, which put the icon
@@ -214,8 +217,8 @@ static const char kCollapseCss[] =
     // layout altogether makes the line exactly as wide as the icon, so the
     // notice draws as a 48px square with the icon centred in it.
     //
-    // Taken as what follows the icon's own box, reusing the match above rather
-    // than naming anything: in a notice the icon comes first and the words come
+    // Taken as what follows the icon's own box, and what follows each step on
+    // the way down to it: in a notice the icon comes first and the words come
     // after it. A notice built the other way round keeps its words and falls
     // back to the clipping above, which is what the strip did before this and
     // is a safe thing to fall back to. Matching on a sibling is also the cheap
@@ -224,7 +227,8 @@ static const char kCollapseCss[] =
     //
     // The button goes out of the layout, not out of the markup, so the click
     // carried to it below still finds it.
-    "[data-whatly-banner] *:has(>svg)~*{display:none!important}"
+    "[data-whatly-banner] [data-whatly-icon]~*,"
+    "[data-whatly-banner] [data-whatly-icon-path]~*{display:none!important}"
     // The filter pills (All / Unread / Favourites / more) are a horizontal row
     // that a 97px column simply guillotines. Fold them into a 2x2 grid of round
     // buttons instead, each labelled with the first letter of its own caption —
@@ -407,45 +411,201 @@ static const char kScriptTemplate[] = R"JS(
     // conditions that call prepare() are therefore never met — so the notice
     // stayed untagged and wrapped into the ladder of single letters this is
     // here to prevent, until an expand and a collapse happened to run prepare()
-    // again. Two querySelector calls and no layout read, which is what makes it
-    // cheap enough to run every tick where prepare(), measuring every div in
-    // the document, is not.
+    // again. The named routes are querySelector calls and no layout read; the
+    // sweep for a bar with no name at all measures, so it is asked only while
+    // the list is collapsed, which is the only state where anything wraps and
+    // the only state the result is used in. prepare(), which measures every div
+    // in the document, stays off the tick either way.
     //
-    // Idempotent on purpose: the attribute is written only when the answer
+    // Idempotent on purpose: an attribute is written only where the answer
     // changes, so running once a second does not mutate the page under
     // WhatsApp's own observers.
+    // A chat row, or anything inside one. The strip clips a row, so a row's own
+    // name and message wrap to one letter per line out of sight and measure
+    // exactly like an untreated notice. Refuses on exception too, because a
+    // guess here costs a chat its picture.
+    var inRow = function (el) {
+      try {
+        return !!(el && el.closest &&
+                  el.closest('[role="row"],[role="listitem"],[role="gridcell"],'
+                             + '[data-testid="cell-frame-container"]'));
+      } catch (e) { return true; }
+    };
+
+    // On the screen and actually drawn. A hidden copy of a bar measures like
+    // the bar, and acting on one draws a second icon beside the first and takes
+    // it away again on the next pass.
+    var drawn = function (el) {
+      try {
+        if (el.checkVisibility &&
+            !el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true }))
+          return false;
+        var r = el.getBoundingClientRect();
+        return r.width > 0 && r.height > 0 && r.bottom > 0 &&
+               r.top < (window.innerHeight || 900);
+      } catch (e) { return false; }
+    };
+
+    // The picture the notice is about, which is NOT simply the first element
+    // holding an svg: a dismiss cross holds one too and often comes first in
+    // document order. An icon inside a control is never the notice's own, and
+    // one is taken only when the notice has nothing else.
+    var noticeIcon = function (bar) {
+      var all = bar.querySelectorAll('*');
+      var spare = null;
+      for (var i = 0; i < all.length; i++) {
+        var kids = all[i].children;
+        for (var j = 0; j < kids.length; j++) {
+          var t = (kids[j].tagName || '').toLowerCase();
+          if (t !== 'svg' && t !== 'img') continue;
+          if (all[i].closest('button,[role="button"],a')) {
+            if (!spare) spare = all[i];
+            continue;
+          }
+          return all[i];
+        }
+      }
+      return spare;
+    };
+
+    // Forget which element was the picture, everywhere inside one bar.
+    var unname = function (bar) {
+      bar.querySelectorAll('[data-whatly-icon],[data-whatly-icon-path]')
+         .forEach(function (m) {
+           m.removeAttribute('data-whatly-icon');
+           m.removeAttribute('data-whatly-icon-path');
+         });
+    };
+
+    // Everything that makes a bar a notice. `loose` drops the one test a
+    // promotion below the list cannot pass: it renders its dismiss control
+    // under the pointer and holds none at rest. Only a bar recognised by its
+    // own wrapping is adopted that way, which is a far narrower door than the
+    // slot behind #pane-side.
+    var noticeLike = function (el, pane, loose) {
+      if (!el || el.nodeType !== 1 || el === pane) return false;
+      if (pane && el.contains(pane)) return false;
+      if (inRow(el)) return false;
+      if (el.querySelector('[role="row"],[role="grid"]')) return false;
+      if (el.querySelector('#all-filter,#additional-filters')) return false;
+      if (el.querySelector('input,textarea,[contenteditable="true"]')) return false;
+      // A notice HOLDS controls; it is not one. The list's own Archived button
+      // passes every other test on its own merits.
+      if (el.matches('button,[role="button"],a')) return false;
+      if (!el.querySelector('svg,[data-icon],img')) return false;
+      if (!loose && !el.querySelector('button,[role="button"],a')) return false;
+      var t = (el.textContent || '').trim();
+      // A word fits at 97px and needs nothing doing; a page of text is a
+      // container that happened to pass the tests above. Length is the whole
+      // test, so this holds in every interface language.
+      if (t.length < 12 || t.length > 400) return false;
+      return drawn(el);
+    };
+
+    // A notice no name can reach, recognised by what the strip itself does to
+    // it: a sentence in a 97px column wraps to one letter per line, tall and
+    // narrow in a way nothing else in a chat list is. The first ancestor that
+    // also holds a picture is the bar — an icon and a sentence on one line is
+    // what a notice is — bounded by everything it must never swallow. A
+    // promotion below the list carries no testid, no id and no role at all, and
+    // is reachable no other way.
+    var wrappedNotices = function (side, pane) {
+      var out = [];
+      var all = side.querySelectorAll('*');
+      for (var i = 0; i < all.length && out.length < 4; i++) {
+        var e = all[i];
+        if (e.closest('[data-whatly-banner]')) continue;
+        if (inRow(e)) continue;
+        var t = (e.textContent || '').trim();
+        if (t.length < 8) continue;
+        var r = e.getBoundingClientRect();
+        if (r.width > 40 || r.height < 60) continue;
+        if (!drawn(e)) continue;
+        var p = e.parentElement, d = 0;
+        while (p && p !== side && d < 20) {
+          if (p === pane || (pane && p.contains(pane))) { p = null; break; }
+          if (inRow(p) || p.querySelector('[role="row"],[role="grid"]')) {
+            p = null;
+            break;
+          }
+          if (p.getBoundingClientRect().width > 60 &&
+              p.querySelector('svg,[data-icon],img')) break;
+          p = p.parentElement;
+          d++;
+        }
+        if (p && p !== side && out.indexOf(p) < 0) out.push(p);
+      }
+      return out;
+    };
+
+)JS"
+// Another 16380-byte literal reached, and split for the same build constraint
+// as the one below. Adjacent literals are concatenated by the compiler, so the
+// script is unchanged by where the seams fall.
+R"JS(
     var tagBanner = function () {
       var side = document.querySelector('#side');
       if (!side) return;
       var pane = document.querySelector('#pane-side');
-      var note = side.querySelector('[data-testid="chat-butterbar"]');
+      var notes = [];
+      var add = function (el, loose) {
+        if (el && notes.indexOf(el) < 0 && noticeLike(el, pane, loose))
+          notes.push(el);
+      };
+      // EVERY bar carrying the name, not just the first. A list can hold two at
+      // once — an update notice and a sync notice — and the one left untagged
+      // was held back by the stylesheet or wrapped into the ladder of single
+      // letters this is here to prevent.
+      side.querySelectorAll('[data-testid="chat-butterbar"]')
+          .forEach(function (e) { add(e, false); });
       // The slot kept behind the name, for the day the name changes — and it
       // has to refuse the filter row, because that is what sits immediately
       // above the list when the bar is not in the page at all. A filter row
-      // passes every content test below on its own merits: buttons, an svg
-      // inside the "more" control, no row, and a caption over twelve characters
-      // in any language. It is named here by the ids WhatsApp chose for those
+      // passes every content test on its own merits: buttons, an svg inside the
+      // "more" control, no row, and a caption over twelve characters in any
+      // language. It is named here by the ids WhatsApp chose for those
       // controls, the same two the pill folding already relies on.
-      if (!note && pane) {
-        note = pane.previousElementSibling;
-        if (note && note.querySelector('#all-filter,#additional-filters'))
-          note = null;
-      }
-      var isNotice = !!note && !note.querySelector('[role="row"]') &&
-                     !!note.querySelector('svg,[data-icon]') &&
-                     !!note.querySelector('button,[role="button"],a');
-      if (isNotice) {
-        var bt = (note.textContent || '').trim();
-        // A word fits at 97px and needs nothing doing; a page of text is a
-        // container that happened to pass the tests above. Length is the
-        // whole test, so this holds in every interface language.
-        isNotice = bt.length >= 12 && bt.length <= 400;
-      }
+      if (pane) add(pane.previousElementSibling, false);
+      // And whatever is wrapping with no name at all, which is the only way to
+      // reach a promotion below the list. Collapsed only: expanded, nothing
+      // wraps, and this is the one pass here that reads layout.
+      try {
+        if (collapsed())
+          wrappedNotices(side, pane).forEach(function (e) { add(e, true); });
+      } catch (e) { /* never break the page */ }
+      // A bar drawn as an icon no longer wraps, so it can never be found by its
+      // own wrapping a second time, and a promotion holds no control at rest.
+      // Keeping a tag therefore asks less than earning one: still in the list,
+      // still holding a picture, still not a row and not the list itself.
+      // Without that the bar is tagged, drawn, dropped and tagged again, which
+      // reads on screen as an icon flickering once a second.
       document.querySelectorAll('[data-whatly-banner]').forEach(function (e) {
-        if (!isNotice || e !== note) e.removeAttribute('data-whatly-banner');
+        if (notes.indexOf(e) >= 0) return;
+        if (side.contains(e) && !inRow(e) && e !== pane &&
+            !(pane && e.contains(pane)) &&
+            !!e.querySelector('svg,[data-icon],img') &&
+            !e.querySelector('[role="row"],[role="grid"]')) {
+          notes.push(e);
+          return;
+        }
+        e.removeAttribute('data-whatly-banner');
+        unname(e);
       });
-      if (isNotice && !note.hasAttribute('data-whatly-banner'))
-        note.setAttribute('data-whatly-banner', '1');
+      notes.forEach(function (e) {
+        if (!e.hasAttribute('data-whatly-banner'))
+          e.setAttribute('data-whatly-banner', '1');
+        var want = noticeIcon(e);
+        if (!want || e.querySelector('[data-whatly-icon]') === want) return;
+        unname(e);
+        want.setAttribute('data-whatly-icon', '1');
+        // And the way down to it, so the words beside each step leave the
+        // layout along with the words beside the icon itself.
+        var p = want.parentElement;
+        while (p && p !== e) {
+          p.setAttribute('data-whatly-icon-path', '1');
+          p = p.parentElement;
+        }
+      });
       // Every other bar in that slot is let through, so the stylesheet holds
       // one back only until this pass has looked at it. Marked only while it
       // holds something, because the spent shell is refilled where it sits: a
@@ -453,7 +613,7 @@ static const char kScriptTemplate[] = R"JS(
       // next notice arrives, which is the one moment it must not be.
       side.querySelectorAll('[data-testid="chat-butterbar"]')
           .forEach(function (e) {
-            var pass = !(isNotice && e === note) && !!e.firstElementChild;
+            var pass = notes.indexOf(e) < 0 && !!e.firstElementChild;
             if (pass === e.hasAttribute('data-whatly-passed')) return;
             if (pass) e.setAttribute('data-whatly-passed', '1');
             else e.removeAttribute('data-whatly-passed');
@@ -780,8 +940,11 @@ R"JS(
       var clone = row.cloneNode(true);
       clone.removeAttribute('id');
       // A notice is clipped to one nowrapped line in the strip; the preview is
-      // the place it gets read, so the clone must not inherit that.
+      // the place it gets read, so the clone must not inherit that — nor the
+      // naming of its picture, which would draw at 48px and take the sentence
+      // beside it out of the layout in the preview too.
       clone.removeAttribute('data-whatly-banner');
+      unname(clone);
       clone.style.zoom = zoom;
       // A chat row is built to hold exactly one line of preview, so its inner
       // blocks have fixed heights and centre what is in them. Let the message
