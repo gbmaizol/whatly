@@ -237,9 +237,37 @@ static const char kCollapseCss[] =
     // picture itself is wrong rather than that the notice can be put away.
     // Back into the corner, and the centring transform with it — an offset from
     // the middle of a box this small is most of the way across it.
+    //
+    // What is pinned is the box WhatsApp itself positions, not the control
+    // inside it: the control is a 40px hit area with a 13px glyph centred in
+    // it, so pinning the control alone still left the glyph a third of the way
+    // into the picture — about where it already was. The box is sized down to a
+    // corner badge, and the chain inside it made to fill that box, because the
+    // glyph is centred by flex rows that otherwise keep their original width
+    // and push it straight back off the corner. The rows inside the svg are
+    // left alone: <title> and <desc> are never rendered, and a display of
+    // block would ask for them to be.
+    //
+    // Clipped to that box, because filling it is asked of every element in
+    // the chain and one of them is an empty spacer beside the picture rather
+    // than above it: given a size it reached down over the picture, where it
+    // drew nothing but still answered the pointer — and being inside the
+    // control, a click there put the notice away. Clipping takes it out of
+    // hit-testing as well as out of sight.
     "[data-whatly-banner] [data-whatly-dismiss]{position:absolute!important;"
     "top:0!important;right:0!important;left:auto!important;"
-    "bottom:auto!important;transform:none!important}"
+    "bottom:auto!important;transform:none!important;width:18px!important;"
+    "height:18px!important;overflow:hidden!important}"
+    "[data-whatly-banner] [data-whatly-dismiss] *:not(svg *)"
+    "{display:block!important;width:100%!important;height:100%!important}"
+    // WhatsApp names its icons with an SVG <title> ("ic-close"), and that is
+    // where the tooltip over the cross comes from: an svg's own <title> is
+    // nearer the pointer than a title attribute on anything above it, so
+    // labelling the control could never win while the picture was hoverable.
+    // Out of hit-testing it goes; the pointer then rests on the control, whose
+    // title the pass below sets, and a click lands on the control either way.
+    "[data-whatly-banner] [data-whatly-dismiss] svg"
+    "{pointer-events:none!important}"
     // The filter pills (All / Unread / Favourites / more) are a horizontal row
     // that a 97px column simply guillotines. Fold them into a 2x2 grid of round
     // buttons instead, each labelled with the first letter of its own caption —
@@ -461,6 +489,27 @@ static const char kScriptTemplate[] = R"JS(
       } catch (e) { return false; }
     };
 
+    // The words a control actually shows. WhatsApp labels its icons with an SVG
+    // <title> — "ic-close" on the cross, "ic-sync" on the notice's own picture
+    // — and that text lands in textContent, where it reads as a caption. Both
+    // searches below ask whether a control has something written on it, so with
+    // textContent both answered yes for every control a notice has and both
+    // picked the wrong one: no cross was ever found, and the click carried to
+    // the icon went to the cross instead of to the notice's own button.
+    var words = function (el) {
+      var t = '';
+      try {
+        var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+        var n;
+        while ((n = w.nextNode())) {
+          var p = n.parentNode;
+          if (p && p.closest && p.closest('svg')) continue;
+          t += n.nodeValue;
+        }
+      } catch (e) { t = el.textContent || ''; }
+      return t.trim();
+    };
+
     // The picture the notice is about, which is NOT simply the first element
     // holding an svg: a dismiss cross holds one too and often comes first in
     // document order. An icon inside a control is never the notice's own, and
@@ -494,11 +543,23 @@ static const char kScriptTemplate[] = R"JS(
     var noticeDismiss = function (bar, icon) {
       var acts = bar.querySelectorAll('button,[role="button"],a');
       for (var i = 0; i < acts.length; i++) {
-        if ((acts[i].textContent || '').trim()) continue;
+        if (words(acts[i])) continue;
         if (icon && acts[i].contains(icon)) continue;
         if (acts[i].querySelector('svg,img,[data-icon]')) return acts[i];
       }
       return null;
+    };
+
+    // The top of the cross's own branch: the outermost element that holds the
+    // cross and not the picture. That is the one WhatsApp gives a position to,
+    // and so the one worth moving — the button below it is laid out in flow
+    // inside it and moving that alone leaves the branch sitting where it was.
+    var dismissBox = function (bar, ctl) {
+      var e = ctl;
+      while (e.parentElement && e.parentElement !== bar &&
+             !e.parentElement.hasAttribute('data-whatly-icon-path'))
+        e = e.parentElement;
+      return e;
     };
 
     // Forget which element was the picture, everywhere inside one bar.
@@ -646,11 +707,12 @@ R"JS(
         // After the naming above, which clears every mark in the bar when the
         // picture changes.
         var x = noticeDismiss(e, e.querySelector('[data-whatly-icon]'));
-        if (x !== e.querySelector('[data-whatly-dismiss]')) {
+        var box = x ? dismissBox(e, x) : null;
+        if (box !== e.querySelector('[data-whatly-dismiss]')) {
           e.querySelectorAll('[data-whatly-dismiss]').forEach(function (m) {
             m.removeAttribute('data-whatly-dismiss');
           });
-          if (x) x.setAttribute('data-whatly-dismiss', '1');
+          if (box) box.setAttribute('data-whatly-dismiss', '1');
         }
         // Written only where it is not already what it should be, so running
         // once a second does not mutate the page under WhatsApp's observers.
@@ -1095,7 +1157,7 @@ R"JS(
         var acts = note.querySelectorAll('button,[role="button"],a');
         var act = null;
         for (var ai = 0; ai < acts.length; ai++) {
-          if ((acts[ai].textContent || '').trim()) { act = acts[ai]; break; }
+          if (words(acts[ai])) { act = acts[ai]; break; }
         }
         if (!act) act = acts[0];
         if (!act) return;
