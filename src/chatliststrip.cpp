@@ -155,6 +155,7 @@ static const char kCollapseCss[] =
     ":not([data-whatly-passed]){display:none!important}"
     "[data-whatly-banner]{overflow:hidden!important;display:flex!important;"
     "align-items:center!important;justify-content:center!important;"
+    "position:relative!important;"
     "gap:0!important;padding-left:0!important;padding-right:0!important}"
     "[data-whatly-banner],[data-whatly-banner] *{cursor:pointer!important}"
     // The rule that does the actual work; everything else here follows from it.
@@ -229,6 +230,16 @@ static const char kCollapseCss[] =
     // carried to it below still finds it.
     "[data-whatly-banner] [data-whatly-icon]~*,"
     "[data-whatly-banner] [data-whatly-icon-path]~*{display:none!important}"
+    // The dismiss cross, which WhatsApp sets against the notice's own box: a
+    // little in from the right and centred down the side. Against a bar as wide
+    // as its sentences that reads as the top-right corner; against a 48px
+    // square it lands over the middle of the picture, where a cross says the
+    // picture itself is wrong rather than that the notice can be put away.
+    // Back into the corner, and the centring transform with it — an offset from
+    // the middle of a box this small is most of the way across it.
+    "[data-whatly-banner] [data-whatly-dismiss]{position:absolute!important;"
+    "top:0!important;right:0!important;left:auto!important;"
+    "bottom:auto!important;transform:none!important}"
     // The filter pills (All / Unread / Favourites / more) are a horizontal row
     // that a 97px column simply guillotines. Fold them into a 2x2 grid of round
     // buttons instead, each labelled with the first letter of its own caption —
@@ -313,6 +324,10 @@ static const char kScriptTemplate[] = R"JS(
     // from here rather than close over it. See the note on sync().
     window.__whatlyStripCss = __CSS__;
     window.__whatlyStripZoom = __ZOOM__;
+    // What the dismiss cross is called once the sentence beside it is gone.
+    // WhatsApp's own word for it is "Close", which on a bare cross over an icon
+    // reads as closing the window rather than putting one notice away.
+    var DISMISS = __DISMISS__;
     var el = document.getElementById('whatly-chatlist-strip');
 
     // Read each visible row's unread count into an attribute, which the
@@ -468,12 +483,27 @@ static const char kScriptTemplate[] = R"JS(
       return spare;
     };
 
+    // The control that puts the notice away: the one control it offers that
+    // carries a picture and no words. That is the same test the click carried
+    // to the icon uses to avoid it — a notice's action is the control with
+    // something written on it — read here from the other side.
+    var noticeDismiss = function (bar) {
+      var acts = bar.querySelectorAll('button,[role="button"],a');
+      for (var i = 0; i < acts.length; i++) {
+        if ((acts[i].textContent || '').trim()) continue;
+        if (acts[i].querySelector('svg,img,[data-icon]')) return acts[i];
+      }
+      return null;
+    };
+
     // Forget which element was the picture, everywhere inside one bar.
     var unname = function (bar) {
-      bar.querySelectorAll('[data-whatly-icon],[data-whatly-icon-path]')
+      bar.querySelectorAll('[data-whatly-icon],[data-whatly-icon-path],'
+                           + '[data-whatly-dismiss]')
          .forEach(function (m) {
            m.removeAttribute('data-whatly-icon');
            m.removeAttribute('data-whatly-icon-path');
+           m.removeAttribute('data-whatly-dismiss');
          });
     };
 
@@ -595,15 +625,33 @@ R"JS(
         if (!e.hasAttribute('data-whatly-banner'))
           e.setAttribute('data-whatly-banner', '1');
         var want = noticeIcon(e);
-        if (!want || e.querySelector('[data-whatly-icon]') === want) return;
-        unname(e);
-        want.setAttribute('data-whatly-icon', '1');
-        // And the way down to it, so the words beside each step leave the
-        // layout along with the words beside the icon itself.
-        var p = want.parentElement;
-        while (p && p !== e) {
-          p.setAttribute('data-whatly-icon-path', '1');
-          p = p.parentElement;
+        if (want && e.querySelector('[data-whatly-icon]') !== want) {
+          unname(e);
+          want.setAttribute('data-whatly-icon', '1');
+          // And the way down to it, so the words beside each step leave the
+          // layout along with the words beside the icon itself.
+          var p = want.parentElement;
+          while (p && p !== e) {
+            p.setAttribute('data-whatly-icon-path', '1');
+            p = p.parentElement;
+          }
+        }
+        // The cross is named for the same reason the picture is: where it sits
+        // is set against the notice's own box, and that box is now 48px square.
+        // After the naming above, which clears every mark in the bar when the
+        // picture changes.
+        var x = noticeDismiss(e);
+        if (x !== e.querySelector('[data-whatly-dismiss]')) {
+          e.querySelectorAll('[data-whatly-dismiss]').forEach(function (m) {
+            m.removeAttribute('data-whatly-dismiss');
+          });
+          if (x) x.setAttribute('data-whatly-dismiss', '1');
+        }
+        // Written only where it is not already what it should be, so running
+        // once a second does not mutate the page under WhatsApp's observers.
+        if (x && DISMISS && x.getAttribute('title') !== DISMISS) {
+          x.setAttribute('title', DISMISS);
+          x.setAttribute('aria-label', DISMISS);
         }
       });
       // Every other bar in that slot is let through, so the stylesheet holds
@@ -1229,6 +1277,9 @@ QString scriptSource() {
   QString source = QString::fromUtf8(kScriptTemplate);
   source.replace(QLatin1String("__CSS__"), jsStringLiteral(css));
   source.replace(QLatin1String("__ZOOM__"), QLatin1String(zoom));
+  source.replace(
+      QLatin1String("__DISMISS__"),
+      jsStringLiteral(QCoreApplication::translate("ChatListStrip", "Dismiss")));
   return source;
 }
 
