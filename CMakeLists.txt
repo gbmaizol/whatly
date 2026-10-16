@@ -129,6 +129,15 @@ endif()
 # for a normal source build they stay on.
 option(WHATLY_HARDENING "Add stack-protector/FORTIFY hardening compile flags" ON)
 
+# A dogfood build is handed over to be tried, not shipped, so it carries every
+# aid a report might need — which a Release build otherwise strips: the remote
+# debugging port is opened for Debug builds only, and qDebug() is compiled out.
+# Diagnosing what WhatsApp Web's own markup did then needs a second, different
+# build, by which time the page may have moved on. OFF by default, so an
+# installer built from this tree is unaffected.
+option(WHATLY_DOGFOOD
+    "Attach every debugging aid: remote debugging port and full log output" OFF)
+
 # Compiler flags
 if(MSVC)
     # Source files contain UTF-8 characters; MSVC needs to be told explicitly.
@@ -153,7 +162,9 @@ else()
     add_compile_options($<$<CONFIG:Debug>:-O1>)
 endif()
 
-add_compile_options($<$<CONFIG:Release>:-DQT_NO_DEBUG_OUTPUT>)
+if(NOT WHATLY_DOGFOOD)
+    add_compile_options($<$<CONFIG:Release>:-DQT_NO_DEBUG_OUTPUT>)
+endif()
 
 # Installation prefix
 if(NOT CMAKE_INSTALL_PREFIX)
@@ -521,6 +532,7 @@ target_compile_definitions(whatly PRIVATE
     BUILD_TIMESTAMP="${BUILD_TIMESTAMP}"
     VERSIONSTR="${PROJECT_VERSION}"
     WHATLY_BUILD_LABEL="${WHATLY_BUILD_LABEL}"
+    $<$<BOOL:${WHATLY_DOGFOOD}>:WHATLY_DOGFOOD>
 )
 
 # Check for WebEngine spellchecker support
