@@ -487,10 +487,15 @@ static const char kScriptTemplate[] = R"JS(
     // carries a picture and no words. That is the same test the click carried
     // to the icon uses to avoid it — a notice's action is the control with
     // something written on it — read here from the other side.
-    var noticeDismiss = function (bar) {
+    // Never whatever is holding the notice's own picture, which noticeIcon()
+    // falls back to a control for when the notice has nothing else: that one
+    // carries a picture and no words too, and pinning it to the corner would
+    // move the very thing the strip draws the notice for.
+    var noticeDismiss = function (bar, icon) {
       var acts = bar.querySelectorAll('button,[role="button"],a');
       for (var i = 0; i < acts.length; i++) {
         if ((acts[i].textContent || '').trim()) continue;
+        if (icon && acts[i].contains(icon)) continue;
         if (acts[i].querySelector('svg,img,[data-icon]')) return acts[i];
       }
       return null;
@@ -640,7 +645,7 @@ R"JS(
         // is set against the notice's own box, and that box is now 48px square.
         // After the naming above, which clears every mark in the bar when the
         // picture changes.
-        var x = noticeDismiss(e);
+        var x = noticeDismiss(e, e.querySelector('[data-whatly-icon]'));
         if (x !== e.querySelector('[data-whatly-dismiss]')) {
           e.querySelectorAll('[data-whatly-dismiss]').forEach(function (m) {
             m.removeAttribute('data-whatly-dismiss');
