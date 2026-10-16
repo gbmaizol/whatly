@@ -63,6 +63,16 @@ static const char kCollapseCss[] =
     "min-width:%1!important;max-width:%1!important}"
     "#side,#pane-side{overflow-x:hidden!important}"
     "#pane-side [role=\"row\"]{overflow:hidden!important}"
+    // WhatsApp's own footer at the end of the list, which says the messages
+    // are end-to-end encrypted and links to an explainer. It is not a notice
+    // and it offers nothing to put it away: no control, no cross. At 97px it
+    // wraps its sentence into a block of 12px text 57px wide below the last
+    // chat, where it cannot be read and cannot be dismissed. Out of the
+    // collapsed layout, and back the moment the list is expanded, which is
+    // where there is room to read it. Named by the id WhatsApp chose for it,
+    // as the butterbar rules and the pill folding already are, so a renamed
+    // id stops matching and the footer simply comes back.
+    "#pane-side [data-testid=chatlist-e2e-message]{display:none!important}"
     // The unread count, put back. WhatsApp's own badge sits at the right-hand end
     // of a full-width row, so a 97px column cuts it off — and losing it is losing
     // the one thing the collapsed list most needs to tell you. Redrawn as a pill
