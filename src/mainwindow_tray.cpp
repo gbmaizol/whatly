@@ -23,6 +23,14 @@
 #include <QJsonObject>
 #include <QPalette>
 
+#ifdef Q_OS_LINUX
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusPendingCallWatcher>
+#include <QDBusPendingReply>
+#include <QDBusVariant>
+#endif
+
 // ── Actions ──────────────────────────────────────────────────────────────────
 
 void MainWindow::createActions() {
@@ -513,6 +521,16 @@ void MainWindow::createTrayIcon() {
            .toBool())
     m_systemTrayIcon->show();
 
+#ifdef Q_OS_LINUX
+  // Put the icon back on the panel if the panel forgets it (see
+  // keepTrayIconRegistered()).
+  auto *trayGuard = new QTimer(this);
+  trayGuard->setInterval(30000);
+  connect(trayGuard, &QTimer::timeout, this,
+          &MainWindow::keepTrayIconRegistered);
+  trayGuard->start();
+#endif
+
   if (qApp->styleHints()->showShortcutsInContextMenus()) {
     foreach (QAction *action, m_trayIconMenu->actions()) {
       action->setShortcutVisibleInContextMenu(true);
@@ -533,6 +551,61 @@ void MainWindow::createTrayIcon() {
 // left to bring the window back at all. Restoring an already-visible window is
 // harmless: it just raises it. Enabling it unconditionally removes the trap
 // rather than relying on the refresh always happening.
+// Some panels forget a tray icon that is still alive. Cinnamon's
+// xapp-sn-watcher before linuxmint/xapp#211 drops every item whose bus name
+// merely starts with the name of a client that exits: when ":1.51" quits,
+// ":1.519/StatusNotifierItem" goes with it. Qt registers its item once, and
+// again only if the watcher itself restarts, so the icon stays gone for as long
+// as Whatly runs, and with it the only way to quit a hidden window. Look at the
+// watcher's list now and then, and register the item again when it is missing.
+void MainWindow::keepTrayIconRegistered() {
+#ifdef Q_OS_LINUX
+  if (!m_systemTrayIcon || !m_systemTrayIcon->isVisible())
+    return;
+  // Qt serves the item on a private connection named after it,
+  // "org.kde.StatusNotifierItem-<pid>-<n>", where n counts every tray object Qt
+  // has made, including the throwaway ones isSystemTrayAvailable() creates. Find
+  // the one that serves the item rather than guessing n.
+  QDBusConnection tray(QString{});
+  for (int n = 1; n <= 32 && !tray.isConnected(); ++n) {
+    QDBusConnection c(QStringLiteral("org.kde.StatusNotifierItem-%1-%2")
+                          .arg(QCoreApplication::applicationPid())
+                          .arg(n));
+    if (c.isConnected() &&
+        c.objectRegisteredAt(QStringLiteral("/StatusNotifierItem")))
+      tray = c;
+  }
+  if (!tray.isConnected())
+    return;
+
+  const QString watcher = QStringLiteral("org.kde.StatusNotifierWatcher");
+  QDBusMessage get = QDBusMessage::createMethodCall(
+      watcher, QStringLiteral("/StatusNotifierWatcher"),
+      QStringLiteral("org.freedesktop.DBus.Properties"), QStringLiteral("Get"));
+  get << watcher << QStringLiteral("RegisteredStatusNotifierItems");
+  auto *pending = new QDBusPendingCallWatcher(tray.asyncCall(get), this);
+  connect(pending, &QDBusPendingCallWatcher::finished, this,
+          [tray, watcher](QDBusPendingCallWatcher *call) {
+            call->deleteLater();
+            const QDBusPendingReply<QDBusVariant> reply = *call;
+            if (reply.isError())
+              return; // no watcher at all: nothing to register with
+            const QString service = tray.baseService();
+            const QStringList items = reply.value().variant().toStringList();
+            for (const QString &item : items)
+              if (item == service || item.startsWith(service + QLatin1Char('/')))
+                return;
+            qInfo() << "Tray: the panel had forgotten the tray icon; "
+                       "registering it again.";
+            QDBusMessage reg = QDBusMessage::createMethodCall(
+                watcher, QStringLiteral("/StatusNotifierWatcher"), watcher,
+                QStringLiteral("RegisterStatusNotifierItem"));
+            reg << service;
+            tray.asyncCall(reg);
+          });
+#endif
+}
+
 void MainWindow::checkWindowState() {
   // Any window, not this one: with this window hidden and another in front,
   // "Minimise to tray" was greyed out while there was plainly something to put
