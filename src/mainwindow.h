@@ -741,6 +741,7 @@ private slots:
   void toggleMute(const bool &checked);
   void fullScreenRequested(QWebEngineFullScreenRequest request);
   void checkWindowState();
+  void keepTrayIconRegistered();
   void initLock();
 #ifdef Q_OS_LINUX
   // The freedesktop appearance portal changed a setting; re-apply the
