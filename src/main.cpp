@@ -614,7 +614,11 @@ int main(int argc, char *argv[]) {
   // Now that the app/org names (and thus the data path) are set, persist
   // Chromium's own fd-2 output to a file for bug reports. Must be before Qt
   // WebEngine starts, which the profile creation below is the first to do.
-  DebugLog::captureNativeStderr();
+  // Only the primary instance does it: capturing rotates the file, and a second
+  // launch that is about to hand over and exit would otherwise move the running
+  // instance's log aside and, on the launch after that, delete it.
+  if (!instance.isSecondary())
+    DebugLog::captureNativeStderr();
 
   // Install the configured network proxy before any account profile opens a
   // connection (Qt WebEngine honours the application-wide proxy).
