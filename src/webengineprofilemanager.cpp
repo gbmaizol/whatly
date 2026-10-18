@@ -190,7 +190,7 @@ void WebEngineProfileManager::configureProfile(QWebEngineProfile *profile,
         "  var Native=window.WebSocket;"
         "  if(!Native)return;"
         "  window.__whatlyWsPatched=true;"
-        "  var st={open:0,everOpened:false,last:Date.now()};"
+        "  var st={open:0,everOpened:false,last:Date.now(),born:Date.now()};"
         "  window.__whatlyWs=st;"
         "  function P(u,pr){"
         "    var ws=pr!==undefined?new Native(u,pr):new Native(u);"
@@ -208,7 +208,12 @@ void WebEngineProfileManager::configureProfile(QWebEngineProfile *profile,
         "  P.CLOSING=Native.CLOSING;P.CLOSED=Native.CLOSED;"
         "  window.WebSocket=P;"
         "  window.__whatlyWsState=function(){"
-        "    if(!st.everOpened||!navigator.onLine)return 'idle';" // connecting/offline: neutral
+        "    if(!navigator.onLine)return 'idle';"   // offline: nothing a reload would fix
+        // Never connected: still connecting for the first two minutes of the
+        // document, stuck after that. A reload that stalls before WhatsApp's
+        // own code runs (its stylesheet and scripts never arrive) opens no
+        // socket at all, and would otherwise read as "connecting" for ever.
+        "    if(!st.everOpened)return (Date.now()-st.born)>120000?'stuck':'idle';"
         "    if(st.open<=0)return 'stuck';"          // socket died and never reopened
         "    if((Date.now()-st.last)>90000)return 'stuck';" // socket open but silent >90s
         "    return 'ok';"                           // connected and active
