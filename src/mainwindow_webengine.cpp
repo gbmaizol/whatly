@@ -1099,24 +1099,31 @@ void MainWindow::checkConnectionHealth() {
           return;
         m_watchdogStrikes = 0;
 
-        // Cap recovery at 3 reloads per hang episode. If the connection is still
-        // stuck after 3 reloads the cause is not something a reload fixes (no
-        // disk space, network down, ...), so stop hammering — repeated reloads
-        // are expensive and pointless. The counter resets once the connection
-        // reports healthy again (state == "ok").
+        // Allow 3 quick reloads per hang episode. If the connection is still
+        // stuck after them, the cause is usually not something a reload fixes
+        // (no disk space, network down, ...), so slow down to one reload every
+        // 10 minutes rather than stopping: a page whose reload stalled never
+        // reports "ok" again by itself, so stopping would leave it dead until
+        // the app is restarted. The counter resets once the connection reports
+        // healthy again (state == "ok").
         if (m_watchdogReloads >= 3) {
           if (!m_watchdogGaveUp) {
             m_watchdogGaveUp = true;
             qWarning() << "Connection watchdog: still stuck after 3 reloads, "
-                          "giving up until the connection recovers.";
+                          "retrying every 10 minutes until it recovers.";
           }
-          return;
+          if (m_lastWatchdogReload.elapsed() < 600000)
+            return;
         }
 
         ++m_watchdogReloads;
         m_lastWatchdogReload.restart();
-        qWarning() << "Connection watchdog: WhatsApp WebSocket stuck, reload"
-                   << m_watchdogReloads << "of 3.";
+        if (m_watchdogReloads <= 3)
+          qWarning() << "Connection watchdog: WhatsApp WebSocket stuck, reload"
+                     << m_watchdogReloads << "of 3.";
+        else
+          qWarning() << "Connection watchdog: WhatsApp WebSocket still stuck,"
+                     << "slow reload" << m_watchdogReloads - 3;
         if (m_webEngine)
           m_webEngine->triggerPageAction(QWebEnginePage::ReloadAndBypassCache);
       });

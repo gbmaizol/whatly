@@ -672,8 +672,8 @@ private:
   QTimer *m_connectionWatchdog = nullptr;
   QElapsedTimer m_lastWatchdogReload;
   int m_watchdogStrikes = 0;
-  int m_watchdogReloads = 0;      // reloads in the current hang episode (capped at 3)
-  bool m_watchdogGaveUp = false;  // true once the cap is hit; reset on recovery
+  int m_watchdogReloads = 0;      // reloads in the current hang episode (3 quick, then every 10 min)
+  bool m_watchdogGaveUp = false;  // true once the quick reloads are spent; reset on recovery
   bool m_trayConnected = true;    // reflected in the tray icon (see getTrayIcon)
 
   QAction *m_reloadAction = nullptr;
