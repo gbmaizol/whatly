@@ -74,12 +74,16 @@ QWebEngineProfile *WebEngineProfileManager::profileFor(const QString &accountId)
 void WebEngineProfileManager::configureProfile(QWebEngineProfile *profile,
                                                const QString &accountId) {
     // Derive the default UA from the engine itself *before* we ever override
-    // httpUserAgent, so it always matches the installed Chromium version and
-    // stays current across Qt WebEngine upgrades. Only worth doing once — every
-    // account's engine reports the same UA. The hardcoded value in common.cpp
-    // survives only as a fallback if this ever yields nothing.
+    // httpUserAgent, so it matches the installed Chromium version and stays
+    // current across Qt WebEngine upgrades — up to kLastChromeWithCalls: past
+    // it WhatsApp Web greys out voice and video calls in Whatly, so a newer
+    // engine reports that version instead of its own (#97). Only worth doing
+    // once — every account's engine reports the same UA. The hardcoded value
+    // in common.cpp survives only as a fallback if this ever yields nothing.
     if (defaultUserAgentStr.isEmpty() || m_profiles.isEmpty()) {
-        const QString engineUA = stripQtWebEngineToken(profile->httpUserAgent());
+        const QString engineUA =
+            capChromeVersion(stripQtWebEngineToken(profile->httpUserAgent()),
+                             kLastChromeWithCalls);
         if (!engineUA.isEmpty())
             defaultUserAgentStr = engineUA;
         qDebug() << "Engine-derived default UserAgent:" << defaultUserAgentStr;

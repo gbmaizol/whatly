@@ -80,13 +80,19 @@ QString trayTooltipText(const UnreadBreakdown &unread);
 // an invite (e.g. a whatsapp://send request). Pure, unit tested (issue #186).
 QString inviteCodeFromUrl(const QString &url);
 
-// The Chrome major version a user agent claims, 0 when it names none. WhatsApp
-// Web greys out voice and video calls for a Chrome newer than the ones it lists
-// as supported, and the default user agent follows the installed Chromium, so a
-// Qt WebEngine past kLastChromeWithCalls loses the calls although nothing in it
-// is missing (#97). Pure, unit tested.
+// The Chrome major version a user agent claims, 0 when it names none. With a
+// user agent claiming a Chrome past kLastChromeWithCalls, WhatsApp Web greys
+// out voice and video calls in Whatly, and claiming kLastChromeWithCalls brings
+// them back; WhatsApp's reason is not known (#97). Pure, unit tested.
 int chromeMajorVersion(const QString &userAgent);
 constexpr int kLastChromeWithCalls = 130;
+
+// The user agent with the Chrome version it claims lowered to
+// "Chrome/<maxMajor>.0.0.0" when it claims a newer one, otherwise unchanged.
+// The engine-derived default goes through this with kLastChromeWithCalls, so a
+// newer Qt WebEngine keeps the call buttons while an older one still reports
+// its own version (#97). Pure, unit tested.
+QString capChromeVersion(const QString &userAgent, int maxMajor);
 
 // Page-zoom bounds for Ctrl +/-/0 and the injected zoom buttons; the zoom is
 // clamped so it can never become unusably tiny or huge. Pure, so it is unit

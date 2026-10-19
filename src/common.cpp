@@ -157,6 +157,17 @@ int chromeMajorVersion(const QString &userAgent) {
   return m.hasMatch() ? m.captured(1).toInt() : 0;
 }
 
+QString capChromeVersion(const QString &userAgent, int maxMajor) {
+  static const QRegularExpression chrome(
+      QStringLiteral("\\bChrome/(\\d+)(?:\\.\\d+)*"));
+  const QRegularExpressionMatch m = chrome.match(userAgent);
+  if (!m.hasMatch() || m.captured(1).toInt() <= maxMajor)
+    return userAgent;
+  QString capped = userAgent;
+  return capped.replace(m.capturedStart(), m.capturedLength(),
+                        QStringLiteral("Chrome/%1.0.0.0").arg(maxMajor));
+}
+
 QString inviteCodeFromUrl(const QString &url) {
   const QString u = url.trimmed();
   // A web invite link: https://chat.whatsapp.com/<code> (older links carry an
