@@ -1689,6 +1689,43 @@ private slots:
              0);
     QCOMPARE(chromeMajorVersion(QString()), 0);
   }
+
+  // The engine-derived default user agent goes through this (#97): a Chrome
+  // past kLastChromeWithCalls is lowered to it, nothing else in the string
+  // changes, and an older Chrome is left as it is.
+  void chromeCap() {
+    const QString ua = QStringLiteral(
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like "
+        "Gecko) Chrome/%1 Safari/537.36");
+    // Qt 6.11 (Chromium 140) and Qt 6.10 (Chromium 134) are lowered.
+    QCOMPARE(capChromeVersion(ua.arg(QStringLiteral("140.0.0.0")),
+                              kLastChromeWithCalls),
+             ua.arg(QStringLiteral("130.0.0.0")));
+    QCOMPARE(capChromeVersion(ua.arg(QStringLiteral("134.0.6998.208")),
+                              kLastChromeWithCalls),
+             ua.arg(QStringLiteral("130.0.0.0")));
+    // The last version with calls, and anything older, is left alone.
+    QCOMPARE(capChromeVersion(ua.arg(QStringLiteral("130.0.0.0")),
+                              kLastChromeWithCalls),
+             ua.arg(QStringLiteral("130.0.0.0")));
+    QCOMPARE(capChromeVersion(ua.arg(QStringLiteral("122.0.6261.171")),
+                              kLastChromeWithCalls),
+             ua.arg(QStringLiteral("122.0.6261.171")));
+    // The Windows default as Qt 6.11 hands it out, less the QtWebEngine token.
+    QCOMPARE(capChromeVersion(
+                 QStringLiteral("Mozilla/5.0 (Windows NT 6.2; Win64; x64) "
+                                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                                "Chrome/140.0.0.0 Safari/537.36"),
+                 kLastChromeWithCalls),
+             QStringLiteral("Mozilla/5.0 (Windows NT 6.2; Win64; x64) "
+                            "AppleWebKit/537.36 (KHTML, like Gecko) "
+                            "Chrome/130.0.0.0 Safari/537.36"));
+    // No Chrome token, nothing to lower.
+    QCOMPARE(capChromeVersion(QStringLiteral("HeadlessChrome/140.0"),
+                              kLastChromeWithCalls),
+             QStringLiteral("HeadlessChrome/140.0"));
+    QCOMPARE(capChromeVersion(QString(), kLastChromeWithCalls), QString());
+  }
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
