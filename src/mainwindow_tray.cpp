@@ -538,19 +538,6 @@ void MainWindow::createTrayIcon() {
   }
 }
 
-// Act on the actions themselves rather than on menu->actions().at(0/1/4): those
-// indices count the separators too, so they happen to be right only as long as
-// nobody reorders the menu — after which this would silently disable the wrong
-// entries.
-//
-// "Restore" is deliberately never disabled. It used to be greyed out whenever
-// the window was visible, and the state was only refreshed from the menu's
-// aboutToShow signal. Qt does not guarantee that signal for a tray menu the
-// desktop shell renders itself (Wayland exports it over D-Bus), so a stale
-// "disabled" could survive the window being hidden — and then there was no way
-// left to bring the window back at all. Restoring an already-visible window is
-// harmless: it just raises it. Enabling it unconditionally removes the trap
-// rather than relying on the refresh always happening.
 // Some panels forget a tray icon that is still alive. Cinnamon's
 // xapp-sn-watcher before linuxmint/xapp#211 drops every item whose bus name
 // merely starts with the name of a client that exits: when ":1.51" quits,
@@ -606,6 +593,19 @@ void MainWindow::keepTrayIconRegistered() {
 #endif
 }
 
+// Act on the actions themselves rather than on menu->actions().at(0/1/4): those
+// indices count the separators too, so they happen to be right only as long as
+// nobody reorders the menu — after which this would silently disable the wrong
+// entries.
+//
+// "Restore" is deliberately never disabled. It used to be greyed out whenever
+// the window was visible, and the state was only refreshed from the menu's
+// aboutToShow signal. Qt does not guarantee that signal for a tray menu the
+// desktop shell renders itself (Wayland exports it over D-Bus), so a stale
+// "disabled" could survive the window being hidden — and then there was no way
+// left to bring the window back at all. Restoring an already-visible window is
+// harmless: it just raises it. Enabling it unconditionally removes the trap
+// rather than relying on the refresh always happening.
 void MainWindow::checkWindowState() {
   // Any window, not this one: with this window hidden and another in front,
   // "Minimise to tray" was greyed out while there was plainly something to put
