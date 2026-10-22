@@ -135,8 +135,18 @@ option(WHATLY_HARDENING "Add stack-protector/FORTIFY hardening compile flags" ON
 # Diagnosing what WhatsApp Web's own markup did then needs a second, different
 # build, by which time the page may have moved on. OFF by default, so an
 # installer built from this tree is unaffected.
+#
+# Never ship one. The port listens on 127.0.0.1 only, but any process on the
+# machine can attach to it and drive the WhatsApp session, logged in, without
+# asking. The value is cached: a build directory that had it ON keeps it until
+# it is configured again with -DWHATLY_DOGFOOD=OFF.
 option(WHATLY_DOGFOOD
     "Attach every debugging aid: remote debugging port and full log output" OFF)
+if(WHATLY_DOGFOOD)
+    message(WARNING "WHATLY_DOGFOOD is ON: this build opens Chromium's remote "
+                    "debugging port on 127.0.0.1:9421, where any local process "
+                    "can drive the WhatsApp session. Never ship it.")
+endif()
 
 # Compiler flags
 if(MSVC)
