@@ -587,8 +587,9 @@ static const char kScriptTemplate[] = R"JS(
     // promotion below the list cannot pass: it renders its dismiss control
     // under the pointer and holds none at rest. Only a bar recognised by its
     // own wrapping is adopted that way, which is a far narrower door than the
-    // slot behind #pane-side.
-    var noticeLike = function (el, pane, loose) {
+    // slot behind #pane-side. `kept` drops drawn() as well, for a bar that
+    // already carries the tag; see the end of tagBanner().
+    var noticeLike = function (el, pane, loose, kept) {
       if (!el || el.nodeType !== 1 || el === pane) return false;
       if (pane && el.contains(pane)) return false;
       if (inRow(el)) return false;
@@ -605,7 +606,7 @@ static const char kScriptTemplate[] = R"JS(
       // container that happened to pass the tests above. Length is the whole
       // test, so this holds in every interface language.
       if (t.length < 12 || t.length > 400) return false;
-      return drawn(el);
+      return kept || drawn(el);
     };
 
     // A notice no name can reach, recognised by what the strip itself does to
@@ -679,18 +680,24 @@ R"JS(
         if (collapsed())
           wrappedNotices(side, pane).forEach(function (e) { add(e, true); });
       } catch (e) { /* never break the page */ }
-      // A bar drawn as an icon no longer wraps, so it can never be found by its
-      // own wrapping a second time, and a promotion holds no control at rest.
-      // Keeping a tag therefore asks less than earning one: still in the list,
-      // still holding a picture, still not a row and not the list itself.
-      // Without that the bar is tagged, drawn, dropped and tagged again, which
-      // reads on screen as an icon flickering once a second.
+      // A bar keeps its tag only while it would still earn one. WhatsApp reuses
+      // its nodes: when a notice goes, its bar, or the container adopted around
+      // it, can be refilled with something else that has a picture, and a tag
+      // that outlived the notice would hide that content behind the rules on
+      // [data-whatly-icon]~* for as long as the list stays collapsed.
+      //
+      // So keeping a tag runs every content test that earning one runs, and
+      // leaves out only what a notice drawn as an icon can no longer show: its
+      // own wrapping, which an icon no longer does, so it can never be found
+      // that way a second time; a control at rest, which a promotion does not
+      // hold; and being on screen this very second, so a kept bar that is
+      // briefly out of sight is not dropped and drawn as the ladder of single
+      // letters until the next pass. Asking any of those of a kept bar has it
+      // tagged, drawn, dropped and tagged again, which reads on screen as an
+      // icon flickering once a second.
       document.querySelectorAll('[data-whatly-banner]').forEach(function (e) {
         if (notes.indexOf(e) >= 0) return;
-        if (side.contains(e) && !inRow(e) && e !== pane &&
-            !(pane && e.contains(pane)) &&
-            !!e.querySelector('svg,[data-icon],img') &&
-            !e.querySelector('[role="row"],[role="grid"]')) {
+        if (side.contains(e) && noticeLike(e, pane, true, true)) {
           notes.push(e);
           return;
         }
