@@ -1159,8 +1159,9 @@ R"JS(
     // offers a bare icon button — a dismiss cross is the obvious one — would
     // otherwise have that picked simply for being first in the markup, and
     // dismissing an update prompt is the opposite of what the click meant. Falls
-    // back to the first control of any kind, so a notice whose only button is an
-    // icon still works.
+    // back to the first control that is not the dismiss cross, so a notice
+    // whose action is a bare icon still works, and a click on the picture still
+    // never puts the notice away.
     //
     // A click that already landed on a control is left entirely alone, so
     // WhatsApp never receives it twice.
@@ -1176,7 +1177,11 @@ R"JS(
         for (var ai = 0; ai < acts.length; ai++) {
           if (words(acts[ai])) { act = acts[ai]; break; }
         }
-        if (!act) act = acts[0];
+        // With no words to go by, the first control in the markup is as likely
+        // to be the cross as the action, and tagBanner() has named the cross.
+        for (ai = 0; !act && ai < acts.length; ai++) {
+          if (!acts[ai].closest('[data-whatly-dismiss]')) act = acts[ai];
+        }
         if (!act) return;
         ev.preventDefault();
         // Immediate, because the notice turns out to live in the strip ABOVE
