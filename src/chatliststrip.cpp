@@ -618,11 +618,18 @@ static const char kScriptTemplate[] = R"JS(
     // is reachable no other way.
     var wrappedNotices = function (side, pane) {
       var out = [];
-      var all = side.querySelectorAll('*');
-      for (var i = 0; i < all.length && out.length < 4; i++) {
-        var e = all[i];
-        if (e.closest('[data-whatly-banner]')) continue;
-        if (inRow(e)) continue;
+      // Rows are most of what #side holds and nothing inside one is a notice,
+      // so each row is skipped whole rather than visited node by node, and so
+      // is a bar that is already tagged. What is left is the list's own
+      // scaffolding, and only that is measured.
+      var walk = document.createTreeWalker(side, NodeFilter.SHOW_ELEMENT, {
+        acceptNode: function (n) {
+          return n.hasAttribute('data-whatly-banner') || inRow(n)
+                     ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      var e;
+      while (out.length < 4 && (e = walk.nextNode())) {
         var t = (e.textContent || '').trim();
         if (t.length < 8) continue;
         var r = e.getBoundingClientRect();
@@ -979,13 +986,11 @@ R"JS(
       var s = document.getElementById('whatly-chatlist-strip');
       return !!(s && s.textContent);
     };
-    // WhatsApp rebuilds this pane whenever the section changes, taking the tags
-    // with it. A timer costs one querySelector per tick and puts them back; a
-    // MutationObserver over a tree WhatsApp mutates continuously would measure
-    // the layout several times a second instead.
     // WhatsApp swaps the pane out when the section changes, taking the tags
-    // with it, and nothing tells us it happened. A timer costs a couple of
-    // querySelector calls per tick and puts everything back; a MutationObserver
+    // with it, and nothing tells us it happened. A timer puts everything back
+    // for a few querySelector calls per tick and, only while the list is
+    // collapsed, one sweep of #side for a notice with no name, which skips the
+    // rows and measures what is left; see wrappedNotices(). A MutationObserver
     // over a tree WhatsApp mutates continuously would measure the layout
     // several times a second instead — that cost 40% of a core once already.
     setInterval(function () {
